@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "nombre": "Ley"
+  },
+  {
+    "id": 2,
+    "nombre": "Decreto"
+  },
+  {
+    "id": 8,
+    "nombre": "Decisión Administrativa"
+  },
+  {
+    "id": 3,
+    "nombre": "Resolución"
+  },
+  {
+    "id": 4,
+    "nombre": "Disposición"
+  },
+  {
+    "id": 12,
+    "nombre": "Acordada"
+  },
+  {
+    "id": 11,
+    "nombre": "Acta"
+  },
+  {
+    "id": 27,
+    "nombre": "Actuacion"
+  },
+  {
+    "id": 17,
+    "nombre": "Acuerdo"
+  },
+  {
+    "id": 5,
+    "nombre": "Circular"
+  },
+  {
+    "id": 6,
+    "nombre": "Comunicación"
+  },
+  {
+    "id": 13,
+    "nombre": "Comunicado"
+  },
+  {
+    "id": 20,
+    "nombre": "Convenio"
+  },
+  {
+    "id": 14,
+    "nombre": "Decisión"
+  },
+  {
+    "id": 7,
+    "nombre": "Decreto/Ley"
+  },
+  {
+    "id": 15,
+    "nombre": "Directiva"
+  },
+  {
+    "id": 10,
+    "nombre": "Instrucción"
+  },
+  {
+    "id": 23,
+    "nombre": "Interpretación"
+  },
+  {
+    "id": 24,
+    "nombre": "Laudo"
+  },
+  {
+    "id": 18,
+    "nombre": "Memorandum"
+  },
+  {
+    "id": 21,
+    "nombre": "Misión"
+  },
+  {
+    "id": 16,
+    "nombre": "Nota"
+  },
+  {
+    "id": 9,
+    "nombre": "Nota Externa"
+  },
+  {
+    "id": 29,
+    "nombre": "Ordenanza"
+  },
+  {
+    "id": 19,
+    "nombre": "Protocolo"
+  },
+  {
+    "id": 28,
+    "nombre": "Providencia"
+  },
+  {
+    "id": 22,
+    "nombre": "Recomendación"
+  }
+]

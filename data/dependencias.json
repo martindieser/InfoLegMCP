@@ -1,0 +1,6658 @@
+[
+  {
+    "id": 3262,
+    "nombre": "1RA. COM. NAC. DE SALARIOS IND. DEL VESTIDO TRABAJO A DOMIC."
+  },
+  {
+    "id": 310,
+    "nombre": "ADM. GRAL. DEL SERVICIO NACIONAL DE SANIDAD ANIMAL"
+  },
+  {
+    "id": 660,
+    "nombre": "ADMINISTRACION ADUANA BARILOCHE"
+  },
+  {
+    "id": 3731,
+    "nombre": "ADMINISTRACION DEL PUERTO DE BUENOS AIRES"
+  },
+  {
+    "id": 5,
+    "nombre": "ADMINISTRACION DE PARQUES NACIONALES"
+  },
+  {
+    "id": 3237,
+    "nombre": "ADMINISTRACION DE PARQUES NACIONALES - P"
+  },
+  {
+    "id": 410,
+    "nombre": "ADMINISTRACION DE PROGRAMAS ESPECIALES"
+  },
+  {
+    "id": 4104,
+    "nombre": "ADMINISTRACION DE SERVICIOS GENERALES"
+  },
+  {
+    "id": 385,
+    "nombre": "ADMINISTRACION FEDERAL DE INGRESOS PUBLICOS"
+  },
+  {
+    "id": 213,
+    "nombre": "ADMINISTRACION GENERAL DE PUERTOS"
+  },
+  {
+    "id": 4180,
+    "nombre": "ADMINISTRACION GENERAL DE PUERTOS S.A.U."
+  },
+  {
+    "id": 3640,
+    "nombre": "ADMINISTRACION GENERAL DE PUERTOS SOCIEDAD DEL ESTADO"
+  },
+  {
+    "id": 3855,
+    "nombre": "ADMINISTRACION GUBERNAMENTAL DE INGRESOS PUBLICOS"
+  },
+  {
+    "id": 1,
+    "nombre": "ADMINISTRACION NACIONAL DE ADUANAS"
+  },
+  {
+    "id": 3394,
+    "nombre": "ADMINISTRACION NACIONAL DE AVIACION CIVIL"
+  },
+  {
+    "id": 4212,
+    "nombre": "ADMINISTRACION NACIONAL DE ESTABLECIMIENTOS DE SALUD"
+  },
+  {
+    "id": 816,
+    "nombre": "ADMINISTRACION NACIONAL DE LABORATORIOS E INSTITUT"
+  },
+  {
+    "id": 2,
+    "nombre": "ADMINISTRACION NACIONAL DE LA SEGURIDAD SOCIAL"
+  },
+  {
+    "id": 3239,
+    "nombre": "ADMINISTRACION  NACIONAL DE LA SEGURIDAD SOCIAL - GNP Y S"
+  },
+  {
+    "id": 3223,
+    "nombre": "ADMINISTRACION  NACIONAL DE LA SEGURIDAD SOCIAL - GP"
+  },
+  {
+    "id": 3,
+    "nombre": "ADMINISTRACION NACIONAL DEL SEGURO DE SALUD"
+  },
+  {
+    "id": 4,
+    "nombre": "ADMINISTRACION NACIONAL DEL SEGURO SOCIAL"
+  },
+  {
+    "id": 522,
+    "nombre": "ADMINISTRACION NACIONAL DE PATENTES"
+  },
+  {
+    "id": 4053,
+    "nombre": "ADMINISTRACION TRIBUTARIA DE LA PROVINCIA DEL CHACO"
+  },
+  {
+    "id": 3788,
+    "nombre": "ADMINISTRACION TRIBUTARIA MENDOZA"
+  },
+  {
+    "id": 3939,
+    "nombre": "ADMINISTRACION TRIBUTARIA PROVINCIAL"
+  },
+  {
+    "id": 402,
+    "nombre": "ADMINISTRADORAS DE PLANES DE AHORRO PARA FINES DET"
+  },
+  {
+    "id": 3941,
+    "nombre": "ADMINISTRADORA TRIBUTARIA DE LA PROVINCIA DE ENTRE RIOS"
+  },
+  {
+    "id": 230,
+    "nombre": "ADM.NAC.DE MEDICAMENTOS, ALIMENTOS Y TEC. MEDICA"
+  },
+  {
+    "id": 3461,
+    "nombre": "ADM NAC LABORATORIOS E INSTITUTOS DE SALUD DR CARLOS MALBRAN"
+  },
+  {
+    "id": 3862,
+    "nombre": "ADUANA BAHIA BLANCA"
+  },
+  {
+    "id": 4033,
+    "nombre": "ADUANA BARRANQUERAS"
+  },
+  {
+    "id": 3985,
+    "nombre": "ADUANA BERNARDO DE IRIGOYEN"
+  },
+  {
+    "id": 4041,
+    "nombre": "ADUANA BUENOS AIRES"
+  },
+  {
+    "id": 4045,
+    "nombre": "ADUANA CAMPANA"
+  },
+  {
+    "id": 3959,
+    "nombre": "ADUANA CLORINDA"
+  },
+  {
+    "id": 4218,
+    "nombre": "ADUANA CONCEPCION DEL URUGUAY"
+  },
+  {
+    "id": 3978,
+    "nombre": "ADUANA CONCORDIA"
+  },
+  {
+    "id": 3869,
+    "nombre": "ADUANA CORDOBA"
+  },
+  {
+    "id": 3784,
+    "nombre": "ADUANA CORRIENTES"
+  },
+  {
+    "id": 4029,
+    "nombre": "ADUANA DE ARRANQUERAS"
+  },
+  {
+    "id": 4030,
+    "nombre": "ADUANA DE BARRANQUERAS"
+  },
+  {
+    "id": 4031,
+    "nombre": "ADUANA DE BUENOS AIRES"
+  },
+  {
+    "id": 3960,
+    "nombre": "ADUANA DE CLORINDA"
+  },
+  {
+    "id": 3979,
+    "nombre": "ADUANA DE COLON"
+  },
+  {
+    "id": 782,
+    "nombre": "ADUANA DE COMODORO RIVADAVIA"
+  },
+  {
+    "id": 3428,
+    "nombre": "ADUANA DE CONCEPCION DEL URUGUAY - ENTRE RIOS"
+  },
+  {
+    "id": 4035,
+    "nombre": "ADUANA DE EZEIZA"
+  },
+  {
+    "id": 3965,
+    "nombre": "ADUANA DE GOYA"
+  },
+  {
+    "id": 3224,
+    "nombre": "ADUANA DE LA PLATA"
+  },
+  {
+    "id": 792,
+    "nombre": "ADUANA DE LA QUIACA"
+  },
+  {
+    "id": 3961,
+    "nombre": "ADUANA DE OBERA"
+  },
+  {
+    "id": 3478,
+    "nombre": "ADUANA DE PASO DE LOS LIBRES"
+  },
+  {
+    "id": 4072,
+    "nombre": "ADUANA DE POCITOS"
+  },
+  {
+    "id": 3500,
+    "nombre": "ADUANA DE PUERTO DESEADO"
+  },
+  {
+    "id": 3289,
+    "nombre": "ADUANA DE SAN NICOLAS"
+  },
+  {
+    "id": 3638,
+    "nombre": "ADUANA DE SAN RAFAEL"
+  },
+  {
+    "id": 4016,
+    "nombre": "ADUANA FORMOSA"
+  },
+  {
+    "id": 3863,
+    "nombre": "ADUANA GENERAL PICO"
+  },
+  {
+    "id": 4015,
+    "nombre": "ADUANA GOYA"
+  },
+  {
+    "id": 3980,
+    "nombre": "ADUANA GUALEGUAYCHU"
+  },
+  {
+    "id": 4006,
+    "nombre": "ADUANA IGUAZU"
+  },
+  {
+    "id": 4026,
+    "nombre": "ADUANA LA QUIACA"
+  },
+  {
+    "id": 3865,
+    "nombre": "ADUANA MAR DEL PLATA"
+  },
+  {
+    "id": 4088,
+    "nombre": "ADUANA MENDOZA"
+  },
+  {
+    "id": 4047,
+    "nombre": "ADUANA NEUQUEN"
+  },
+  {
+    "id": 3986,
+    "nombre": "ADUANA OBERA"
+  },
+  {
+    "id": 4067,
+    "nombre": "ADUANA ORAN"
+  },
+  {
+    "id": 4025,
+    "nombre": "ADUANA PASO DE LOS LIBRES"
+  },
+  {
+    "id": 4107,
+    "nombre": "ADUANA POCITOS"
+  },
+  {
+    "id": 3964,
+    "nombre": "ADUANA POSADAS"
+  },
+  {
+    "id": 4082,
+    "nombre": "ADUANA PUERTO MADRYN"
+  },
+  {
+    "id": 4231,
+    "nombre": "ADUANA ROSARIO"
+  },
+  {
+    "id": 4068,
+    "nombre": "ADUANA SALTA"
+  },
+  {
+    "id": 4125,
+    "nombre": "ADUANA SAN ANTONIO OESTE"
+  },
+  {
+    "id": 4119,
+    "nombre": "ADUANA SAN CARLOS DE BARILOCHE"
+  },
+  {
+    "id": 3987,
+    "nombre": "ADUANA SAN JAVIER"
+  },
+  {
+    "id": 4209,
+    "nombre": "ADUANA SAN LORENZO"
+  },
+  {
+    "id": 4178,
+    "nombre": "ADUANA SAN MARTIN DE LOS ANDES"
+  },
+  {
+    "id": 3864,
+    "nombre": "ADUANA SAN PEDRO"
+  },
+  {
+    "id": 3982,
+    "nombre": "ADUANA SANTA FE"
+  },
+  {
+    "id": 4069,
+    "nombre": "ADUANA SANTIAGO DEL ESTERO"
+  },
+  {
+    "id": 4007,
+    "nombre": "ADUANA SANTO TOME"
+  },
+  {
+    "id": 4070,
+    "nombre": "ADUANA TINOGASTA"
+  },
+  {
+    "id": 4074,
+    "nombre": "ADUANA TUCUMAN"
+  },
+  {
+    "id": 3208,
+    "nombre": "AFIP - COMARB"
+  },
+  {
+    "id": 3715,
+    "nombre": "AGENCIA DE ACCESO A LA INFORMACION PUBLICA"
+  },
+  {
+    "id": 3512,
+    "nombre": "AGENCIA DE ADMINISTRACION DE BIENES DEL ESTADO"
+  },
+  {
+    "id": 3804,
+    "nombre": "AGENCIA DE DEPORTE NACIONAL"
+  },
+  {
+    "id": 4215,
+    "nombre": "AGENCIA DE INVESTIGACION DE ACCIDENTES E INCIDENTES DE AVIAC"
+  },
+  {
+    "id": 3294,
+    "nombre": "AGENCIA DE PLANIFICACION"
+  },
+  {
+    "id": 3680,
+    "nombre": "AGENCIA DE RECAUDACION DE LA PROVINCIA DE BUENOS AIRES"
+  },
+  {
+    "id": 4055,
+    "nombre": "AGENCIA DE RECAUDACION DE LA PROVINCIA DE CATAMARCA"
+  },
+  {
+    "id": 4058,
+    "nombre": "AGENCIA DE RECAUDACION FUEGUINA"
+  },
+  {
+    "id": 3843,
+    "nombre": "AGENCIA DE RECAUDACION TRIBUTARIA DE LA PROVINCIA DE RIO NEG"
+  },
+  {
+    "id": 4162,
+    "nombre": "AGENCIA DE RECAUDACION Y CONTROL ADUANERO"
+  },
+  {
+    "id": 3580,
+    "nombre": "AGENCIA FEDERAL DE INTELIGENCIA"
+  },
+  {
+    "id": 3281,
+    "nombre": "AGENCIA NACIONAL DE DESARROLLO DE INVERSIONES"
+  },
+  {
+    "id": 3728,
+    "nombre": "AGENCIA NACIONAL DE DISCAPACIDAD"
+  },
+  {
+    "id": 3711,
+    "nombre": "AGENCIA NACIONAL DE LABORATORIOS PUBLICOS"
+  },
+  {
+    "id": 3647,
+    "nombre": "AGENCIA NACIONAL DE MATERIALES CONTROLADOS"
+  },
+  {
+    "id": 3891,
+    "nombre": "AGENCIA NACIONAL DE PROMOCION DE LA INVESTIGACION EL DESARR"
+  },
+  {
+    "id": 4177,
+    "nombre": "AGENCIA NACIONAL DE PUERTOS Y NAVEGACION"
+  },
+  {
+    "id": 3397,
+    "nombre": "AGENCIA NACIONAL DE SEGURIDAD VIAL"
+  },
+  {
+    "id": 4105,
+    "nombre": "AGENCIA REGULATORIA DE LA INDUSTRIA DEL CANAMO INDUSTRIAL Y"
+  },
+  {
+    "id": 4048,
+    "nombre": "AGENCIA SANTACRUCENA DE INGRESOS PUBLICOS"
+  },
+  {
+    "id": 3243,
+    "nombre": "ARBITRO DEL MINISTERIO DE TRABAJO EMPLEO Y SEGURIDAD SOCIAL"
+  },
+  {
+    "id": 3873,
+    "nombre": "ARCHIVO GENERAL DE LA NACION"
+  },
+  {
+    "id": 612,
+    "nombre": "AREA DE ANALISIS REGULATORIOS Y ESTUDIOS ESPECIALE"
+  },
+  {
+    "id": 3932,
+    "nombre": "AREA DE MATERIAL QUILMES"
+  },
+  {
+    "id": 4085,
+    "nombre": "AREA DE SEGURIDAD PUBLICA Y AMBIENTAL"
+  },
+  {
+    "id": 3253,
+    "nombre": "AREA INDUSTRIA COMERCIO Y DE LA PEQUEÑA Y MEDIANA EMPRESA"
+  },
+  {
+    "id": 817,
+    "nombre": "AREA INFRACCIONES AERONAUTICAS C.E.T.A."
+  },
+  {
+    "id": 818,
+    "nombre": "AREA INFRACCIONES AERONAUTICAS S.S.T.A."
+  },
+  {
+    "id": 3924,
+    "nombre": "AREA NAVAL ATLANTICA"
+  },
+  {
+    "id": 3915,
+    "nombre": "AREA NAVAL AUSTRAL"
+  },
+  {
+    "id": 337,
+    "nombre": "AUDITORIA GENERAL DE LA NACION"
+  },
+  {
+    "id": 3284,
+    "nombre": "AUTORIDAD DE CUENCA MATANZA RIACHUELO"
+  },
+  {
+    "id": 3395,
+    "nombre": "AUTORIDAD FEDERAL DE SERVICIOS DE COMUNICACION AUDIOVISUAL"
+  },
+  {
+    "id": 3582,
+    "nombre": "AUTORIDAD FEDERAL DE TECNOLOGIAS DE LA INFORMACION Y COMUNIC"
+  },
+  {
+    "id": 3579,
+    "nombre": "AUTORIDAD  FEDERAL DE TECNOLOGIAS DE LA INF Y LAS COMUNICA"
+  },
+  {
+    "id": 404,
+    "nombre": "AUTORIDAD REGULATORIA NUCLEAR"
+  },
+  {
+    "id": 109,
+    "nombre": "BANCO CENTRAL DE LA REPUBLICA ARGENTINA (B.C.R.A.)"
+  },
+  {
+    "id": 4039,
+    "nombre": "BANCO NACIONAL DE DATOS GENETICOS"
+  },
+  {
+    "id": 3757,
+    "nombre": "BIBLIOTECA DEL CONGRESO DE LA NACION"
+  },
+  {
+    "id": 705,
+    "nombre": "BIBLIOTECA NACIONAL"
+  },
+  {
+    "id": 3724,
+    "nombre": "BIBLIOTECA NACIONAL DOCTOR MARIANO MORENO"
+  },
+  {
+    "id": 3676,
+    "nombre": "BIBLIOTECA NACIONAL MARIANO MORENO"
+  },
+  {
+    "id": 506,
+    "nombre": "BOLSA DE COMERCIO DE BUENOS AIRES"
+  },
+  {
+    "id": 645,
+    "nombre": "CAJA COMPLEMENTARIA DE PREVISION PARA LA ACTIVIDAD"
+  },
+  {
+    "id": 110,
+    "nombre": "CAJA DE ASIG.FAMILIARES PARA PERSONAL DE LA ESTIBA"
+  },
+  {
+    "id": 6,
+    "nombre": "CAJA DE ASIG.FAM.PER.ACT.MAR.FLU.E IND.NAVAL"
+  },
+  {
+    "id": 3226,
+    "nombre": "CAJA DE RETIROS JUBILACIONES Y PENSIONES DE LA POLICIA FED."
+  },
+  {
+    "id": 3216,
+    "nombre": "CAJA DE SEGURIDAD SOCIAL PARA ABOGADOS DE LA CIUDAD AUTONOMA"
+  },
+  {
+    "id": 7,
+    "nombre": "CAJA DE SUB.FAM.PARA EL PERSONAL DE LA INDUSTRIA"
+  },
+  {
+    "id": 8,
+    "nombre": "CAJA DE SUB.FAM.PARA EMPLEADOS DE COMERCIO(CASFEC)"
+  },
+  {
+    "id": 9,
+    "nombre": "CAJA NACIONAL DE AHORRO Y SEGURO"
+  },
+  {
+    "id": 753,
+    "nombre": "CAMARA FEDERAL DE APELACIONES DE CORDOBA"
+  },
+  {
+    "id": 756,
+    "nombre": "CAMARA FEDERAL DE APELACIONES DE GRAL ROCA"
+  },
+  {
+    "id": 3405,
+    "nombre": "CAMARA FEDERAL DE APELACIONES DE POSADAS - MISIONES"
+  },
+  {
+    "id": 3353,
+    "nombre": "CAMARA FEDERAL DE APELACIONES DE ROSARIO"
+  },
+  {
+    "id": 600,
+    "nombre": "CAMARA FEDERAL DE LA SEGURIDAD SOCIAL"
+  },
+  {
+    "id": 3410,
+    "nombre": "CAMARA FEDERAL DE SEGURIDAD SOCIAL"
+  },
+  {
+    "id": 3261,
+    "nombre": "CAMARA NACIONAL DE APELACIONES CONTENCIOSO ADM. FED. CAPITAL"
+  },
+  {
+    "id": 3725,
+    "nombre": "CAMARA NACIONAL DE APELACIONES CONTENCIOSO ADM. FEDERAL"
+  },
+  {
+    "id": 246,
+    "nombre": "CAMARA NACIONAL DE APELACIONES DEL TRABAJO"
+  },
+  {
+    "id": 599,
+    "nombre": "CAMARA NACIONAL DE APELACIONES EN LO CIVIL Y COMER"
+  },
+  {
+    "id": 3420,
+    "nombre": "CAMARA NACIONAL DE APELACIONES EN LO CONTENCIOSO ADM. FED."
+  },
+  {
+    "id": 521,
+    "nombre": "CAMARA NACIONAL ELECTORAL"
+  },
+  {
+    "id": 3730,
+    "nombre": "CAPITANIA DE PUERTOS DE BUENOS AIRES Y RIO DE LA PLATA"
+  },
+  {
+    "id": 3623,
+    "nombre": "CAPITANIA GENERAL DE PUERTOS"
+  },
+  {
+    "id": 758,
+    "nombre": "CASA MILITAR"
+  },
+  {
+    "id": 3811,
+    "nombre": "CASAS DE CONTENIDOS FEDERALES"
+  },
+  {
+    "id": 3912,
+    "nombre": "CENTRO DE INVESTIGACION DE RECURSOS NATURALES"
+  },
+  {
+    "id": 4049,
+    "nombre": "CENTRO INTERNACIONAL PARA LA PROMOCION DE LOS DERECHOS HUMAN"
+  },
+  {
+    "id": 594,
+    "nombre": "CENTRO NACIONAL DE REEDUCACION SOCIAL (CE.NA.RE.SO"
+  },
+  {
+    "id": 4186,
+    "nombre": "COLEGIO DE CORREDORES PUBLICOS INMOBILIARIOS DE ENTRE RIOS"
+  },
+  {
+    "id": 3901,
+    "nombre": "COLEGIO PUBLICO DE ABOGADOS DE LA CAPITAL FEDERAL"
+  },
+  {
+    "id": 3378,
+    "nombre": "COLONIA NACIONAL DR. MANUEL A. MONTES DE OCA"
+  },
+  {
+    "id": 3517,
+    "nombre": "COMANDANTE EN JEFE DE LA FUERZA AEREA"
+  },
+  {
+    "id": 3906,
+    "nombre": "COMANDO DE ADIESTRAMIENTO Y ALISTAMIENTO DEL EJERCITO"
+  },
+  {
+    "id": 3898,
+    "nombre": "COMANDO DE LA FLOTA DE MAR"
+  },
+  {
+    "id": 3902,
+    "nombre": "COMANDO DE LA INFANTERIA DE MARINA"
+  },
+  {
+    "id": 445,
+    "nombre": "COMANDO DE REGIONES AEREAS"
+  },
+  {
+    "id": 3926,
+    "nombre": "COMANDO DE TRANSPORTES NAVALES"
+  },
+  {
+    "id": 793,
+    "nombre": "COM. DE REGULACION DEL REG. DE MATRICULAS HABILITA"
+  },
+  {
+    "id": 3242,
+    "nombre": "COM. DE REGULARIZACION DEL REG. DE MATRICULAS HABILITANTES"
+  },
+  {
+    "id": 3366,
+    "nombre": "COM. DE SALARIOS DE TRAB. A DOMICILIO PARA LA IND. CALZADO"
+  },
+  {
+    "id": 549,
+    "nombre": "COM.FISC.REG.NAC.VENDEDORES Y DISTRIBUIDORES DIARI"
+  },
+  {
+    "id": 383,
+    "nombre": "COMISION ADMINISTRADORA DEL RIO DE LA PLATA"
+  },
+  {
+    "id": 209,
+    "nombre": "COMISION ADMINISTRADORA DEL RIO URUGUAY"
+  },
+  {
+    "id": 22,
+    "nombre": "COMISION ARBITRAL"
+  },
+  {
+    "id": 610,
+    "nombre": "COMISION ASESORA DECRETO Nº 6803/68"
+  },
+  {
+    "id": 3823,
+    "nombre": "COMISION BICAMERAL DE MONITOREO E IMPLEMENTACION DEL CPPF"
+  },
+  {
+    "id": 3670,
+    "nombre": "COMISION BICAMERAL DE MONITOREO E IMPLEMENTACION NUEVO CPPN"
+  },
+  {
+    "id": 570,
+    "nombre": "COMISION DE COMERCIO DEL MERCOSUR"
+  },
+  {
+    "id": 3501,
+    "nombre": "COMISION DE PLANIFICACION Y COORDINACION...INVERSIONES CARB."
+  },
+  {
+    "id": 3358,
+    "nombre": "COMISION DE PREVENCION DE ACCIDENTES DE AVIACION CIVIL"
+  },
+  {
+    "id": 3386,
+    "nombre": "COMISION DE SALARIOS DE TRABAJO A DOMICILIO IND. DEL CALZADO"
+  },
+  {
+    "id": 3219,
+    "nombre": "COMISION DE TIERRAS FISCALES NACIONALES"
+  },
+  {
+    "id": 3220,
+    "nombre": "COMISION DE TIERRAS FISCALES NACIONALES - PROGRAMA ARRAIGO"
+  },
+  {
+    "id": 3495,
+    "nombre": "COMISION ESPECIAL DE SEGUIMIENTO DEL REGIMEN LABORAL"
+  },
+  {
+    "id": 10,
+    "nombre": "COMISION FEDERAL DE IMPUESTOS"
+  },
+  {
+    "id": 4222,
+    "nombre": "COMISION MIXTA DEL RIO PARANA"
+  },
+  {
+    "id": 4223,
+    "nombre": "COMISION MIXTA DEL RIO PARANA - AREGTINA"
+  },
+  {
+    "id": 4224,
+    "nombre": "COMISION MIXTA DEL RIO PARANA - ARGENTINA"
+  },
+  {
+    "id": 4225,
+    "nombre": "COMISION MIXTA DEL RIO PARANA - PARAGUAY"
+  },
+  {
+    "id": 3346,
+    "nombre": "COMISION NAC. DE TIERRAS PARA EL HABITAT SOCIAL PADRE MUGICA"
+  },
+  {
+    "id": 3345,
+    "nombre": "COMISION NAC. DE TIERRAS PARA EL HABITAT SOCIAL PADRE MUJICA"
+  },
+  {
+    "id": 3809,
+    "nombre": "COMISION NACIONAL ANTIDOPAJE"
+  },
+  {
+    "id": 397,
+    "nombre": "COMISION NACIONAL ANTIDOPING"
+  },
+  {
+    "id": 3852,
+    "nombre": "COMISION NACIONAL ARGENTINA DE COOPERACION CON LA UNESCO"
+  },
+  {
+    "id": 628,
+    "nombre": "COMISION NACIONAL ASESORA PARA LA INTEGRACION DE P"
+  },
+  {
+    "id": 381,
+    "nombre": "COMISION NACIONAL DE ACTIVIDADES ESPACIALES"
+  },
+  {
+    "id": 427,
+    "nombre": "COMISION NACIONAL DE COMERCIO EXTERIOR"
+  },
+  {
+    "id": 373,
+    "nombre": "COMISION NACIONAL DE COMUNICACIONES"
+  },
+  {
+    "id": 286,
+    "nombre": "COMISION NACIONAL DE CORREOS Y TELEGRAFOS"
+  },
+  {
+    "id": 456,
+    "nombre": "COMISION NACIONAL DE DEFENSA DE LA COMPETENCIA"
+  },
+  {
+    "id": 215,
+    "nombre": "COMISION NACIONAL DE ENERGIA ATOMICA"
+  },
+  {
+    "id": 3388,
+    "nombre": "COMISION NACIONAL DE EVALUACION Y ACREDITACION UNIVERSITARIA"
+  },
+  {
+    "id": 3430,
+    "nombre": "COMISION NACIONAL DEL TRANSITO Y LA SEGURIDAD VIAL"
+  },
+  {
+    "id": 3454,
+    "nombre": "COMISION NACIONAL DE MUSEOS Y DE MONUMENTOS Y LUGARES HISTOR"
+  },
+  {
+    "id": 489,
+    "nombre": "COMISION NACIONAL DE PENSIONES ASISTENCIALES"
+  },
+  {
+    "id": 379,
+    "nombre": "COMISION NACIONAL DE REGULACION DEL TRANSPORTE"
+  },
+  {
+    "id": 13,
+    "nombre": "COMISION NACIONAL DE TELECOMUNICACIONES"
+  },
+  {
+    "id": 11,
+    "nombre": "COMISION NACIONAL DE TRABAJO AGRARIO"
+  },
+  {
+    "id": 3581,
+    "nombre": "COMISION NACIONAL DE TRABAJO EN CASAS PARTICULARES"
+  },
+  {
+    "id": 229,
+    "nombre": "COMISION NACIONAL DE TRANSPORTE AUTOMOTOR"
+  },
+  {
+    "id": 14,
+    "nombre": "COMISION NACIONAL DE VALORES"
+  },
+  {
+    "id": 360,
+    "nombre": "COMISION NACIONAL DE ZONAS DE SEGURIDAD"
+  },
+  {
+    "id": 3548,
+    "nombre": "COMISION NACIONAL INTERMINISTERIAL EN POLITICAS DE SALUD MEN"
+  },
+  {
+    "id": 3504,
+    "nombre": "COMISION NACIONAL PARA LOS REFUGIADOS"
+  },
+  {
+    "id": 3260,
+    "nombre": "COMISION PLENARIA"
+  },
+  {
+    "id": 3870,
+    "nombre": "COMISION PLENARIA CONVENIO MULTILATERAL DEL 18.08.77"
+  },
+  {
+    "id": 256,
+    "nombre": "COMISION TECNICA MIXTA DEL FRENTE MARITIMO"
+  },
+  {
+    "id": 436,
+    "nombre": "COMITE CONSULTIVO PERMANENTE DE LA LEY DE RIESGOS"
+  },
+  {
+    "id": 3938,
+    "nombre": "COMITE COORDINADOR DE PROGRAMAS PARA PERSONAS CON DISCAPACID"
+  },
+  {
+    "id": 3706,
+    "nombre": "COMITE DE SELECCION PROGRAMA ESCENA PUBLICA"
+  },
+  {
+    "id": 16,
+    "nombre": "COMITE EJEC.DE CONTRALOR DE LA REFOR.IMPOSITIVA"
+  },
+  {
+    "id": 239,
+    "nombre": "COMITE EJECUTIVO DE CONTROL DE LA REF. ADMINIST."
+  },
+  {
+    "id": 3474,
+    "nombre": "COMITE EJECUTIVO DE LA COMISION BINACIONAL ARGENTINA-BRASIL"
+  },
+  {
+    "id": 255,
+    "nombre": "COMITE EJECUTIVO DE LA COMISION FEDERAL DE IMPUES."
+  },
+  {
+    "id": 417,
+    "nombre": "COMITE EJECUTIVO DEL PROGRAMA DE INSPECCION DE PRE"
+  },
+  {
+    "id": 17,
+    "nombre": "COMITE FEDERAL DE RADIODIFUSION"
+  },
+  {
+    "id": 491,
+    "nombre": "COMITE FEDERAL PESQUERO"
+  },
+  {
+    "id": 374,
+    "nombre": "COMITE LICITADOR"
+  },
+  {
+    "id": 4051,
+    "nombre": "COMITE NACIONAL PARA LA PREVENCION DE LA TORTURA"
+  },
+  {
+    "id": 3297,
+    "nombre": "COM. NACIONAL DE MUSEOS Y DE MONUMENTOS Y LUGARES HISTORICOS"
+  },
+  {
+    "id": 12,
+    "nombre": "COM.NAC.SALARIOS TRAB.A DOM.IND.VESTIDO Y CALZ."
+  },
+  {
+    "id": 222,
+    "nombre": "COM.NAC.SALARIO VITAL MINIMO MOVIL"
+  },
+  {
+    "id": 15,
+    "nombre": "COM.REGUL.PRODUC.Y COMERCIO DE LA YERBA MATE"
+  },
+  {
+    "id": 3317,
+    "nombre": "CONS. DE ADM. DEL FONDO COMPENSADOR PARA JUB. Y PENS. TELEF."
+  },
+  {
+    "id": 140,
+    "nombre": "CONSEJO DE ADM.DEL SERVICIO NAC.DE SANIDAD ANIMAL"
+  },
+  {
+    "id": 4075,
+    "nombre": "CONSEJO DE ARTICULACION DE PROGRAMAS PARA PERSONAS CON DISCA"
+  },
+  {
+    "id": 742,
+    "nombre": "CONSEJO DE LA BOLSA DE COMERCIO DE BUENOS AIRES"
+  },
+  {
+    "id": 434,
+    "nombre": "CONSEJO DE LA MAGISTRATURA"
+  },
+  {
+    "id": 562,
+    "nombre": "CONSEJO DEL MERCADO COMUN"
+  },
+  {
+    "id": 3697,
+    "nombre": "CONSEJO DEL REGISTRO NACIONAL DE CONSTRUCTORES Y FIRMAS CONS"
+  },
+  {
+    "id": 366,
+    "nombre": "CONSEJO DE SEGURIDAD DE LAS NACIONES UNIDAS"
+  },
+  {
+    "id": 233,
+    "nombre": "CONSEJO DIRECTIVO DEL INST.NAC.DE VITIVINICULTURA"
+  },
+  {
+    "id": 626,
+    "nombre": "CONSEJO FEDERAL DE CULTURA Y EDUCACION"
+  },
+  {
+    "id": 416,
+    "nombre": "CONSEJO FEDERAL PESQUERO"
+  },
+  {
+    "id": 111,
+    "nombre": "CONSEJO GREMIAL DE ENSEÑANZA PRIVADA"
+  },
+  {
+    "id": 3321,
+    "nombre": "CONSEJO INTERUNIVERSITARIO NACIONAL"
+  },
+  {
+    "id": 3333,
+    "nombre": "CONSEJO NAC DEL EMPLEO PRODUCTIVIDAD Y EL SALARIO M.V.Y M"
+  },
+  {
+    "id": 18,
+    "nombre": "CONSEJO NAC.DEL SALARIO MINIMO,VITAL Y MOVIL"
+  },
+  {
+    "id": 3453,
+    "nombre": "CONSEJO NACIONAL DE COORDINACION DE POLITICAS SOCIALES"
+  },
+  {
+    "id": 725,
+    "nombre": "CONSEJO NACIONAL DE INVESTIGACIONES CIENTIFICAS Y"
+  },
+  {
+    "id": 3832,
+    "nombre": "CONSEJO NACIONAL DE INVESTIGACIONES CIENTIFICAS Y TECNICAS"
+  },
+  {
+    "id": 790,
+    "nombre": "CONSEJO NACIONAL DE LA MUJER"
+  },
+  {
+    "id": 418,
+    "nombre": "CONSEJO PROFESIONAL DE CIENCIAS ECONOMICAS DE LA C"
+  },
+  {
+    "id": 3516,
+    "nombre": "CONSEJO PROFESIONAL DE CIENCIAS ECONOMICAS PCIA. DE SANTA FE"
+  },
+  {
+    "id": 3493,
+    "nombre": "CONSEJO PROFESIONAL DE INGENIERIA AERONAUTICA"
+  },
+  {
+    "id": 3484,
+    "nombre": "CONSEJO PROFESIONAL DE INGENIERIA AGRONOMICA"
+  },
+  {
+    "id": 20,
+    "nombre": "CONSEJO PROFESIONAL DE INGENIERIA CIVIL"
+  },
+  {
+    "id": 3519,
+    "nombre": "CONSEJO PROFESIONAL DE INGENIERIA DE TELECOMUNICACIONES..."
+  },
+  {
+    "id": 3418,
+    "nombre": "CONSEJO PROFESIONAL DE INGENIERIA INDUSTRIAL"
+  },
+  {
+    "id": 3634,
+    "nombre": "CONSEJO PROFESIONAL DE INGENIERIA MECANICA Y ELECTRICISTA"
+  },
+  {
+    "id": 784,
+    "nombre": "CONSEJO PROFESIONAL DE INGENIERIA NAVAL"
+  },
+  {
+    "id": 3590,
+    "nombre": "CONSEJO PROFESIONAL DE INGENIERIA QUIMICA"
+  },
+  {
+    "id": 3380,
+    "nombre": "CONSEJO PROFESIONAL DE INGENIERIA Y ARQUITECTURA DE LA PAMPA"
+  },
+  {
+    "id": 4101,
+    "nombre": "CONSEJO PROFESIONAL DE LA INGENIERIA AERONAUTICA Y ESPACIAL"
+  },
+  {
+    "id": 4213,
+    "nombre": "CONSEJO PROFESIONAL DE MEDICOS VETERINARIOS"
+  },
+  {
+    "id": 3572,
+    "nombre": "CONSEJOS PROFESIONALES DE AGRIMENSURA ARQUITECTURA E INGENI"
+  },
+  {
+    "id": 3536,
+    "nombre": "CONSEJO SUPERIOR DE LA UNIVERSIDAD DE BUENOS AIRES"
+  },
+  {
+    "id": 3268,
+    "nombre": "CONSEJO SUPERIOR PROFESIONAL DE GEOLOGIA"
+  },
+  {
+    "id": 815,
+    "nombre": "CONS. NAC. DEL EMPLEO, LA PRODUCTIVIDAD Y EL SALAR"
+  },
+  {
+    "id": 752,
+    "nombre": "CONS. NACIONAL  DEL EMPLEO, LA PRODUCTIVIDAD Y EL"
+  },
+  {
+    "id": 19,
+    "nombre": "CONS.PROF.CIENC.ECON.CIUDAD AUT.BS.AS"
+  },
+  {
+    "id": 3336,
+    "nombre": "CONS. PROF. DE CIENC. ECONOMICAS DE LA PROV. DE SANTA FE"
+  },
+  {
+    "id": 112,
+    "nombre": "CONS.PROF.DE ING.ELECTR. Y TELECOMUNICACIONES"
+  },
+  {
+    "id": 748,
+    "nombre": "CONS. PROF. ING. DE TELECOMUNICACIONES, ELECT. Y C"
+  },
+  {
+    "id": 3830,
+    "nombre": "CONTADURIA GENERAL DE LA NACION"
+  },
+  {
+    "id": 604,
+    "nombre": "COORDINACION DE CUARENTENAS, FRONTERAS Y CERTIFICA"
+  },
+  {
+    "id": 3482,
+    "nombre": "COORDINACION DE GABINETE DE ASESORES"
+  },
+  {
+    "id": 3923,
+    "nombre": "COORDINACION DEL TRIBUNAL DEL TRABAJO DOMESTICO"
+  },
+  {
+    "id": 643,
+    "nombre": "COORDINACION EJECUTIVA DE PROMOCION, DESARROLLO Y"
+  },
+  {
+    "id": 3370,
+    "nombre": "COORDINACION GENERAL DE ASUNTOS POLITICO INSTITUCIONALES"
+  },
+  {
+    "id": 631,
+    "nombre": "COORDINACION GENERAL DE LA UNIDAD PRESIDENTE"
+  },
+  {
+    "id": 734,
+    "nombre": "CORPORACION DEL MERCADO CENTRAL DE BUENOS AIRES"
+  },
+  {
+    "id": 3381,
+    "nombre": "CORPORACION VITIVINICOLA ARGENTINA"
+  },
+  {
+    "id": 21,
+    "nombre": "CORTE SUPREMA DE JUSTICIA DE LA NACION"
+  },
+  {
+    "id": 3222,
+    "nombre": "DEFENSOR DEL PUEBLO DE LA NACION"
+  },
+  {
+    "id": 3520,
+    "nombre": "DEFENSORIA DEL PUBLICO DE SERVICIOS DE COMUNICACION AUDIOVIS"
+  },
+  {
+    "id": 433,
+    "nombre": "DEFENSORIA GENERAL DE LA NACION"
+  },
+  {
+    "id": 3214,
+    "nombre": "DEFENSORIA SUBROGANTE DE LA DEFENSORIA GENERAL DE LA NACION"
+  },
+  {
+    "id": 3992,
+    "nombre": "DEPARTAMENTO ADJUDICACIONES Y EJECUCION DE COMPRAS"
+  },
+  {
+    "id": 590,
+    "nombre": "DEPARTAMENTO ADMINISTRACION DE BIENES Y SERVICIOS"
+  },
+  {
+    "id": 3913,
+    "nombre": "DEPARTAMENTO CONTRATACIONES PALOMAR"
+  },
+  {
+    "id": 3481,
+    "nombre": "DEPARTAMENTO DE COMPRAS Y CONTRATACIONES"
+  },
+  {
+    "id": 3446,
+    "nombre": "DEPARTAMENTO PROCEDIMIENTOS LEGALES ADUANEROS"
+  },
+  {
+    "id": 3251,
+    "nombre": "DEPTO.  ASISTENCIA ADMINISTRATIVA Y TECNICA DE BUENOS AIRES"
+  },
+  {
+    "id": 800,
+    "nombre": "DIRECCION ADUANA DE BUENOS AIRES"
+  },
+  {
+    "id": 799,
+    "nombre": "DIRECCION ADUANA DE EZEIZA"
+  },
+  {
+    "id": 3244,
+    "nombre": "DIRECCION DE ADMISION DE EXTRANJEROS - D.N.M."
+  },
+  {
+    "id": 3627,
+    "nombre": "DIRECCION DE ADUANA DE EZEIZA"
+  },
+  {
+    "id": 468,
+    "nombre": "DIRECCION DE ADUANAS METROPOLITANAS"
+  },
+  {
+    "id": 3545,
+    "nombre": "DIRECCION DE AERONAVEGABILIDAD"
+  },
+  {
+    "id": 561,
+    "nombre": "DIRECCION DE AGROQUIMICOS, PRODUCTOS FARMACOLOGICO"
+  },
+  {
+    "id": 3514,
+    "nombre": "DIRECCION DE AGROQUIMICOS PRODUCTOS FARMACOLOGICOS Y VETERI"
+  },
+  {
+    "id": 3840,
+    "nombre": "DIRECCION DE ANALISIS LABORAL DEL SECTOR PUBLICO"
+  },
+  {
+    "id": 3899,
+    "nombre": "DIRECCION DE ARSENALES"
+  },
+  {
+    "id": 3839,
+    "nombre": "DIRECCION DE BIOTECNOLOGIA"
+  },
+  {
+    "id": 3316,
+    "nombre": "DIRECCION DE CALIDAD AGROALIMENTARIA"
+  },
+  {
+    "id": 3991,
+    "nombre": "DIRECCION DE COMPRAS"
+  },
+  {
+    "id": 3935,
+    "nombre": "DIRECCION DE CONTRATACIONES"
+  },
+  {
+    "id": 3565,
+    "nombre": "DIRECCION DE CONTROL DE MONOTRIBUTO"
+  },
+  {
+    "id": 4190,
+    "nombre": "DIRECCION DE CONTROL GRANDES CONTRIBUYENTES"
+  },
+  {
+    "id": 602,
+    "nombre": "DIRECCION DE CUARENTENA ANIMAL"
+  },
+  {
+    "id": 3505,
+    "nombre": "DIRECCION DE DEFENSA DEL CONSUMIDOR"
+  },
+  {
+    "id": 3332,
+    "nombre": "DIRECCION DE DISCAPACIDAD"
+  },
+  {
+    "id": 3559,
+    "nombre": "DIRECCION DE EMPLEO INDEPENDIENTE Y ENTRAMADO PRODUCTIVO"
+  },
+  {
+    "id": 747,
+    "nombre": "DIRECCION DE FAUNA SILVESTRE"
+  },
+  {
+    "id": 569,
+    "nombre": "DIRECCION DE FAUNA Y FLORA SILVESTRES"
+  },
+  {
+    "id": 3529,
+    "nombre": "DIRECCION DE FISCALIZACION DE IMPORTACION"
+  },
+  {
+    "id": 4227,
+    "nombre": "DIRECCION DE FISCALIZACION DE PRECURSORES QUIMICOS"
+  },
+  {
+    "id": 3442,
+    "nombre": "DIRECCION DE FISCALIZACION GRANDES CONTRIBUYENTES NACIONALES"
+  },
+  {
+    "id": 3544,
+    "nombre": "DIRECCION DE FISCALIZACION OPERATIVA DE LA SEGURIDAD SOCIAL"
+  },
+  {
+    "id": 3329,
+    "nombre": "DIRECCION DE FRANQUICIAS"
+  },
+  {
+    "id": 3693,
+    "nombre": "DIRECCION DE GESTION"
+  },
+  {
+    "id": 723,
+    "nombre": "DIRECCION DE GESTION DE FISCALIZACION DE LOS RECUR"
+  },
+  {
+    "id": 3653,
+    "nombre": "DIRECCION DE GESTION DE LOS RECURSOS Y PRESUPUESTO"
+  },
+  {
+    "id": 3560,
+    "nombre": "DIRECCION DE GESTION DE RESPONSABILIDAD SOCIAL EMPRESARIA"
+  },
+  {
+    "id": 750,
+    "nombre": "DIRECCION DE GRANDES CONTRIBUYENTES NACIONALES"
+  },
+  {
+    "id": 595,
+    "nombre": "DIRECCION DE HABILITACIONES AERONAUTICAS DE LA FUE"
+  },
+  {
+    "id": 3540,
+    "nombre": "DIRECCION DE HABILITACIONES AERONAUTICAS MILITARES"
+  },
+  {
+    "id": 794,
+    "nombre": "DIRECCION DE INFRAESTRUCTURA - COMANDO DE REGIONES"
+  },
+  {
+    "id": 3305,
+    "nombre": "DIRECCION DE INSPECCION FEDERAL"
+  },
+  {
+    "id": 459,
+    "nombre": "DIRECCION DE INSPECCION Y RELACIONES INDIVIDUALES"
+  },
+  {
+    "id": 3665,
+    "nombre": "DIRECCION DE INSPECCION Y RELACIONES INDIVIDUALES DEL TRABAJ"
+  },
+  {
+    "id": 3988,
+    "nombre": "DIRECCION DE INVESTIGACIONES DE DELITOS FEDERALES"
+  },
+  {
+    "id": 538,
+    "nombre": "DIRECCION DE LABORATORIOS Y CONTROL TECNICO"
+  },
+  {
+    "id": 3853,
+    "nombre": "DIRECCION DEL REGISTRO ANALISIS TECNICO Y CONTROL DEL USO PQ"
+  },
+  {
+    "id": 4017,
+    "nombre": "DIRECCION DEL REGISTRO Y FISCALIZACION DE PRECURSORES QUIMIC"
+  },
+  {
+    "id": 4050,
+    "nombre": "DIRECCION DEL SERVICIO DE CONCILIACION LABORAL OBLIGATORIA"
+  },
+  {
+    "id": 387,
+    "nombre": "DIRECCION DEL SISTEMA UNICO DE REGISTRO LABORAL"
+  },
+  {
+    "id": 4023,
+    "nombre": "DIRECCION DE NORMATIVA LABORAL"
+  },
+  {
+    "id": 598,
+    "nombre": "DIRECCION DE OPERACIONES GRANDES CONTRIBUYENTES NA"
+  },
+  {
+    "id": 3783,
+    "nombre": "DIRECCION DE ORIENTACION Y FORMACION PROFESIONAL"
+  },
+  {
+    "id": 545,
+    "nombre": "DIRECCION DE PERSONAL"
+  },
+  {
+    "id": 4103,
+    "nombre": "DIRECCION DE PLANEAMIENTO ESTRATEGICO"
+  },
+  {
+    "id": 3969,
+    "nombre": "DIRECCION DE PLANEAMIENTO Y COMERCIALIZACION"
+  },
+  {
+    "id": 4052,
+    "nombre": "DIRECCION DE PLANIFICACION DE POLITICAS DE TRANSPARENCIA"
+  },
+  {
+    "id": 3660,
+    "nombre": "DIRECCION DE POLICIA DE SEGURIDAD DE LA NAVEGACION"
+  },
+  {
+    "id": 301,
+    "nombre": "DIRECCION DE PRODUCCION GANADERA"
+  },
+  {
+    "id": 722,
+    "nombre": "DIRECCION DE PROGRAMAS Y NORMAS DE RECAUDACION"
+  },
+  {
+    "id": 3225,
+    "nombre": "DIRECCION DE PROMOCION - SERVICIO NACIONAL DE REHABILITACION"
+  },
+  {
+    "id": 3337,
+    "nombre": "DIRECCION DE PROTECCION AMBIENTAL"
+  },
+  {
+    "id": 3331,
+    "nombre": "DIRECCION DE PROTECCION INTEGRAL PERSONAS CON DISCAPACIDAD"
+  },
+  {
+    "id": 4188,
+    "nombre": "DIRECCION DE RECAUDACION GRANDES CONTRIBUYENTES"
+  },
+  {
+    "id": 3307,
+    "nombre": "DIRECCION DE RECAUDACION PREVISIONAL"
+  },
+  {
+    "id": 4175,
+    "nombre": "DIRECCION DE RECURSOS HUMANOS"
+  },
+  {
+    "id": 3267,
+    "nombre": "DIRECCION DE REGISTRO FISCALIZACION Y SANIDAD DE FRONTERAS"
+  },
+  {
+    "id": 412,
+    "nombre": "DIRECCION DE REGISTRO Y FISCALIZACION DE RECURSOS"
+  },
+  {
+    "id": 3521,
+    "nombre": "DIRECCION DE REGULACION DEL SISTEMA NACIONAL INTEGRADO DE VE"
+  },
+  {
+    "id": 4127,
+    "nombre": "DIRECCION DE RESPONSABILIDAD ADMINISTRATIVA Y SUMARIOS"
+  },
+  {
+    "id": 4139,
+    "nombre": "DIRECCION DE SALUD"
+  },
+  {
+    "id": 305,
+    "nombre": "DIRECCION DE TECNOLOGIA, CALIDAD Y PROP.INDUSTRIAL"
+  },
+  {
+    "id": 4230,
+    "nombre": "DIRECCION DE TRANSFERENCIA DE TECNOLOGIA"
+  },
+  {
+    "id": 728,
+    "nombre": "DIRECCION DE TRANSITO AEREO"
+  },
+  {
+    "id": 4174,
+    "nombre": "DIRECCION DE VALIDEZ NACIONAL DE TITULOS Y ESTUDIOS"
+  },
+  {
+    "id": 525,
+    "nombre": "DIRECCION EJECUTIVA DEL PROYECTO PNUD ARG/96/001"
+  },
+  {
+    "id": 4081,
+    "nombre": "DIRECCION GENERAL ADMINISTRATIVA"
+  },
+  {
+    "id": 3813,
+    "nombre": "DIRECCION GENERAL AMBIENTAL"
+  },
+  {
+    "id": 3229,
+    "nombre": "DIRECCION GENERAL DE ADMINISTRACION"
+  },
+  {
+    "id": 3963,
+    "nombre": "DIRECCION GENERAL DE ADMINISTRACION Y ASUNTOS JURIDICOS"
+  },
+  {
+    "id": 3689,
+    "nombre": "DIRECCION GENERAL DE ADMINISTRACION Y FINANZAS"
+  },
+  {
+    "id": 3911,
+    "nombre": "DIRECCION GENERAL DE ADMINISTRACION Y OPERACIONES"
+  },
+  {
+    "id": 4009,
+    "nombre": "DIRECCION GENERAL DE ADMINISTRACION Y PROGRAMACION FINANCIER"
+  },
+  {
+    "id": 398,
+    "nombre": "DIRECCION GENERAL DE ADUANAS"
+  },
+  {
+    "id": 4102,
+    "nombre": "DIRECCION GENERAL DE ASUNTOS CONSULARES"
+  },
+  {
+    "id": 3645,
+    "nombre": "DIRECCION GENERAL DE ASUNTOS JURIDICOS"
+  },
+  {
+    "id": 4094,
+    "nombre": "DIRECCION GENERAL DE CEREMONIAL"
+  },
+  {
+    "id": 3369,
+    "nombre": "DIRECCION GENERAL DE CONTRATACIONES"
+  },
+  {
+    "id": 3470,
+    "nombre": "DIRECCION GENERAL DE CONTROL DE TRANSITO AEREO"
+  },
+  {
+    "id": 3810,
+    "nombre": "DIRECCION GENERAL DE DISENO DE NORMAS Y PROCESOS"
+  },
+  {
+    "id": 23,
+    "nombre": "DIRECCION GENERAL DE FABRICACIONES MILITARES"
+  },
+  {
+    "id": 3735,
+    "nombre": "DIRECCION GENERAL DE GESTION DE RECURSOS HUMANOS"
+  },
+  {
+    "id": 3525,
+    "nombre": "DIRECCION GENERAL DE GESTION INFORMATICA"
+  },
+  {
+    "id": 4001,
+    "nombre": "DIRECCION GENERAL DE GESTION POLITICA Y SOCIAL"
+  },
+  {
+    "id": 3798,
+    "nombre": "DIRECCION GENERAL DE INFORMATICA"
+  },
+  {
+    "id": 3856,
+    "nombre": "DIRECCION GENERAL DE INFRAESTRUCTURA Y SERVICIOS AEROPORTUAR"
+  },
+  {
+    "id": 4228,
+    "nombre": "DIRECCION GENERAL DE INSPECCION DE PERSONAS JURIDICASY REGIS"
+  },
+  {
+    "id": 3967,
+    "nombre": "DIRECCION GENERAL DE INTENDENCIA"
+  },
+  {
+    "id": 3889,
+    "nombre": "DIRECCION GENERAL DE INTENDENCIA DE LA ARMADA"
+  },
+  {
+    "id": 3503,
+    "nombre": "DIRECCION GENERAL DE LABORATORIOS Y CONTROL TECNICO"
+  },
+  {
+    "id": 4005,
+    "nombre": "DIRECCION GENERAL DE LOGISTICA"
+  },
+  {
+    "id": 666,
+    "nombre": "DIRECCION GENERAL DE LOS RECURSOS DE LA SEGURIDAD"
+  },
+  {
+    "id": 3570,
+    "nombre": "DIRECCION GENERAL DE LOS RECURSOS DE LA SEGURIDAD SOCIAL"
+  },
+  {
+    "id": 3885,
+    "nombre": "DIRECCION GENERAL DE MATERIAL"
+  },
+  {
+    "id": 3806,
+    "nombre": "DIRECCION GENERAL DE MONITOREO DE LA GESTION DE PRESTACIONES"
+  },
+  {
+    "id": 3652,
+    "nombre": "DIRECCION GENERAL DE MOVIMIENTO MIGRATORIO"
+  },
+  {
+    "id": 4032,
+    "nombre": "DIRECCION GENERAL DE PROGRAMAS Y PROYECTOS SECTORIALES Y ESP"
+  },
+  {
+    "id": 3236,
+    "nombre": "DIRECCION GENERAL DE RECURSOS DE LA SEGURIDAD SOCIAL-AFIP"
+  },
+  {
+    "id": 3286,
+    "nombre": "DIRECCION GENERAL DE RENTAS"
+  },
+  {
+    "id": 3230,
+    "nombre": "DIRECCION GENERAL DE RENTAS DE LA PROVINCIA DEL CHACO"
+  },
+  {
+    "id": 3966,
+    "nombre": "DIRECCION GENERAL DE RENTAS DE LA PROVINCIA DE SALTA"
+  },
+  {
+    "id": 3808,
+    "nombre": "DIRECCION GENERAL DE RENTAS DE LA PROVINCIA DE SAN JUAN"
+  },
+  {
+    "id": 3287,
+    "nombre": "DIRECCION GENERAL DE RENTAS - TUCUMAN"
+  },
+  {
+    "id": 3626,
+    "nombre": "DIRECCION GENERAL DE SALUD"
+  },
+  {
+    "id": 3921,
+    "nombre": "DIRECCION GENERAL DE SALUD DE LA ARMADA"
+  },
+  {
+    "id": 3419,
+    "nombre": "DIRECCION GENERAL DE SANIDAD"
+  },
+  {
+    "id": 4095,
+    "nombre": "DIRECCION GENERAL DE TECNOLOGIA INFORMATICA Y TELECOMUNICACI"
+  },
+  {
+    "id": 3827,
+    "nombre": "DIRECCION GENERAL DE TECNOLOGIAS INFORMATICAS Y COMUNICACION"
+  },
+  {
+    "id": 24,
+    "nombre": "DIRECCION GENERAL IMPOSITIVA"
+  },
+  {
+    "id": 547,
+    "nombre": "DIRECCION GENERAL IMPOSITIVA - REGION NEUQUEN"
+  },
+  {
+    "id": 3738,
+    "nombre": "DIRECCION GENERAL LEGAL TECNICA Y ADMINISTRATIVA"
+  },
+  {
+    "id": 3789,
+    "nombre": "DIRECCION GENERAL OPERATIVA"
+  },
+  {
+    "id": 3896,
+    "nombre": "DIRECCION GENERAL TECNICA Y ADMINISTRATIVA"
+  },
+  {
+    "id": 3631,
+    "nombre": "DIRECCION GESTION DE LOS RECURSOS Y PRESUPUESTO"
+  },
+  {
+    "id": 3538,
+    "nombre": "DIRECCION GRAL DE INFRAESTRUCTURA Y SERVICIOS AEROPORTUARIOS"
+  },
+  {
+    "id": 3814,
+    "nombre": "DIRECCION GRAL DEL REGISTRO DE LA PROP. INM. DE LA CAP. FED."
+  },
+  {
+    "id": 3816,
+    "nombre": "DIRECCION NAC DE ARMONIZACION DE LOS REGIMENES DE LA SEG SOC"
+  },
+  {
+    "id": 4071,
+    "nombre": "DIRECCION NAC DE LA ESCUELA DEL CUERPO DE ABOGADAS Y ABOGADO"
+  },
+  {
+    "id": 3264,
+    "nombre": "DIRECCION NAC. DE PROMOCION DE METODOS PARTICIPATIVOS DE JUS"
+  },
+  {
+    "id": 3422,
+    "nombre": "DIRECCION NAC DE REGISTRO FISCALIZACION Y SANIDAD DE FRONT"
+  },
+  {
+    "id": 3836,
+    "nombre": "DIRECCION NACIONAL DE ACCESO A LA INFORMACION PUBLICA"
+  },
+  {
+    "id": 3829,
+    "nombre": "DIRECCION NACIONAL DE ACCESO AL SUELO Y FORMALIZACIONES"
+  },
+  {
+    "id": 3888,
+    "nombre": "DIRECCION NACIONAL DE ADMINISTRACION ASUNTOS JURIDICOS Y MOD"
+  },
+  {
+    "id": 455,
+    "nombre": "DIRECCION NACIONAL DE AERONAVEGABILIDAD"
+  },
+  {
+    "id": 4160,
+    "nombre": "DIRECCION NACIONAL DE AGRICULTURA"
+  },
+  {
+    "id": 3447,
+    "nombre": "DIRECCION NACIONAL DE AGROQUIMICOS PRODUCTOS VET Y ALIM"
+  },
+  {
+    "id": 3464,
+    "nombre": "DIRECCION NACIONAL DE ALTOS ESTUDIOS"
+  },
+  {
+    "id": 344,
+    "nombre": "DIRECCION NACIONAL DE ANTECENDENTES DE TRANSITO"
+  },
+  {
+    "id": 4100,
+    "nombre": "DIRECCION NACIONAL DE AREAS MARINAS PROTEGIDAS"
+  },
+  {
+    "id": 3943,
+    "nombre": "DIRECCION NACIONAL DE ARMONIZACION DE LOS REGIMENES DE LA SE"
+  },
+  {
+    "id": 531,
+    "nombre": "DIRECCION NACIONAL DE ASOCIACIONES SINDICALES"
+  },
+  {
+    "id": 451,
+    "nombre": "DIRECCION NACIONAL DE ASUNTOS REGIONALES, SECTORIA"
+  },
+  {
+    "id": 3682,
+    "nombre": "DIRECCION NACIONAL DE AUTORIZACIONES Y REGISTROS TIC"
+  },
+  {
+    "id": 3878,
+    "nombre": "DIRECCION NACIONAL DE BECAS EDUCATIVAS"
+  },
+  {
+    "id": 392,
+    "nombre": "DIRECCION NACIONAL DE BIENES DEL ESTADO"
+  },
+  {
+    "id": 4003,
+    "nombre": "DIRECCION NACIONAL DE BIOECONOMIA"
+  },
+  {
+    "id": 4195,
+    "nombre": "DIRECCION NACIONAL DE CALIDAD Y DESARROLLO DEL TALENTO EN SA"
+  },
+  {
+    "id": 3957,
+    "nombre": "DIRECCION NACIONAL DE CEREMONIAL"
+  },
+  {
+    "id": 3973,
+    "nombre": "DIRECCION NACIONAL DE CIBERSEGURIDAD"
+  },
+  {
+    "id": 243,
+    "nombre": "DIRECCION NACIONAL DE CINEMATOGRAFIA"
+  },
+  {
+    "id": 276,
+    "nombre": "DIRECCION NACIONAL DE CINE Y ARTES AUDIOVISUALES"
+  },
+  {
+    "id": 795,
+    "nombre": "DIRECCION NACIONAL DE COMERCIO EXTERIOR"
+  },
+  {
+    "id": 413,
+    "nombre": "DIRECCION NACIONAL DE COMERCIO INTERIOR"
+  },
+  {
+    "id": 3683,
+    "nombre": "DIRECCION NACIONAL DE COMPRAS PUBLICAS Y DESARROLLO DE PROVE"
+  },
+  {
+    "id": 4099,
+    "nombre": "DIRECCION NACIONAL DE CONSERVACION"
+  },
+  {
+    "id": 3781,
+    "nombre": "DIRECCION NACIONAL DE CONTROL COMERCIAL AGROPECUARIO"
+  },
+  {
+    "id": 4153,
+    "nombre": "DIRECCION NACIONAL DE CONTROL DE PUERTOS Y VIAS NAVEGABLES"
+  },
+  {
+    "id": 4109,
+    "nombre": "DIRECCION NACIONAL DE CONTROL DE SERVICIOS POSTALES"
+  },
+  {
+    "id": 4036,
+    "nombre": "DIRECCION NACIONAL DE COORDINACION DE LOS REGIMENES DE LA SE"
+  },
+  {
+    "id": 3312,
+    "nombre": "DIRECCION NACIONAL DE COORDINACION PESQUERA"
+  },
+  {
+    "id": 3812,
+    "nombre": "DIRECCION NACIONAL DE COORDINACION Y FISCALIZACION PESQUERA"
+  },
+  {
+    "id": 3636,
+    "nombre": "DIRECCION NACIONAL DE DEFENSA DEL CONSUMIDOR"
+  },
+  {
+    "id": 3953,
+    "nombre": "DIRECCION NACIONAL DE DEFENSA DEL CONSUMIDOR Y ARBITRAJE DEL"
+  },
+  {
+    "id": 4115,
+    "nombre": "DIRECCION NACIONAL DE EVALUACION AMBIENTAL"
+  },
+  {
+    "id": 386,
+    "nombre": "DIRECCION NACIONAL DE EXTENSION JURIDICA"
+  },
+  {
+    "id": 3756,
+    "nombre": "DIRECCION NACIONAL DE FACILITACION DEL COMERCIO"
+  },
+  {
+    "id": 512,
+    "nombre": "DIRECCION NACIONAL DE FISCALIZACION AGROALIMENTARI"
+  },
+  {
+    "id": 3712,
+    "nombre": "DIRECCION NACIONAL DE FISCALIZACION RESGUARDO Y DESTRUCCION"
+  },
+  {
+    "id": 3948,
+    "nombre": "DIRECCION NACIONAL DE FORMACION CONTINUA"
+  },
+  {
+    "id": 3642,
+    "nombre": "DIRECCION NACIONAL DE FORMACION CULTURAL"
+  },
+  {
+    "id": 4210,
+    "nombre": "DIRECCION NACIONAL DE FORMACION LABORAL"
+  },
+  {
+    "id": 4021,
+    "nombre": "DIRECCION NACIONAL DE GENERACION ELECTRICA"
+  },
+  {
+    "id": 727,
+    "nombre": "DIRECCION NACIONAL DE GESTION AMBIENTAL"
+  },
+  {
+    "id": 3947,
+    "nombre": "DIRECCION NACIONAL DE GESTION DE POLITICA INDUSTRIAL"
+  },
+  {
+    "id": 4038,
+    "nombre": "DIRECCION NACIONAL DE GESTION PATRIMONIAL"
+  },
+  {
+    "id": 4042,
+    "nombre": "DIRECCION NACIONAL DE GESTION UNIVERSITARIA"
+  },
+  {
+    "id": 3649,
+    "nombre": "DIRECCION NACIONAL DE GESTION Y PROGRAMACION"
+  },
+  {
+    "id": 4091,
+    "nombre": "DIRECCION NACIONAL DE HABILITACION FISCALIZACION Y SANIDAD"
+  },
+  {
+    "id": 560,
+    "nombre": "DIRECCION NACIONAL DE HIGIENE Y SEGURIDAD EN EL TR"
+  },
+  {
+    "id": 26,
+    "nombre": "DIRECCION NACIONAL DE IMPORTACIONES"
+  },
+  {
+    "id": 261,
+    "nombre": "DIRECCION NACIONAL DE INDUSTRIA"
+  },
+  {
+    "id": 4028,
+    "nombre": "DIRECCION NACIONAL DE INNOVACION CULTURAL"
+  },
+  {
+    "id": 3459,
+    "nombre": "DIRECCION NACIONAL DE INOCUIDAD Y CALIDAD AGROALIMENTARIA"
+  },
+  {
+    "id": 428,
+    "nombre": "DIRECCION NACIONAL DE INSPECCION DEL TRABAJO"
+  },
+  {
+    "id": 4022,
+    "nombre": "DIRECCION NACIONAL DE INSPECCION DE NAVEGACION AEREA"
+  },
+  {
+    "id": 540,
+    "nombre": "DIRECCION NACIONAL DE INSPECCION FEDERAL DEL TRABA"
+  },
+  {
+    "id": 3526,
+    "nombre": "DIRECCION NACIONAL DE INVERSION PUBLICA"
+  },
+  {
+    "id": 493,
+    "nombre": "DIRECCION NACIONAL DEL ANTARTICO"
+  },
+  {
+    "id": 3554,
+    "nombre": "DIRECCION NACIONAL DE LA POLICIA DE SEGURIDAD AEROPORTUARIA"
+  },
+  {
+    "id": 25,
+    "nombre": "DIRECCION NACIONAL DEL AZUCAR"
+  },
+  {
+    "id": 3373,
+    "nombre": "DIRECCION NACIONAL DEL DERECHO DE AUTOR"
+  },
+  {
+    "id": 3515,
+    "nombre": "DIRECCION NACIONAL DE LOS REGIMENES DE LA SEGURIDAD SOCIAL"
+  },
+  {
+    "id": 3673,
+    "nombre": "DIRECCION NACIONAL DEL REGISTRO DE DOMINIOS DE INTERNET"
+  },
+  {
+    "id": 419,
+    "nombre": "DIRECCION NACIONAL DEL REGISTRO NAC. DE REINCIDENC"
+  },
+  {
+    "id": 3524,
+    "nombre": "DIRECCION NACIONAL DEL REGISTRO NACIONAL DE ARMAS"
+  },
+  {
+    "id": 3401,
+    "nombre": "DIRECCION NACIONAL DEL REGISTRO NACIONAL DE LAS PERSONAS"
+  },
+  {
+    "id": 3490,
+    "nombre": "DIRECCION NACIONAL DEL REGISTRO NACIONAL DE REINCIDENCIA"
+  },
+  {
+    "id": 3518,
+    "nombre": "DIRECCION NACIONAL DEL REGISTRO NACIONAL DE TIERRAS RURALES"
+  },
+  {
+    "id": 437,
+    "nombre": "DIRECCION NACIONAL DEL REGISTRO OFICIAL"
+  },
+  {
+    "id": 819,
+    "nombre": "DIRECCION NACIONAL DEL REGISTRO UNICO DE ASPIRANTE"
+  },
+  {
+    "id": 3900,
+    "nombre": "DIRECCION NACIONAL DEL SERVICIO DE CONCILIACION OBLIGATORIA"
+  },
+  {
+    "id": 3837,
+    "nombre": "DIRECCION NACIONAL DE MARCAS"
+  },
+  {
+    "id": 3477,
+    "nombre": "DIRECCION NACIONAL DE MEDIACION Y METODOS PARTICIPATIVOS..."
+  },
+  {
+    "id": 4000,
+    "nombre": "DIRECCION NACIONAL DE MEDICAMENTOS Y TECNOLOGIA SANITARIA"
+  },
+  {
+    "id": 4004,
+    "nombre": "DIRECCION NACIONAL DE MEJORA DE LA GESTION PRODUCTIVA"
+  },
+  {
+    "id": 27,
+    "nombre": "DIRECCION NACIONAL DE MIGRACIONES"
+  },
+  {
+    "id": 223,
+    "nombre": "DIRECCION NACIONAL DE MIGRACIONES Y ADMIN.NAC.AD."
+  },
+  {
+    "id": 3791,
+    "nombre": "DIRECCION NACIONAL DE MODERNIZACION PRODUCTIVA"
+  },
+  {
+    "id": 421,
+    "nombre": "DIRECCION NACIONAL DE NEGOCIACION COLECTIVA"
+  },
+  {
+    "id": 3553,
+    "nombre": "DIRECCION NACIONAL DE OBRAS Y MANTENIMIENTO PENITENCIARIO"
+  },
+  {
+    "id": 3574,
+    "nombre": "DIRECCION NACIONAL DE OBRA Y MANTENIMIENTO PENITENCIARIO"
+  },
+  {
+    "id": 3462,
+    "nombre": "DIRECCION NACIONAL DE OPERACIONES REGIONALES"
+  },
+  {
+    "id": 529,
+    "nombre": "DIRECCION NACIONAL DE ORDENAMIENTO AMBIENTAL"
+  },
+  {
+    "id": 3801,
+    "nombre": "DIRECCION NACIONAL DE ORGANISMOS ESTABLES"
+  },
+  {
+    "id": 3469,
+    "nombre": "DIRECCION NACIONAL DE ORIENTACION Y FORMACION PROFESIONAL"
+  },
+  {
+    "id": 432,
+    "nombre": "DIRECCION NACIONAL DE PESCA Y ACUICULTURA"
+  },
+  {
+    "id": 113,
+    "nombre": "DIRECCION NACIONAL DE PESCA Y CAZA MARITIMA"
+  },
+  {
+    "id": 3950,
+    "nombre": "DIRECCION NACIONAL DE PLANIFICACION ESTRATEGICA PREVENCION"
+  },
+  {
+    "id": 28,
+    "nombre": "DIRECCION NACIONAL DE POBLACION Y MIGRACION"
+  },
+  {
+    "id": 303,
+    "nombre": "DIRECCION NACIONAL DE POLICIA AERONAUTICA"
+  },
+  {
+    "id": 314,
+    "nombre": "DIRECCION NACIONAL DE POLICIA DEL TRABAJO"
+  },
+  {
+    "id": 391,
+    "nombre": "DIRECCION NACIONAL DE POLITICAS DE EMPLEO Y CAPACI"
+  },
+  {
+    "id": 3845,
+    "nombre": "DIRECCION NACIONAL DE POLITICAS Y REGULACION DE SERVICIOS"
+  },
+  {
+    "id": 3787,
+    "nombre": "DIRECCION NACIONAL DE PROMOCION DE EFICIENCIA ENERGETICA"
+  },
+  {
+    "id": 524,
+    "nombre": "DIRECCION NACIONAL DE PROMOCION DEL EMPLEO"
+  },
+  {
+    "id": 757,
+    "nombre": "DIRECCION NACIONAL DE PROMOCION DE METODOS PARTICI"
+  },
+  {
+    "id": 3998,
+    "nombre": "DIRECCION NACIONAL DE PROMOCION DE PROYECTOS CULTURALES"
+  },
+  {
+    "id": 320,
+    "nombre": "DIRECCION NACIONAL DE PROSPECTIVA"
+  },
+  {
+    "id": 662,
+    "nombre": "DIRECCION NACIONAL DE PROTECCION DE DATOS PERSONAL"
+  },
+  {
+    "id": 3328,
+    "nombre": "DIRECCION NACIONAL DE PROTECCION DE DATOS PERSONALES"
+  },
+  {
+    "id": 528,
+    "nombre": "DIRECCION NACIONAL DE PROTECCION VEGETAL"
+  },
+  {
+    "id": 3736,
+    "nombre": "DIRECCION NACIONAL DE PUBLICIDAD OFICIAL"
+  },
+  {
+    "id": 115,
+    "nombre": "DIRECCION NACIONAL DE RECAUDACION PREVISIONAL"
+  },
+  {
+    "id": 3475,
+    "nombre": "DIRECCION NACIONAL DE REGISTRO FISCALIZACION Y SANIDAD DE F"
+  },
+  {
+    "id": 3879,
+    "nombre": "DIRECCION NACIONAL DE REGISTRO Y DELEGACIONES"
+  },
+  {
+    "id": 3463,
+    "nombre": "DIRECCION NACIONAL DE REGLAMENTACIONES DE ALTOS ESTUDIOS"
+  },
+  {
+    "id": 3954,
+    "nombre": "DIRECCION NACIONAL DE REGLAMENTOS TECNICOS"
+  },
+  {
+    "id": 3479,
+    "nombre": "DIRECCION NACIONAL DE REGULACIONES DEL TRABAJO"
+  },
+  {
+    "id": 807,
+    "nombre": "DIRECCION NACIONAL DE REGULACION Y FISCALIZACION"
+  },
+  {
+    "id": 3271,
+    "nombre": "DIRECCION NACIONAL DE RELACIONES DEL TRABAJO"
+  },
+  {
+    "id": 271,
+    "nombre": "DIRECCION NACIONAL DE RELACIONES DE TRABAJO"
+  },
+  {
+    "id": 623,
+    "nombre": "DIRECCION NACIONAL DE RELACIONES FEDERALES"
+  },
+  {
+    "id": 3940,
+    "nombre": "DIRECCION NACIONAL DE RELACIONES INSTITUCIONALES"
+  },
+  {
+    "id": 4185,
+    "nombre": "DIRECCION NACIONAL DE RELACIONES INTERNACIONALES"
+  },
+  {
+    "id": 3752,
+    "nombre": "DIRECCION NACIONAL DE RELACIONES Y REGULACIONES DEL TRABAJO"
+  },
+  {
+    "id": 3677,
+    "nombre": "DIRECCION NACIONAL DE REL. CON ORGANIZACIONES DE LA SOCIEDAD"
+  },
+  {
+    "id": 4108,
+    "nombre": "DIRECCION NACIONAL DE SALUD SEXUAL Y REPRODUCTIVA"
+  },
+  {
+    "id": 777,
+    "nombre": "DIRECCION NACIONAL DE SALUD Y SEGURIDAD EN EL TRAB"
+  },
+  {
+    "id": 513,
+    "nombre": "DIRECCION NACIONAL DE SANIDAD ANIMAL"
+  },
+  {
+    "id": 3684,
+    "nombre": "DIRECCION NACIONAL DE SEGURIDAD EN ESPECTACULOS FUTBOLISTICO"
+  },
+  {
+    "id": 3995,
+    "nombre": "DIRECCION NACIONAL DE SEGURIDAD EN EVENTOS DEPORTIVOS"
+  },
+  {
+    "id": 3400,
+    "nombre": "DIRECCION NACIONAL DE SEGURIDAD OPERACIONAL"
+  },
+  {
+    "id": 3399,
+    "nombre": "DIRECCION NACIONAL DE SERVICIOS DE NAVEGACION AEREA Y AEROD."
+  },
+  {
+    "id": 4123,
+    "nombre": "DIRECCION NACIONAL DE SERVICIOS REGISTRALES Y DE INFORMACION"
+  },
+  {
+    "id": 3299,
+    "nombre": "DIRECCION NACIONAL DE SERVICIOS TURISTICOS"
+  },
+  {
+    "id": 3838,
+    "nombre": "DIRECCION NACIONAL DE SISTEMAS DE INFORMACION EN SALUD"
+  },
+  {
+    "id": 4144,
+    "nombre": "DIRECCION NACIONAL DE SISTEMAS DE INFORMACION SANITARIA"
+  },
+  {
+    "id": 4142,
+    "nombre": "DIRECCION NACIONAL DE TALENTO HUMANO Y CONOCIMIENTO"
+  },
+  {
+    "id": 3962,
+    "nombre": "DIRECCION NACIONAL DE TRANSPARENCIA INSTITUCIONAL"
+  },
+  {
+    "id": 3577,
+    "nombre": "DIRECCION NACIONAL DE TRANSPORTE AEREO"
+  },
+  {
+    "id": 266,
+    "nombre": "DIRECCION NACIONAL DE TRANSPORTE AEROCOMERCIAL"
+  },
+  {
+    "id": 711,
+    "nombre": "DIRECCION NACIONAL DE TRANSPORTE FLUVIAL Y MARITIM"
+  },
+  {
+    "id": 452,
+    "nombre": "DIRECCION NACIONAL DE TURISMO"
+  },
+  {
+    "id": 3821,
+    "nombre": "DIRECCION NACIONAL DE USO PUBLICO"
+  },
+  {
+    "id": 29,
+    "nombre": "DIRECCION NACIONAL DE VIALIDAD"
+  },
+  {
+    "id": 3367,
+    "nombre": "DIRECCION NACIONAL DE VIAS NAVEGABLES"
+  },
+  {
+    "id": 534,
+    "nombre": "DIRECCION NACIONAL ELECTORAL"
+  },
+  {
+    "id": 3782,
+    "nombre": "DIRECCION NACIONAL LACTEA"
+  },
+  {
+    "id": 258,
+    "nombre": "DIRECCION NAC.REG.NAC.PROP.AUTO. Y CRED.PRENDARIOS"
+  },
+  {
+    "id": 3433,
+    "nombre": "DIRECCION PARA PERSONAS CON DISCAPACIDAD"
+  },
+  {
+    "id": 3835,
+    "nombre": "DIRECCION PROVINCIAL DE RENTAS DE LA PROVINCIA DE JUJUY"
+  },
+  {
+    "id": 4034,
+    "nombre": "DIRECCION PROVINCIAL DE RENTAS DE LA PROVINCIA DEL NEUQUEN"
+  },
+  {
+    "id": 3691,
+    "nombre": "DIRECCION REGIONAL ADUANERA CENTRAL"
+  },
+  {
+    "id": 3749,
+    "nombre": "DIRECCION REGIONAL ADUANERA HIDROVIA"
+  },
+  {
+    "id": 3952,
+    "nombre": "DIRECCION REGIONAL ADUANERA NORESTE"
+  },
+  {
+    "id": 3850,
+    "nombre": "DIRECCION REGIONAL ADUANERA PAMPEANA"
+  },
+  {
+    "id": 3374,
+    "nombre": "DIRECCION REGIONAL ADUANERA RESISTENCIA (AFIP-DGI)"
+  },
+  {
+    "id": 4182,
+    "nombre": "DIRECCION REGIONAL BAHIA BLANCA"
+  },
+  {
+    "id": 703,
+    "nombre": "DIRECCION REGIONAL BAHIA BLANCA (AFIP-DGI)"
+  },
+  {
+    "id": 4171,
+    "nombre": "DIRECCION REGIONAL CENTRO"
+  },
+  {
+    "id": 554,
+    "nombre": "DIRECCION REGIONAL CENTRO (AFIP-DGI)"
+  },
+  {
+    "id": 4077,
+    "nombre": "DIRECCION REGIONAL CENTRO II"
+  },
+  {
+    "id": 4192,
+    "nombre": "DIRECCION REGIONAL COMODORO RIVADAVIA"
+  },
+  {
+    "id": 583,
+    "nombre": "DIRECCION REGIONAL COMODORO RIVADAVIA (AFIP-DGI)"
+  },
+  {
+    "id": 4172,
+    "nombre": "DIRECCION REGIONAL CORDOBA"
+  },
+  {
+    "id": 565,
+    "nombre": "DIRECCION REGIONAL CORDOBA (AFIP-DGI)"
+  },
+  {
+    "id": 3563,
+    "nombre": "DIRECCION REGIONAL DE LOS RECURSOS DE LA SEG SOC CENTRO"
+  },
+  {
+    "id": 3562,
+    "nombre": "DIRECCION REGIONAL DE LOS RECURSOS DE LA SEG SOC CENTRP"
+  },
+  {
+    "id": 3567,
+    "nombre": "DIRECCION REGIONAL DE LOS RECURSOS DE LA SEGURIDAD SOC NORTE"
+  },
+  {
+    "id": 3564,
+    "nombre": "DIRECCION REGIONAL DE LOS RECURSOS DE LA SEGURIDAD SOC OESTE"
+  },
+  {
+    "id": 3568,
+    "nombre": "DIRECCION REGIONAL DE LOS RECURSOS DE LA SEGURIDAD SOC SUR"
+  },
+  {
+    "id": 738,
+    "nombre": "DIRECCION REGIONAL DEVOLUCIONES A EXPORTADORES"
+  },
+  {
+    "id": 3247,
+    "nombre": "DIRECCION REGIONAL DEVOLUCIONES EXPORTADORES"
+  },
+  {
+    "id": 812,
+    "nombre": "DIRECCION REGIONAL I - MIN. DE TRABAJO, EMPLEO Y S"
+  },
+  {
+    "id": 4164,
+    "nombre": "DIRECCION REGIONAL JUNIN"
+  },
+  {
+    "id": 650,
+    "nombre": "DIRECCION REGIONAL JUNIN (AFIP-DGI)"
+  },
+  {
+    "id": 563,
+    "nombre": "DIRECCION REGIONAL LA PLATA (AFIP-DGI)"
+  },
+  {
+    "id": 810,
+    "nombre": "DIRECCION REGIONAL MAR DEL PLATA (DGI)"
+  },
+  {
+    "id": 4204,
+    "nombre": "DIRECCION REGIONAL MENDOZA"
+  },
+  {
+    "id": 3436,
+    "nombre": "DIRECCION REGIONAL MENDOZA (AFIP-DGI)"
+  },
+  {
+    "id": 4080,
+    "nombre": "DIRECCION REGIONAL MERCEDES"
+  },
+  {
+    "id": 4198,
+    "nombre": "DIRECCION REGIONAL MICROCENTRO"
+  },
+  {
+    "id": 606,
+    "nombre": "DIRECCION REGIONAL MICROCENTRO (AFIP-DGI)"
+  },
+  {
+    "id": 3231,
+    "nombre": "DIRECCION REGIONAL MICROCENTRO (AFIP-DGI)   (DV MJUR)."
+  },
+  {
+    "id": 4189,
+    "nombre": "DIRECCION REGIONAL NEUQUEN"
+  },
+  {
+    "id": 556,
+    "nombre": "DIRECCION REGIONAL NEUQUEN (AFIP-DGI)"
+  },
+  {
+    "id": 4191,
+    "nombre": "DIRECCION REGIONAL NORTE"
+  },
+  {
+    "id": 551,
+    "nombre": "DIRECCION REGIONAL NORTE (AFIP-DGI)"
+  },
+  {
+    "id": 3292,
+    "nombre": "DIRECCION REGIONAL NORTE (AFIP-DGI) - DIV. GEST. Y DEVOLUC."
+  },
+  {
+    "id": 4205,
+    "nombre": "DIRECCION REGIONAL NORTE (ARCA)"
+  },
+  {
+    "id": 3569,
+    "nombre": "DIRECCION REGIONAL OESTE"
+  },
+  {
+    "id": 658,
+    "nombre": "DIRECCION REGIONAL OESTE (AFIP-DGI)"
+  },
+  {
+    "id": 4206,
+    "nombre": "DIRECCION REGIONAL OESTE (ARCA)"
+  },
+  {
+    "id": 4199,
+    "nombre": "DIRECCION REGIONAL OESTE (DGI)"
+  },
+  {
+    "id": 4201,
+    "nombre": "DIRECCION REGIONAL PALERMO"
+  },
+  {
+    "id": 735,
+    "nombre": "DIRECCION REGIONAL PALERMO (AFIP-DGI)"
+  },
+  {
+    "id": 4197,
+    "nombre": "DIRECCION REGIONAL PARANA"
+  },
+  {
+    "id": 646,
+    "nombre": "DIRECCION REGIONAL PARANA (AFIP-DGI)"
+  },
+  {
+    "id": 4200,
+    "nombre": "DIRECCION REGIONAL POSADAS"
+  },
+  {
+    "id": 3240,
+    "nombre": "DIRECCION REGIONAL POSADAS (AFIP-DGI)"
+  },
+  {
+    "id": 4193,
+    "nombre": "DIRECCION REGIONAL RESISTENCIA"
+  },
+  {
+    "id": 566,
+    "nombre": "DIRECCION REGIONAL RESISTENCIA (AFIP-DGI)"
+  },
+  {
+    "id": 704,
+    "nombre": "DIRECCION REGIONAL RIO CUARTO (AFIP-DGI)"
+  },
+  {
+    "id": 3431,
+    "nombre": "DIRECCION REGIONAL RIO GALLEGOS (AFIP-DGI)"
+  },
+  {
+    "id": 3739,
+    "nombre": "DIRECCION REGIONAL ROSARIO"
+  },
+  {
+    "id": 797,
+    "nombre": "DIRECCION REGIONAL ROSARIO 2 (DI RRO2)(AFIP-DGA)"
+  },
+  {
+    "id": 3272,
+    "nombre": "DIRECCION REGIONAL ROSARIO I"
+  },
+  {
+    "id": 4203,
+    "nombre": "DIRECCION REGIONAL SALTA"
+  },
+  {
+    "id": 564,
+    "nombre": "DIRECCION REGIONAL SALTA (AFIP-DGI)"
+  },
+  {
+    "id": 4173,
+    "nombre": "DIRECCION REGIONAL SAN JUAN"
+  },
+  {
+    "id": 3282,
+    "nombre": "DIRECCION REGIONAL SAN JUAN (AFIP-DGI)"
+  },
+  {
+    "id": 4167,
+    "nombre": "DIRECCION REGIONAL SANTA FE"
+  },
+  {
+    "id": 607,
+    "nombre": "DIRECCION REGIONAL SANTA FE (AFIP-DGI)"
+  },
+  {
+    "id": 4194,
+    "nombre": "DIRECCION REGIONAL SUR"
+  },
+  {
+    "id": 557,
+    "nombre": "DIRECCION REGIONAL SUR (AFIP-DGI)"
+  },
+  {
+    "id": 4166,
+    "nombre": "DIRECCION REGIONAL TUCUMAN"
+  },
+  {
+    "id": 808,
+    "nombre": "DIRECCION REGIONAL TUCUMAN AFIP-DGI"
+  },
+  {
+    "id": 4168,
+    "nombre": "DIRECCION TECNICA SOBRE REGULACION DEL TRABAJO"
+  },
+  {
+    "id": 3629,
+    "nombre": "DIRECCION TECNICO REGISTRAL Y RUDAC"
+  },
+  {
+    "id": 3803,
+    "nombre": "DIREC. NAC. DE HAB. FISCALIZACION Y SANIDAD DE FRONTERAS"
+  },
+  {
+    "id": 3648,
+    "nombre": "DIRECTORA NACIONAL DE GESTION Y PROGRAMACION"
+  },
+  {
+    "id": 814,
+    "nombre": "DIRECTORIO DE LA COMISION DE ENERGIA ATOMICA"
+  },
+  {
+    "id": 30,
+    "nombre": "DIRECTORIO DEL INST. NACIONAL DE PREV. SOCIAL"
+  },
+  {
+    "id": 761,
+    "nombre": "DIR. GRAL. DE COORDINACION TECNICA ADMINISTRATIVA"
+  },
+  {
+    "id": 371,
+    "nombre": "DIR. NAC. DEL REG. NAC. DE ANTEC. DE TRANSITO"
+  },
+  {
+    "id": 3632,
+    "nombre": "DIR REG DE LOS RECURSOS DE LA SEG SOCIAL GRANDES EMPLEADORES"
+  },
+  {
+    "id": 3403,
+    "nombre": "DISTRITO JURISDICCIONAL 12 - NEUQUEN"
+  },
+  {
+    "id": 3531,
+    "nombre": "DIVISION ADUANA DE CONCEPCION DEL URUGUAY"
+  },
+  {
+    "id": 3703,
+    "nombre": "DIVISION ADUANA DE CORRIENTES"
+  },
+  {
+    "id": 3668,
+    "nombre": "DIVISION ADUANA DE GOYA"
+  },
+  {
+    "id": 3485,
+    "nombre": "DIVISION ADUANA DE LA PLATA"
+  },
+  {
+    "id": 3248,
+    "nombre": "DIVISION ADUANA DE MENDOZA"
+  },
+  {
+    "id": 3655,
+    "nombre": "DIVISION ADUANA DE POSADAS"
+  },
+  {
+    "id": 3527,
+    "nombre": "DIVISION ADUANA DE SALTA"
+  },
+  {
+    "id": 3664,
+    "nombre": "DIVISION ADUANA LA PLATA"
+  },
+  {
+    "id": 3270,
+    "nombre": "DIVISION DOCUMENTAL FISCAL"
+  },
+  {
+    "id": 713,
+    "nombre": "DIVISION FISCALIZACION Nº 1"
+  },
+  {
+    "id": 3245,
+    "nombre": "DIVISION FISCALIZACION NRO. 3"
+  },
+  {
+    "id": 3616,
+    "nombre": "DIVISION GESTION DE SECUESTROS"
+  },
+  {
+    "id": 708,
+    "nombre": "DIVISION REVISION Y RECURSOS"
+  },
+  {
+    "id": 715,
+    "nombre": "DIVISION REVISION Y RECURSOS (AFIP-DR LA PLATA)"
+  },
+  {
+    "id": 716,
+    "nombre": "DIVISION REVISION Y RECURSOS (AFIP-DR MICROCENTRO)"
+  },
+  {
+    "id": 717,
+    "nombre": "DIVISION REVISION Y RECURSOS (AFIP-DR OESTE)"
+  },
+  {
+    "id": 669,
+    "nombre": "DIVISION REVISION Y RECURSOS (AFIP-REGION 1)"
+  },
+  {
+    "id": 751,
+    "nombre": "DIVISION REVISION Y RECURSOS (AFIP-REGION 3)"
+  },
+  {
+    "id": 760,
+    "nombre": "DIVISION REVISION Y RECURSOS (AFIP-REGION 6)"
+  },
+  {
+    "id": 3350,
+    "nombre": "DIVISION REVISION Y RECURSOS (DIRECCION REG. BAHIA BLANCA)"
+  },
+  {
+    "id": 3275,
+    "nombre": "DIVISION REVISION Y RECURSOS (DIRECCION REGIONAL NORTE)"
+  },
+  {
+    "id": 3561,
+    "nombre": "DIVISION REVISION Y RECURSOS I (D. R. MICROCENTRO)"
+  },
+  {
+    "id": 796,
+    "nombre": "DIVISION REVISION Y RECURSOS II (AFIP-DR MICROCENT"
+  },
+  {
+    "id": 3507,
+    "nombre": "DIVISION REVISION Y RECURSOS II (DIRECCION REGIONAL PALERMO)"
+  },
+  {
+    "id": 813,
+    "nombre": "DIVISION REVISION Y RECURSOS II (DR. CENTRO-AFIP)"
+  },
+  {
+    "id": 3903,
+    "nombre": "DIVISION SERVICIO ADMINISTRATIVO INTEGRADO"
+  },
+  {
+    "id": 3211,
+    "nombre": "D. N. DEL REG. UNICO DE ASPIR. A GUARDA CON FINES ADOPTIVOS"
+  },
+  {
+    "id": 3650,
+    "nombre": "EMPRESA ARGENTINA DE NAVEGACION AEREA SOCIEDAD DEL ESTADO"
+  },
+  {
+    "id": 31,
+    "nombre": "EMPRESA LINEAS MARITIMAS ARGENTINAS (ELMA)"
+  },
+  {
+    "id": 114,
+    "nombre": "EMPRESA NACIONAL DE TELECOMUNICACIONES (ENTEL)"
+  },
+  {
+    "id": 3551,
+    "nombre": "ENERGIA ARGENTINA S.A."
+  },
+  {
+    "id": 32,
+    "nombre": "ENTE NACIONAL ARGENTINO DE TURISMO (ENATUR)"
+  },
+  {
+    "id": 3598,
+    "nombre": "ENTE NACIONAL DE COMUNICACIONES"
+  },
+  {
+    "id": 403,
+    "nombre": "ENTE NACIONAL DE OBRAS HIDRICAS DE SANEAMIENTO"
+  },
+  {
+    "id": 235,
+    "nombre": "ENTE NACIONAL REGULADOR DE LA ELECTRICIDAD"
+  },
+  {
+    "id": 232,
+    "nombre": "ENTE NACIONAL REGULADOR DEL GAS"
+  },
+  {
+    "id": 270,
+    "nombre": "ENTE NACIONAL REGULADOR NUCLEAR"
+  },
+  {
+    "id": 739,
+    "nombre": "ENTE PROVINCIAL REGULADOR DE LA ELECTRICIDAD"
+  },
+  {
+    "id": 3290,
+    "nombre": "ENTE REGULADOR DE AGUA Y SANEAMIENTO (ERAS)"
+  },
+  {
+    "id": 252,
+    "nombre": "ENTE TRIPARTITO DE OBRAS Y SERVICIOS SANITARIOS"
+  },
+  {
+    "id": 457,
+    "nombre": "ESCUELA NACIONAL DE MEDIACION"
+  },
+  {
+    "id": 3890,
+    "nombre": "ESTADO MAYOR CONJUNTO DE LAS FUERZAS ARMADAS"
+  },
+  {
+    "id": 211,
+    "nombre": "ESTADO MAYOR GENERAL DE LA ARMADA"
+  },
+  {
+    "id": 3491,
+    "nombre": "ESTADO MAYOR GENERAL DEL EJERCITO"
+  },
+  {
+    "id": 33,
+    "nombre": "ESTADO MAYOR GRAL. DE LA FUERZA AEREA ARGENTINA"
+  },
+  {
+    "id": 731,
+    "nombre": "ESTADO NACIONAL Y CIUDAD AUTONOMA DE BUENOS AIRES"
+  },
+  {
+    "id": 3338,
+    "nombre": "FACULTAD DE CS. EXACTAS Y NAT. DE LA UNIV. NAC. DE LA PAMPA"
+  },
+  {
+    "id": 34,
+    "nombre": "FED.ARG.DE CONS.PROF. DE CIENCIAS ECONOMICAS"
+  },
+  {
+    "id": 3795,
+    "nombre": "FEDERACION ARGENTINA DE LA INGENIERIA ESPECIALIZADA"
+  },
+  {
+    "id": 654,
+    "nombre": "FEDERACION DE PSICOLOGOS DE LA REPUBLICA ARGENTINA"
+  },
+  {
+    "id": 492,
+    "nombre": "FISCALIA DE CONTROL ADMINISTRATIVO"
+  },
+  {
+    "id": 3325,
+    "nombre": "FONDO COMPENSADOR PARA JUBILADOS Y PENSIONADOS TELEFONICOS"
+  },
+  {
+    "id": 3671,
+    "nombre": "FONDO NACIONAL DE BELLAS ARTES"
+  },
+  {
+    "id": 35,
+    "nombre": "FONDO NACIONAL DE LAS ARTES"
+  },
+  {
+    "id": 3323,
+    "nombre": "FUERZA AEREA ARGENTINA"
+  },
+  {
+    "id": 3908,
+    "nombre": "FUNDACION MIGUEL LILLO"
+  },
+  {
+    "id": 4159,
+    "nombre": "GENDARMERIA NACIONAL ARGENTINA"
+  },
+  {
+    "id": 3218,
+    "nombre": "GENRENCIA DE CONTROL PREVISIONAL DE LA S.A.F.J.P"
+  },
+  {
+    "id": 3641,
+    "nombre": "GERENCIA DE ADMINISTRACION DE COMISIONES MEDICAS"
+  },
+  {
+    "id": 4057,
+    "nombre": "GERENCIA DE ADMINISTRACION Y FINANZAS"
+  },
+  {
+    "id": 3970,
+    "nombre": "GERENCIA DE ADMINISTRACION Y PRESUPUESTO"
+  },
+  {
+    "id": 4083,
+    "nombre": "GERENCIA DE ASUNTOS CONTENCIOSOS PENALES Y PREVENCION DEL F"
+  },
+  {
+    "id": 3825,
+    "nombre": "GERENCIA DE ASUNTOS JURIDICOS"
+  },
+  {
+    "id": 3824,
+    "nombre": "GERENCIA DE ASUSTOS JURIDICOS"
+  },
+  {
+    "id": 609,
+    "nombre": "GERENCIA DE COMISIONES MEDICAS DE LA S.A.F.J.P."
+  },
+  {
+    "id": 3586,
+    "nombre": "GERENCIA DE COMUNICACION INSTITUCIONAL Y CAPACITACION"
+  },
+  {
+    "id": 726,
+    "nombre": "GERENCIA DE CONTROL DE ENTIDADES DE LA SAFJP"
+  },
+  {
+    "id": 624,
+    "nombre": "GERENCIA DE CONTROL DE INVERSIONES DE LA S.A.F.J.P"
+  },
+  {
+    "id": 517,
+    "nombre": "GERENCIA DE CONTROL PRESTACIONAL"
+  },
+  {
+    "id": 440,
+    "nombre": "GERENCIA DE COORDINACION ADMINISTRATIVA Y TECNICA"
+  },
+  {
+    "id": 3396,
+    "nombre": "GERENCIA DE DISEÑO DE NORMAS Y PROCESOS"
+  },
+  {
+    "id": 3210,
+    "nombre": "GERENCIA DE ESTUDIOS ESTRATEGICOS Y ESTADISTICAS SAFJP"
+  },
+  {
+    "id": 3550,
+    "nombre": "GERENCIA DE FISCALIZACION DEL INCAA"
+  },
+  {
+    "id": 302,
+    "nombre": "GERENCIA DE INGENIERIA"
+  },
+  {
+    "id": 322,
+    "nombre": "GERENCIA DE LABORATORIOS"
+  },
+  {
+    "id": 724,
+    "nombre": "GERENCIA DE NORMALIZACION DE PRESTACIONES Y SERVIC"
+  },
+  {
+    "id": 3265,
+    "nombre": "GERENCIA DE NORMATIZACION DE PRESTACIONES Y SERVICIOS- ANSES"
+  },
+  {
+    "id": 3209,
+    "nombre": "GERENCIA DE PRESTACIONES MEDICAS SERVICIOS SOCIALES JYP"
+  },
+  {
+    "id": 3509,
+    "nombre": "GERENCIA DE PREVENCION"
+  },
+  {
+    "id": 3259,
+    "nombre": "GERENCIA DE PREVENCION Y CONTROL"
+  },
+  {
+    "id": 3361,
+    "nombre": "GERENCIA DE PREVENCION Y SALUD LABORAL"
+  },
+  {
+    "id": 3258,
+    "nombre": "GERENCIA DE PREVENCIO Y CONTROL"
+  },
+  {
+    "id": 632,
+    "nombre": "GERENCIA DE SERVICIOS POSTALES"
+  },
+  {
+    "id": 3543,
+    "nombre": "GERENCIA DE SISTEMAS - SRT"
+  },
+  {
+    "id": 3413,
+    "nombre": "GERENCIA GENERAL"
+  },
+  {
+    "id": 36,
+    "nombre": "GERENCIA GENERAL DE RECAUDACION PREVISIONAL"
+  },
+  {
+    "id": 3437,
+    "nombre": "GERENCIA MEDICA"
+  },
+  {
+    "id": 3654,
+    "nombre": "GERENCIA TECNICA"
+  },
+  {
+    "id": 4012,
+    "nombre": "GOBERNACION DE LA PROVINCIA DE TIERRA DEL FUEGO ANTARTIDA E"
+  },
+  {
+    "id": 275,
+    "nombre": "GRUPO DEL MERCADO COMUN"
+  },
+  {
+    "id": 3288,
+    "nombre": "HONORABLE CAMARA DE DIPUTADOS DE LA NACION"
+  },
+  {
+    "id": 200,
+    "nombre": "HONORABLE CONGRESO DE LA NACION ARGENTINA"
+  },
+  {
+    "id": 585,
+    "nombre": "HONORABLE SENADO DE LA NACION"
+  },
+  {
+    "id": 783,
+    "nombre": "HOSPITAL DE PEDIATRIA \"PROF. DR. JUAN P. GARRAHAN\""
+  },
+  {
+    "id": 3936,
+    "nombre": "HOSPITAL MILITAR CAMPO DE MAYO"
+  },
+  {
+    "id": 3883,
+    "nombre": "HOSPITAL MILITAR CENTRAL CIR MY DR COSME ARGERICH"
+  },
+  {
+    "id": 3884,
+    "nombre": "HOSPITAL MILITAR CENTRAL DR COSME ARGERICH"
+  },
+  {
+    "id": 3971,
+    "nombre": "HOSPITAL NAC EN RED ESPECIALIZADO EN SALUD MENTAL Y ADICCION"
+  },
+  {
+    "id": 3375,
+    "nombre": "HOSPITAL NACIONAL DR. BALDOMERO SOMMER"
+  },
+  {
+    "id": 3412,
+    "nombre": "HOSPITAL NACIONAL PROFESOR ALEJANDRO POSADAS"
+  },
+  {
+    "id": 4096,
+    "nombre": "HOSPITAL NACIONAL Y COMUNIDAD DR. RAMON CARRILLO"
+  },
+  {
+    "id": 3907,
+    "nombre": "HOSPITAL NAVAL BS AS CIRUJANO MAYOR DOCTOR PEDRO MALLO"
+  },
+  {
+    "id": 3951,
+    "nombre": "HOSPITAL NAVAL PUERTO BELGRANO"
+  },
+  {
+    "id": 3847,
+    "nombre": "IMPRENTA DEL CONGRESO DE LA NACION"
+  },
+  {
+    "id": 37,
+    "nombre": "INSPECCION GENERAL DE JUSTICIA"
+  },
+  {
+    "id": 354,
+    "nombre": "INSPECCION Y RELACIONES INDIVIDUALES DEL TRABAJO"
+  },
+  {
+    "id": 3377,
+    "nombre": "INST. DE ESTADISTICA Y REGISTRO DE LA IND. DE LA CONSTRUCC"
+  },
+  {
+    "id": 3376,
+    "nombre": "INST. DE ESTADISTICA Y REGISTRO DE LA IND.IA DE LA CONSTRUC"
+  },
+  {
+    "id": 376,
+    "nombre": "INST. DE EST. Y REG. DE LA IND. DE LA CONSTRUCCION"
+  },
+  {
+    "id": 136,
+    "nombre": "INST.DE SERV.SOC.PARA LAS ACTIV.RURALES Y AFINES"
+  },
+  {
+    "id": 249,
+    "nombre": "INSTITUTO ARGENTINO DE SANIDAD Y CALIDAD VEGETAL"
+  },
+  {
+    "id": 3371,
+    "nombre": "INSTITUTO DE AYUDA FINANCIERA PARA PAGO DE RETIROS Y PENSION"
+  },
+  {
+    "id": 3663,
+    "nombre": "INSTITUTO DE ESTADISTICA Y REGISTRO DE LA INDUSTRIA DE LA CO"
+  },
+  {
+    "id": 3997,
+    "nombre": "INSTITUTO DEL SERVICIO EXTERIOR DE LA NACION"
+  },
+  {
+    "id": 3585,
+    "nombre": "INSTITUTO DE OBRA SOCIAL DE LAS FUERZAS ARMADAS"
+  },
+  {
+    "id": 3398,
+    "nombre": "INSTITUTO DE OBRA SOCIAL DEL EJERCITO (IOSE)"
+  },
+  {
+    "id": 3918,
+    "nombre": "INSTITUTO DE RECURSOS BIOLOGICOS"
+  },
+  {
+    "id": 342,
+    "nombre": "INSTITUTO DE SERVICIOS SOCIALES BANCARIOS"
+  },
+  {
+    "id": 3449,
+    "nombre": "INSTITUTO FORESTAL NACIONAL"
+  },
+  {
+    "id": 3488,
+    "nombre": "INSTITUTO GEOGRAFICO NACIONAL"
+  },
+  {
+    "id": 3402,
+    "nombre": "INSTITUTO NAC CONTRA LA DISCRIMINACION LA XENOFOBIA Y RAC."
+  },
+  {
+    "id": 38,
+    "nombre": "INSTITUTO NACIONAL DE ACCION COOPERATIVA (INAC)"
+  },
+  {
+    "id": 351,
+    "nombre": "INSTITUTO NACIONAL DE ACCION COOPERATIVA Y MUTUAL"
+  },
+  {
+    "id": 132,
+    "nombre": "INSTITUTO NACIONAL DE ACCION MUTUAL"
+  },
+  {
+    "id": 279,
+    "nombre": "INSTITUTO NACIONAL DE ACCION SOCIAL"
+  },
+  {
+    "id": 3727,
+    "nombre": "INSTITUTO NACIONAL DE ADMINISTRACION PUBLICA"
+  },
+  {
+    "id": 3871,
+    "nombre": "INSTITUTO NACIONAL DE ANTROPOLOGIA Y PENSAMIENTO LATINOAMERI"
+  },
+  {
+    "id": 501,
+    "nombre": "INSTITUTO NACIONAL DE ASOCIATIVISMO Y ECONOMIA SOC"
+  },
+  {
+    "id": 3842,
+    "nombre": "INSTITUTO NACIONAL DE ASOCIATIVISMO Y ECONOMIA SOCIAL"
+  },
+  {
+    "id": 3254,
+    "nombre": "INSTITUTO NACIONAL DE ASOCIATIVISMO Y ECONOMIA SOCIAL - IS"
+  },
+  {
+    "id": 3278,
+    "nombre": "INSTITUTO NACIONAL DE ASOCIATIVISMO Y ECONOMIA SOCIAL - P"
+  },
+  {
+    "id": 3304,
+    "nombre": "INSTITUTO NACIONAL DE ASUNTOS INDIGENAS"
+  },
+  {
+    "id": 40,
+    "nombre": "INSTITUTO NACIONAL DE CINEMATOGRAFIA"
+  },
+  {
+    "id": 267,
+    "nombre": "INSTITUTO NACIONAL DE CINE Y ARTES AUDIOVISUALES"
+  },
+  {
+    "id": 481,
+    "nombre": "INSTITUTO NACIONAL DE EDUCACION TECNOLOGICA"
+  },
+  {
+    "id": 292,
+    "nombre": "INSTITUTO NACIONAL DE ESTADISTICA Y CENSOS"
+  },
+  {
+    "id": 3662,
+    "nombre": "INSTITUTO NACIONAL DE INVESTIGACION Y DESARROLLO PESQUERO"
+  },
+  {
+    "id": 4010,
+    "nombre": "INSTITUTO NACIONAL DE JUVENTUDES"
+  },
+  {
+    "id": 3465,
+    "nombre": "INSTITUTO NACIONAL DE LA ACTIVIDAD HIPICA"
+  },
+  {
+    "id": 312,
+    "nombre": "INSTITUTO NACIONAL DE LA ADMINIST. PUBLICA (INAP)"
+  },
+  {
+    "id": 3458,
+    "nombre": "INSTITUTO NACIONAL DE LA ADMINISTRACION PUBLICA"
+  },
+  {
+    "id": 3255,
+    "nombre": "INSTITUTO NACIONAL DEL AGUA"
+  },
+  {
+    "id": 390,
+    "nombre": "INSTITUTO NACIONAL DEL AGUA Y DEL AMBIENTE"
+  },
+  {
+    "id": 3576,
+    "nombre": "INSTITUTO NACIONAL DE LA MUSICA"
+  },
+  {
+    "id": 394,
+    "nombre": "INSTITUTO NACIONAL DE LA PROPIEDAD INDUSTRIAL"
+  },
+  {
+    "id": 754,
+    "nombre": "INSTITUTO NACIONAL DE LA PROPIEDAD INTELECTUAL"
+  },
+  {
+    "id": 1555,
+    "nombre": "INSTITUTO NACIONAL DE LA SEGURIDAD SOCIAL"
+  },
+  {
+    "id": 3976,
+    "nombre": "INSTITUTO NACIONAL DE LAS MUJERES"
+  },
+  {
+    "id": 603,
+    "nombre": "INSTITUTO NACIONAL DE LA YERBA MATE"
+  },
+  {
+    "id": 4056,
+    "nombre": "INSTITUTO NACIONAL DEL CANCER"
+  },
+  {
+    "id": 555,
+    "nombre": "INSTITUTO NACIONAL DE LOS RECURSOS DE LA SEGURIDAD"
+  },
+  {
+    "id": 647,
+    "nombre": "INSTITUTO NACIONAL DEL TEATRO"
+  },
+  {
+    "id": 3510,
+    "nombre": "INSTITUTO NACIONAL DE MEDICINA AERONAUTICA Y ESPACIAL"
+  },
+  {
+    "id": 4211,
+    "nombre": "INSTITUTO NACIONAL DE MEDICINA TROPICAL"
+  },
+  {
+    "id": 42,
+    "nombre": "INSTITUTO NACIONAL DE OBRAS PUBLICAS"
+  },
+  {
+    "id": 43,
+    "nombre": "INSTITUTO NACIONAL DE OBRAS SOCIALES (INOS)"
+  },
+  {
+    "id": 44,
+    "nombre": "INSTITUTO NACIONAL DE PREVENCION SISMICA"
+  },
+  {
+    "id": 45,
+    "nombre": "INSTITUTO NACIONAL DE PREVISION SOCIAL"
+  },
+  {
+    "id": 3785,
+    "nombre": "INSTITUTO NACIONAL DE PROMOCION TURISTICA"
+  },
+  {
+    "id": 3235,
+    "nombre": "INSTITUTO NACIONAL DE REHABILITACION PSICOFISICA DEL SUR"
+  },
+  {
+    "id": 277,
+    "nombre": "INSTITUTO NACIONAL DE SEMILLAS"
+  },
+  {
+    "id": 3826,
+    "nombre": "INSTITUTO NACIONAL DE TECNOLOGIA AGROPECUARIA"
+  },
+  {
+    "id": 3277,
+    "nombre": "INSTITUTO NACIONAL DE TECNOLOGIA INDUSTRIAL - CD"
+  },
+  {
+    "id": 47,
+    "nombre": "INSTITUTO NACIONAL DE TECNOLOGIA INDUSTRIAL (INTI)"
+  },
+  {
+    "id": 48,
+    "nombre": "INSTITUTO NACIONAL DE VITIVINICULTURA (I.N.V.)"
+  },
+  {
+    "id": 347,
+    "nombre": "INSTITUTO SUPERIOR DE ECONOMISTAS DE GOB."
+  },
+  {
+    "id": 274,
+    "nombre": "INST.NAC. CENTRAL UNICO COORD. ABLACION E IMPLANTE"
+  },
+  {
+    "id": 41,
+    "nombre": "INST.NAC.DE INVESTIG. Y DESARROLLO PESQUERO"
+  },
+  {
+    "id": 46,
+    "nombre": "INST.NAC.DE SERV.SOC.PARA JUBILADOS Y PENSIONADOS"
+  },
+  {
+    "id": 39,
+    "nombre": "INST. NACIONAL DE CIENCIA Y TECNICA HIDRICA"
+  },
+  {
+    "id": 287,
+    "nombre": "JEFATURA DE GABINETE DE MINISTROS"
+  },
+  {
+    "id": 3530,
+    "nombre": "JUNTA CENTRAL DE CONSEJOS PROF DE AGRIM ARQUITECTURA E INGEN"
+  },
+  {
+    "id": 3409,
+    "nombre": "JUNTA DE COMANDANTES EN JEFE"
+  },
+  {
+    "id": 789,
+    "nombre": "JUNTA DE INVESTIGACIONES DE ACCIDENTES AVIACION CI"
+  },
+  {
+    "id": 3917,
+    "nombre": "JUNTA DE SEGURIDAD EN EL TRANSPORTE"
+  },
+  {
+    "id": 49,
+    "nombre": "JUNTA NACIONAL DE CARNES"
+  },
+  {
+    "id": 50,
+    "nombre": "JUNTA NACIONAL DE GRANOS"
+  },
+  {
+    "id": 447,
+    "nombre": "JURADO DE ENJUICIAMIENTO DE MAGISTRADOS DE LA NACI"
+  },
+  {
+    "id": 4221,
+    "nombre": "LA COMISION MIXTA DEL RIO PARANA"
+  },
+  {
+    "id": 51,
+    "nombre": "LOTERIA NACIONAL - SOCIEDAD DEL ESTADO"
+  },
+  {
+    "id": 52,
+    "nombre": "MERCADO CONSIGNATARIO NAC.DE YERBA MATE CANCHADA"
+  },
+  {
+    "id": 53,
+    "nombre": "MERCADO NAC.DE CONC.PESQUERA PUERTO MAR DEL PLATA"
+  },
+  {
+    "id": 3309,
+    "nombre": "MERCADO NACIONAL DE CONCENTRACION PESQUERA"
+  },
+  {
+    "id": 3425,
+    "nombre": "MINISTERIO DE ACCION SOCIAL"
+  },
+  {
+    "id": 3471,
+    "nombre": "MINISTERIO DE AERONAUTICA"
+  },
+  {
+    "id": 4149,
+    "nombre": "MINISTERIO DE AGRICULTURA"
+  },
+  {
+    "id": 3393,
+    "nombre": "MINISTERIO DE AGRICULTURA GANADERIA Y PESCA"
+  },
+  {
+    "id": 3221,
+    "nombre": "MINISTERIO DE AGRICULTURA Y GANADERIA"
+  },
+  {
+    "id": 3593,
+    "nombre": "MINISTERIO DE AGROINDUSTRIA"
+  },
+  {
+    "id": 3857,
+    "nombre": "MINISTERIO DE AMBIENTE Y DESARROLLO SOSTENIBLE"
+  },
+  {
+    "id": 3609,
+    "nombre": "MINISTERIO DE AMBIENTE Y DESARROLLO SUSTENTABLE"
+  },
+  {
+    "id": 4179,
+    "nombre": "MINISTERIO DE BIENESTAR CIUDADANO Y JUSTICIA PROV TIERRA DEL"
+  },
+  {
+    "id": 380,
+    "nombre": "MINISTERIO DE BIENESTAR SOCIAL"
+  },
+  {
+    "id": 4117,
+    "nombre": "MINISTERIO DE CAPITAL HUMANO"
+  },
+  {
+    "id": 3866,
+    "nombre": "MINISTERIO DE CIENCIA TECNOLOGIA E INNOVACION"
+  },
+  {
+    "id": 3310,
+    "nombre": "MINISTERIO DE CIENCIA TECNOLOGIA E INNOVACION PRODUCTIVA"
+  },
+  {
+    "id": 3387,
+    "nombre": "MINISTERIO DE COMERCIO"
+  },
+  {
+    "id": 639,
+    "nombre": "MINISTERIO DE COMERCIO E INTERESES MARITIMOS"
+  },
+  {
+    "id": 3589,
+    "nombre": "MINISTERIO DE COMUNICACIONES"
+  },
+  {
+    "id": 3549,
+    "nombre": "MINISTERIO DE CULTURA"
+  },
+  {
+    "id": 216,
+    "nombre": "MINISTERIO DE CULTURA Y EDUCACION"
+  },
+  {
+    "id": 134,
+    "nombre": "MINISTERIO DE DEFENSA"
+  },
+  {
+    "id": 3854,
+    "nombre": "MINISTERIO DE DESARROLLO PRODUCTIVO"
+  },
+  {
+    "id": 644,
+    "nombre": "MINISTERIO DE DESARROLLO SOCIAL"
+  },
+  {
+    "id": 466,
+    "nombre": "MINISTERIO DE DESARROLLO SOCIAL Y MEDIO AMBIENTE"
+  },
+  {
+    "id": 3858,
+    "nombre": "MINISTERIO DE DESARROLLO TERRITORIAL Y HABITAT"
+  },
+  {
+    "id": 4169,
+    "nombre": "MINISTERIO DE DESREGULACION Y TRANSFORMACION DEL ESTADO"
+  },
+  {
+    "id": 55,
+    "nombre": "MINISTERIO DE ECONOMIA"
+  },
+  {
+    "id": 567,
+    "nombre": "MINISTERIO DE ECONOMIA E INFRAESTRUCTURA"
+  },
+  {
+    "id": 247,
+    "nombre": "MINISTERIO DE ECONOMIA - HACIENDA - INDUSTRIA"
+  },
+  {
+    "id": 56,
+    "nombre": "MINISTERIO DE ECONOMIA, OBRAS Y SERVICIOS PUBLICOS"
+  },
+  {
+    "id": 3360,
+    "nombre": "MINISTERIO DE ECONOMIA Y FINANZAS PUBLICAS"
+  },
+  {
+    "id": 3552,
+    "nombre": "MINISTERIO DE ECONOMIA Y OBRAS Y SERVICIOS PUBLICOS"
+  },
+  {
+    "id": 659,
+    "nombre": "MINISTERIO DE ECONOMIA Y PRODUCCION"
+  },
+  {
+    "id": 3502,
+    "nombre": "MINISTERIO DE ECONOMIA Y TRABAJO"
+  },
+  {
+    "id": 77,
+    "nombre": "MINISTERIO DE EDUCACION"
+  },
+  {
+    "id": 568,
+    "nombre": "MINISTERIO DE EDUCACION, CIENCIA Y TECNOLOGIA"
+  },
+  {
+    "id": 3761,
+    "nombre": "MINISTERIO DE EDUCACION CULTURA CIENCIA Y TECNOLOGIA"
+  },
+  {
+    "id": 3615,
+    "nombre": "MINISTERIO DE EDUCACION Y DEPORTES"
+  },
+  {
+    "id": 201,
+    "nombre": "MINISTERIO DE EDUCACION Y JUSTICIA"
+  },
+  {
+    "id": 3748,
+    "nombre": "MINISTERIO DE ENERGIA"
+  },
+  {
+    "id": 3599,
+    "nombre": "MINISTERIO DE ENERGIA Y MINERIA"
+  },
+  {
+    "id": 3674,
+    "nombre": "MINISTERIO DE FINANZAS"
+  },
+  {
+    "id": 3747,
+    "nombre": "MINISTERIO DE FINANZAS DE LA PROVINCIA DE CORDOBA"
+  },
+  {
+    "id": 4112,
+    "nombre": "MINISTERIO DE GOBIERNO JUSTICIA Y DD HH DE PROV DE LA PAMPA"
+  },
+  {
+    "id": 3672,
+    "nombre": "MINISTERIO DE HACIENDA"
+  },
+  {
+    "id": 3411,
+    "nombre": "MINISTERIO DE HACIENDA Y FINANZAS"
+  },
+  {
+    "id": 3588,
+    "nombre": "MINISTERIO DE HACIENDA Y FINANZAS PUBLICAS"
+  },
+  {
+    "id": 3389,
+    "nombre": "MINISTERIO DE INDUSTRIA"
+  },
+  {
+    "id": 3444,
+    "nombre": "MINISTERIO DE INDUSTRIA Y MINERIA"
+  },
+  {
+    "id": 3390,
+    "nombre": "MINISTERIO DE INDUSTRIA Y TURISMO"
+  },
+  {
+    "id": 4118,
+    "nombre": "MINISTERIO DE INFRAESTRUCTURA"
+  },
+  {
+    "id": 461,
+    "nombre": "MINISTERIO DE INFRAESTRUCTURA Y VIVIENDA"
+  },
+  {
+    "id": 57,
+    "nombre": "MINISTERIO DE JUSTICIA"
+  },
+  {
+    "id": 3455,
+    "nombre": "MINISTERIO DE JUSTICIA E INSTRUCCION PUBLICA"
+  },
+  {
+    "id": 608,
+    "nombre": "MINISTERIO DE JUSTICIA, SEGURIDAD Y DERECHOS HUMAN"
+  },
+  {
+    "id": 3313,
+    "nombre": "MINISTERIO DE JUSTICIA SEGURIDAD Y DERECHOS HUMANOS"
+  },
+  {
+    "id": 462,
+    "nombre": "MINISTERIO DE JUSTICIA Y DERECHOS HUMANOS"
+  },
+  {
+    "id": 3796,
+    "nombre": "MINISTERIO DE JUSTICIA Y DERECHOS HUMANOS DE CORRIENTES"
+  },
+  {
+    "id": 559,
+    "nombre": "MINISTERIO DE LA PRODUCCION"
+  },
+  {
+    "id": 3876,
+    "nombre": "MINISTERIO DE LAS MUJERES GENEROS Y DIVERSIDAD"
+  },
+  {
+    "id": 58,
+    "nombre": "MINISTERIO DEL INTERIOR"
+  },
+  {
+    "id": 3594,
+    "nombre": "MINISTERIO DEL INTERIOR OBRAS PUBLICAS Y VIVIENDA"
+  },
+  {
+    "id": 3494,
+    "nombre": "MINISTERIO DEL INTERIOR Y TRANSPORTE"
+  },
+  {
+    "id": 3591,
+    "nombre": "MINISTERIO DE MODERNIZACION"
+  },
+  {
+    "id": 3874,
+    "nombre": "MINISTERIO DE OBRAS PUBLICAS"
+  },
+  {
+    "id": 59,
+    "nombre": "MINISTERIO DE OBRAS Y SERVICIOS PUBLICOS"
+  },
+  {
+    "id": 3362,
+    "nombre": "MINISTERIO DE PRODUCCION"
+  },
+  {
+    "id": 3763,
+    "nombre": "MINISTERIO DE PRODUCCION Y TRABAJO"
+  },
+  {
+    "id": 60,
+    "nombre": "MINISTERIO DE RELACIONES EXTERIORES Y CULTO"
+  },
+  {
+    "id": 291,
+    "nombre": "MINISTERIO DE REL. EXT., COMERCIO INTERN. Y CULTO"
+  },
+  {
+    "id": 465,
+    "nombre": "MINISTERIO DE SALUD"
+  },
+  {
+    "id": 3372,
+    "nombre": "MINISTERIO DE SALUD DE LA PROVINCIA DE SANTA FE"
+  },
+  {
+    "id": 3341,
+    "nombre": "MINISTERIO DE SALUD PUBLICA Y MEDIO AMBIENTE"
+  },
+  {
+    "id": 61,
+    "nombre": "MINISTERIO DE SALUD Y ACCION SOCIAL"
+  },
+  {
+    "id": 745,
+    "nombre": "MINISTERIO DE SALUD Y AMBIENTE"
+  },
+  {
+    "id": 3768,
+    "nombre": "MINISTERIO DE SALUD Y DESARROLLO SOCIAL"
+  },
+  {
+    "id": 3438,
+    "nombre": "MINISTERIO DE SEGURIDAD"
+  },
+  {
+    "id": 4176,
+    "nombre": "MINISTERIO DE SEGURIDAD NACIONAL"
+  },
+  {
+    "id": 553,
+    "nombre": "MINISTERIO DE SEGURIDAD SOCIAL"
+  },
+  {
+    "id": 227,
+    "nombre": "MINISTERIO DE TRABAJO"
+  },
+  {
+    "id": 464,
+    "nombre": "MINISTERIO DE TRABAJO, EMPLEO Y FORMACION DE RECUR"
+  },
+  {
+    "id": 571,
+    "nombre": "MINISTERIO DE TRABAJO, EMPLEO Y SEGURIDAD SOCIAL"
+  },
+  {
+    "id": 63,
+    "nombre": "MINISTERIO DE TRABAJO Y SEGURIDAD SOCIAL"
+  },
+  {
+    "id": 226,
+    "nombre": "MINISTERIO DE TRABAJO Y S.S. Y ECONOMIA"
+  },
+  {
+    "id": 3592,
+    "nombre": "MINISTERIO DE TRANSPORTE"
+  },
+  {
+    "id": 3424,
+    "nombre": "MINISTERIO DE TURISMO"
+  },
+  {
+    "id": 548,
+    "nombre": "MINISTERIO DE TURISMO, CULTURA Y DEPORTE"
+  },
+  {
+    "id": 3859,
+    "nombre": "MINISTERIO DE TURISMO Y DEPORTES"
+  },
+  {
+    "id": 423,
+    "nombre": "MINISTERIO PUBLICO DE LA NACION"
+  },
+  {
+    "id": 206,
+    "nombre": "MINISTERIOS DE ECONOMIA E INTERIOR"
+  },
+  {
+    "id": 661,
+    "nombre": "MIN. PLANIFICACION FEDERAL, INVERSION PUB. Y SERVI"
+  },
+  {
+    "id": 710,
+    "nombre": "MUSEO ARGENTINO CIENCIAS NATURALES BERNARDINO RIVA"
+  },
+  {
+    "id": 438,
+    "nombre": "NOMENCLATURA COMUN DEL MERCOSUR"
+  },
+  {
+    "id": 4235,
+    "nombre": "OBRA SOCIAL DE LAS FUERZAS FEDERALES DE SEGURIDAD"
+  },
+  {
+    "id": 778,
+    "nombre": "OBRA SOCIAL DE LA UNIVERSIDAD NACIONAL DE SALTA"
+  },
+  {
+    "id": 3584,
+    "nombre": "OBRA SOCIAL DEL PERSONAL DE LA SANIDAD ARGENTINA"
+  },
+  {
+    "id": 4120,
+    "nombre": "OBRA SOCIAL DEL PERSONAL DEL AUTOMOVIL CLUB ARGENTINO"
+  },
+  {
+    "id": 510,
+    "nombre": "OBRA SOCIAL DEL PERSONAL RURAL Y ESTIBADORES DE LA"
+  },
+  {
+    "id": 64,
+    "nombre": "OBRAS SANITARIAS DE LA NACION (OSN)"
+  },
+  {
+    "id": 3439,
+    "nombre": "OCTAVA COMISON DE TRABAJO A DOMICILIO DE LA IND. DEL CALZADO"
+  },
+  {
+    "id": 471,
+    "nombre": "OFICINA ANTICORRUPCION"
+  },
+  {
+    "id": 527,
+    "nombre": "OFICINA NACIONAL DE CONTRATACIONES"
+  },
+  {
+    "id": 361,
+    "nombre": "OFICINA NACIONAL DE CONTROL COMERCIAL AGROPECUARIO"
+  },
+  {
+    "id": 4113,
+    "nombre": "OFICINA NACIONAL DE EMPLEO PUBLICO"
+  },
+  {
+    "id": 442,
+    "nombre": "OFICINA NACIONAL DE ETICA PUBLICA"
+  },
+  {
+    "id": 3432,
+    "nombre": "OFICINA NACIONAL DE PRESUPUESTO"
+  },
+  {
+    "id": 582,
+    "nombre": "OFICINA NACIONAL DE TECNOLOGIAS DE INFORMACION"
+  },
+  {
+    "id": 577,
+    "nombre": "OFICINA NACIONAL DE TECNOLOGIAS INFORMATICAS"
+  },
+  {
+    "id": 597,
+    "nombre": "ORGANISMO REGULADOR DE SEGURIDAD DE PRESAS"
+  },
+  {
+    "id": 507,
+    "nombre": "ORGANO DE CONTROL DE CONCESIONES VIALES"
+  },
+  {
+    "id": 3533,
+    "nombre": "ORGANO DE REVISION DE LA NACION"
+  },
+  {
+    "id": 3722,
+    "nombre": "ORGANO DE REVISION DE LA NACION - LEY 26657"
+  },
+  {
+    "id": 4133,
+    "nombre": "ORGANO DE REVISION NACIONAL DE SALUD MENTAL"
+  },
+  {
+    "id": 280,
+    "nombre": "ORG.CONT. CONCESIONES RED DE ACCESOS CIUDAD BS.AS."
+  },
+  {
+    "id": 414,
+    "nombre": "ORG. REG. DEL SISTEMA NACIONAL DE AEROPUERTOS"
+  },
+  {
+    "id": 3595,
+    "nombre": "PARQUE NACIONAL EL PALMAR"
+  },
+  {
+    "id": 3658,
+    "nombre": "PARQUE NACIONAL LAGO PUELO"
+  },
+  {
+    "id": 3688,
+    "nombre": "PARQUE NACIONAL LANIN"
+  },
+  {
+    "id": 3661,
+    "nombre": "PARQUE NACIONAL NAHUEL HUAPI"
+  },
+  {
+    "id": 3740,
+    "nombre": "PARQUE TECNOPOLIS DEL BICENTENARIO"
+  },
+  {
+    "id": 3215,
+    "nombre": "PLENARIO DE REPRESENTANTES DE LA COMISION FEDERAL DE IMPUEST"
+  },
+  {
+    "id": 207,
+    "nombre": "PODER EJECUTIVO NACIONAL (P.E.N.)"
+  },
+  {
+    "id": 809,
+    "nombre": "POLICIA DE SEGURIDAD AEROPORTUARIA"
+  },
+  {
+    "id": 3532,
+    "nombre": "POLICIA DE SEGURIDAD DE LA NAVEGACION"
+  },
+  {
+    "id": 448,
+    "nombre": "PREFECTURA NAVAL ARGENTINA"
+  },
+  {
+    "id": 368,
+    "nombre": "PRESIDENTE DEL H. SENADO DE LA NACION"
+  },
+  {
+    "id": 3324,
+    "nombre": "PRESIDENTES DEL H. SENADO Y DE LA H. CAM. DE DIP. DE LA NAC."
+  },
+  {
+    "id": 3300,
+    "nombre": "PRIM. COM. DE SALARIOS DE TRAB. A DOM. PARA LA IND. DEL VEST"
+  },
+  {
+    "id": 3279,
+    "nombre": "PRIMERA COM. NAC. DE SALARIOS DE LA IND. DEL VESTIDO DE TRAB"
+  },
+  {
+    "id": 454,
+    "nombre": "PROCURACION DEL TESORO DE LA NACION"
+  },
+  {
+    "id": 65,
+    "nombre": "PROCURACION GENERAL DE LA NACION"
+  },
+  {
+    "id": 3456,
+    "nombre": "PROCURACION PENITENCIARIA DE LA NACION"
+  },
+  {
+    "id": 3833,
+    "nombre": "PROGRAMA DE CALIDAD"
+  },
+  {
+    "id": 3499,
+    "nombre": "RADIO Y TELEVISION ARGENTINA S.E."
+  },
+  {
+    "id": 3296,
+    "nombre": "RECTORADO DE LA UNIVERSIDAD DE BUENOS AIRES"
+  },
+  {
+    "id": 3293,
+    "nombre": "REGIMEN PARA LA RECUPERACION DE LA GANADERIA OVINA"
+  },
+  {
+    "id": 787,
+    "nombre": "REGION ADUANERA MENDOZA (AFIP)"
+  },
+  {
+    "id": 780,
+    "nombre": "REGION LA PLATA (AFIP-DGI)"
+  },
+  {
+    "id": 749,
+    "nombre": "REGION MERCEDES (AFIP-DGI)"
+  },
+  {
+    "id": 786,
+    "nombre": "REGION Nº 10 (AFIP-DGI)"
+  },
+  {
+    "id": 762,
+    "nombre": "REGION Nº 3 (AFIP-DGI)"
+  },
+  {
+    "id": 759,
+    "nombre": "REGION Nº 6 (AFIP-DGI)"
+  },
+  {
+    "id": 781,
+    "nombre": "REGION Nº 9 (AFIP-DGI)"
+  },
+  {
+    "id": 304,
+    "nombre": "REGISTRO DE LA PROPIEDAD INMUEBLE"
+  },
+  {
+    "id": 3506,
+    "nombre": "REGISTRO DE LA PROPIEDAD INMUEBLE DE LA CAPITAL FEDERAL"
+  },
+  {
+    "id": 66,
+    "nombre": "REGISTRO NAC.DE LA PROP.AUTOMOTOR Y CRED.PRENDARIO"
+  },
+  {
+    "id": 653,
+    "nombre": "REGISTRO NACIONAL DE AERONAVES"
+  },
+  {
+    "id": 343,
+    "nombre": "REGISTRO NACIONAL DE ARMAS"
+  },
+  {
+    "id": 630,
+    "nombre": "REGISTRO NACIONAL DE CONSTRUCTORES DE OBRAS PUBLIC"
+  },
+  {
+    "id": 721,
+    "nombre": "REGISTRO NACIONAL DE COOPERATIVAS Y MUTUALES"
+  },
+  {
+    "id": 296,
+    "nombre": "REGISTRO NACIONAL DE LA INDUSTRIA DE CONSTRUCCION"
+  },
+  {
+    "id": 67,
+    "nombre": "REGISTRO NACIONAL DE LAS PERSONAS"
+  },
+  {
+    "id": 3352,
+    "nombre": "REGISTRO NACIONAL DE PRECURSORES QUIMICOS"
+  },
+  {
+    "id": 3617,
+    "nombre": "REGISTRO NACIONAL DE REINCIDENCIA"
+  },
+  {
+    "id": 3557,
+    "nombre": "REGISTRO NACIONAL DE TIERRAS RURALES"
+  },
+  {
+    "id": 652,
+    "nombre": "REGISTRO NACIONAL DE TRABAJADORES RURALES Y EMPLEA"
+  },
+  {
+    "id": 4040,
+    "nombre": "REGISTRO NACIONAL DE TRABAJADORES RURALES Y EMPLEADORES"
+  },
+  {
+    "id": 3513,
+    "nombre": "REGISTRO NACIONAL DE TRABAJADORES Y EMPLEADORES AGRARIOS"
+  },
+  {
+    "id": 3232,
+    "nombre": "REGISTRO UNICO DE ASPIRANTES A GUARDAS CON FINES ADOPTIVOS"
+  },
+  {
+    "id": 3233,
+    "nombre": "REPUBLICA ARGENTINA - REPUBLICA FEDERATIVA DEL BRASIL"
+  },
+  {
+    "id": 622,
+    "nombre": "REUNION DE MINISTROS DEL MERCOSUR"
+  },
+  {
+    "id": 264,
+    "nombre": "SALUD PUBLICA"
+  },
+  {
+    "id": 315,
+    "nombre": "SEC. DE COORD. LEGAL, TECNICA Y ADMINISTRATIVA"
+  },
+  {
+    "id": 3815,
+    "nombre": "SEC DE EVALUACION PRESUPUESTARIA INVER PUB Y PARTIC PUB PRI"
+  },
+  {
+    "id": 313,
+    "nombre": "SEC. DE POLITICAS DE SALUD Y REGULACION SANITARIA"
+  },
+  {
+    "id": 263,
+    "nombre": "SEC.PROG.PARA PREV.DROG. Y LUCHA C/NARCO.PRES.NAC."
+  },
+  {
+    "id": 3280,
+    "nombre": "SECRET. ADMINISTRATIVA DEL HONORABLE SENADO DE LA NACION"
+  },
+  {
+    "id": 3956,
+    "nombre": "SECRETARIA DE ACCESO A LA SALUD"
+  },
+  {
+    "id": 4131,
+    "nombre": "SECRETARIA DE ACCESO Y EQUIDAD EN SALUD"
+  },
+  {
+    "id": 126,
+    "nombre": "SECRETARIA DE ACCION COOPERATIVA"
+  },
+  {
+    "id": 3452,
+    "nombre": "SECRETARIA DE ACTUACION ELECTORAL"
+  },
+  {
+    "id": 3539,
+    "nombre": "SECRETARIA DE AERONAUTICA"
+  },
+  {
+    "id": 3610,
+    "nombre": "SECRETARIA DE AGREGADO DE VALOR"
+  },
+  {
+    "id": 3931,
+    "nombre": "SECRETARIA DE AGRICULTURA FAMILIAR CAMPESINA E INDIGENA"
+  },
+  {
+    "id": 3695,
+    "nombre": "SECRETARIA DE AGRICULTURA FAMILIAR COORDINACION Y DESARROLLO"
+  },
+  {
+    "id": 370,
+    "nombre": "SECRETARIA DE AGRICULTURA, GANADERIA, PESCA Y ALIM"
+  },
+  {
+    "id": 82,
+    "nombre": "SECRETARIA DE AGRICULTURA, GANADERIA Y PESCA"
+  },
+  {
+    "id": 319,
+    "nombre": "SECRETARIA DE AGRICULTURA, PESCA Y ALIMENTACION"
+  },
+  {
+    "id": 300,
+    "nombre": "SECRETARIA DE AGRICULTURA Y GANADERIA"
+  },
+  {
+    "id": 3919,
+    "nombre": "SECRETARIA DE ALIMENTOS BIOECONOMIA Y DESARROLLO REGIONAL"
+  },
+  {
+    "id": 3741,
+    "nombre": "SECRETARIA DE ALIMENTOS Y BIOECONOMIA"
+  },
+  {
+    "id": 574,
+    "nombre": "SECRETARIA DE AMBIENTE Y DESARROLLO SUSTENTABLE"
+  },
+  {
+    "id": 3327,
+    "nombre": "SECRETARIA DE ARTICULACION CIENTIFICO TECNOLOGICA"
+  },
+  {
+    "id": 4087,
+    "nombre": "SECRETARIA DE ARTICULACION DE POLITICA SOCIAL"
+  },
+  {
+    "id": 4061,
+    "nombre": "SECRETARIA DE ARTICULACION FEDERAL DE LA SEGURIDAD"
+  },
+  {
+    "id": 3990,
+    "nombre": "SECRETARIA DE ARTICULACION INTERJURISDICCIONAL"
+  },
+  {
+    "id": 405,
+    "nombre": "SECRETARIA DE ASISTENCIA FINANCIERA A LAS PROVINCI"
+  },
+  {
+    "id": 260,
+    "nombre": "SECRETARIA DE ASIST. REFORMA ECONOMICA PROVINCIAL"
+  },
+  {
+    "id": 4116,
+    "nombre": "SECRETARIA DE ASUNTOS ECONOMICOS Y FINANCIEROS INTERNACIONAL"
+  },
+  {
+    "id": 4008,
+    "nombre": "SECRETARIA DE ASUNTOS ESTRATEGICOS"
+  },
+  {
+    "id": 453,
+    "nombre": "SECRETARIA DE ASUNTOS INSTITUCIONALES"
+  },
+  {
+    "id": 811,
+    "nombre": "SECRETARIA DE ASUNTOS MILITARES"
+  },
+  {
+    "id": 3315,
+    "nombre": "SECRETARIA DE ASUNTOS MUNICIPALES"
+  },
+  {
+    "id": 505,
+    "nombre": "SECRETARIA DE ASUNTOS POLITICOS"
+  },
+  {
+    "id": 3637,
+    "nombre": "SECRETARIA DE ASUNTOS POLITICOS E INSTITUCIONALES"
+  },
+  {
+    "id": 257,
+    "nombre": "SECRETARIA DE ASUNTOS REGISTRALES"
+  },
+  {
+    "id": 399,
+    "nombre": "SECRETARIA DE ASUNTOS TECNICOS Y LEGISLATIVOS"
+  },
+  {
+    "id": 3746,
+    "nombre": "SECRETARIA DE ATENCION CIUDADANA Y SERVICIOS FEDERALES"
+  },
+  {
+    "id": 486,
+    "nombre": "SECRETARIA DE ATENCION SANITARIA"
+  },
+  {
+    "id": 4129,
+    "nombre": "SECRETARIA DE BIOECONOMIA"
+  },
+  {
+    "id": 3882,
+    "nombre": "SECRETARIA DE CALIDAD EN SALUD"
+  },
+  {
+    "id": 3946,
+    "nombre": "SECRETARIA DE CAMBIO CLIMATICO DESARROLLO SOSTENIBLE E INNO"
+  },
+  {
+    "id": 3759,
+    "nombre": "SECRETARIA DE CAMBIO CLIMATICO Y DESARROLLO SUSTENTABLE"
+  },
+  {
+    "id": 470,
+    "nombre": "SECRETARIA DE CIENCIA, TECNOLOGIA E INNOVACION PRO"
+  },
+  {
+    "id": 3537,
+    "nombre": "SECRETARIA DE CIENCIA TECNOLOGIA Y PRODUCCION PARA LA DEFEN"
+  },
+  {
+    "id": 83,
+    "nombre": "SECRETARIA DE CIENCIA Y TECNOLOGIA"
+  },
+  {
+    "id": 3754,
+    "nombre": "SECRETARIA DE COBERTURAS Y RECURSOS DE SALUD"
+  },
+  {
+    "id": 84,
+    "nombre": "SECRETARIA DE COMBUSTIBLES"
+  },
+  {
+    "id": 236,
+    "nombre": "SECRETARIA DE COMERCIO"
+  },
+  {
+    "id": 231,
+    "nombre": "SECRETARIA DE COMERCIO E INVERSIONES"
+  },
+  {
+    "id": 238,
+    "nombre": "SECRETARIA DE COMERCIO EXTERIOR"
+  },
+  {
+    "id": 3841,
+    "nombre": "SECRETARIA DE COMERCIO INTERIOR"
+  },
+  {
+    "id": 128,
+    "nombre": "SECRETARIA DE COMERCIO INTERIOR (SECI)"
+  },
+  {
+    "id": 488,
+    "nombre": "SECRETARIA DE COMERCIO Y NEGOCIACIONES ECONOMICAS"
+  },
+  {
+    "id": 736,
+    "nombre": "SECRETARIA DE COMERCIO Y RELACIONES ECONOMICAS INT"
+  },
+  {
+    "id": 129,
+    "nombre": "SECRETARIA DE COMUNICACIONES"
+  },
+  {
+    "id": 3435,
+    "nombre": "SECRETARIA DE COMUNICACION PUBLICA"
+  },
+  {
+    "id": 4157,
+    "nombre": "SECRETARIA DE COMUNICACION Y MEDIOS"
+  },
+  {
+    "id": 3894,
+    "nombre": "SECRETARIA DE COMUNICACION Y PRENSA"
+  },
+  {
+    "id": 3611,
+    "nombre": "SECRETARIA DE CONTROL Y MONITOREO AMBIENTAL"
+  },
+  {
+    "id": 3643,
+    "nombre": "SECRETARIA DE COOP CON LOS POD JUD MINIST PUBLICOS Y LEGISL"
+  },
+  {
+    "id": 358,
+    "nombre": "SECRETARIA DE COORDINACION"
+  },
+  {
+    "id": 3770,
+    "nombre": "SECRETARIA DE COORDINACION ADMINISTRATIVA"
+  },
+  {
+    "id": 3406,
+    "nombre": "SECRETARIA DE COORDINACION ADMINISTRATIVA Y EVALUACION PRES."
+  },
+  {
+    "id": 4086,
+    "nombre": "SECRETARIA DE COORDINACION BIENESTAR CONTROL Y TRANSPARENC"
+  },
+  {
+    "id": 4161,
+    "nombre": "SECRETARIA DE COORDINACION DE ENERGIA Y MINERIA"
+  },
+  {
+    "id": 3737,
+    "nombre": "SECRETARIA DE COORDINACION DE GESTION CULTURAL"
+  },
+  {
+    "id": 3776,
+    "nombre": "SECRETARIA DE COORDINACION DE POLITICA ENERGETICA"
+  },
+  {
+    "id": 3755,
+    "nombre": "SECRETARIA DE COORDINACION DE POLITICAS PUBLICAS"
+  },
+  {
+    "id": 130,
+    "nombre": "SECRETARIA DE COORDINACION ECONOMICA"
+  },
+  {
+    "id": 3792,
+    "nombre": "SECRETARIA DE COORDINACION E INVERSIONES TURISTICAS"
+  },
+  {
+    "id": 3758,
+    "nombre": "SECRETARIA DE COORDINACION FORMACION Y CARRERA"
+  },
+  {
+    "id": 497,
+    "nombre": "SECRETARIA DE COORDINACION GENERAL"
+  },
+  {
+    "id": 519,
+    "nombre": "SECRETARIA DE COORDINACION GENERAL DE LA JEFATURA"
+  },
+  {
+    "id": 4060,
+    "nombre": "SECRETARIA DE COORDINACION LEGAL Y ADMINISTRATIVA"
+  },
+  {
+    "id": 4170,
+    "nombre": "SECRETARIA DE COORDINACION LEGAL Y ADMINISTRATIVA DE INTERIO"
+  },
+  {
+    "id": 3922,
+    "nombre": "SECRETARIA DE COORDINACION MILITAR EN EMERGENCIAS"
+  },
+  {
+    "id": 3546,
+    "nombre": "SECRETARIA DE COORDINACION POLITICO-INSTITUCIONAL Y EMER AGR"
+  },
+  {
+    "id": 4046,
+    "nombre": "SECRETARIA DE COORDINACION PRESUPUESTARIA Y PLANIFICACION DE"
+  },
+  {
+    "id": 664,
+    "nombre": "SECRETARIA DE COORDINACION TECNICA"
+  },
+  {
+    "id": 3354,
+    "nombre": "SECRETARIA DE COORDINACION Y COOPERACION INTERNACIONAL"
+  },
+  {
+    "id": 3621,
+    "nombre": "SECRETARIA DE COORDINACION Y DESARROLLO TERRITORIAL"
+  },
+  {
+    "id": 3349,
+    "nombre": "SECRETARIA DE COORDINACION Y MONITOREO INSTITUCIONAL"
+  },
+  {
+    "id": 3834,
+    "nombre": "SECRETARIA DE COORDINACION Y PLANIFICACION EXTERIOR"
+  },
+  {
+    "id": 281,
+    "nombre": "SECRETARIA DE CULTO"
+  },
+  {
+    "id": 4156,
+    "nombre": "SECRETARIA DE CULTO Y CIVILIZACION"
+  },
+  {
+    "id": 329,
+    "nombre": "SECRETARIA DE CULTURA"
+  },
+  {
+    "id": 467,
+    "nombre": "SECRETARIA DE CULTURA Y COMUNICACION"
+  },
+  {
+    "id": 3694,
+    "nombre": "SECRETARIA DE CULTURA Y CREATIVIDAD"
+  },
+  {
+    "id": 532,
+    "nombre": "SECRETARIA DE CULTURA Y MEDIOS DE COMUNICACION"
+  },
+  {
+    "id": 479,
+    "nombre": "SECRETARIA DE DEFENSA DE LA COMPETENCIA Y DEL CONS"
+  },
+  {
+    "id": 3445,
+    "nombre": "SECRETARIA DE DEPORTE"
+  },
+  {
+    "id": 3607,
+    "nombre": "SECRETARIA DE DEPORTE EDUCACION FISICA Y RECREACION"
+  },
+  {
+    "id": 288,
+    "nombre": "SECRETARIA DE DEPORTES"
+  },
+  {
+    "id": 541,
+    "nombre": "SECRETARIA DE DEPORTES Y RECREACION"
+  },
+  {
+    "id": 579,
+    "nombre": "SECRETARIA DE DERECHOS HUMANOS"
+  },
+  {
+    "id": 3904,
+    "nombre": "SECRETARIA DE DESARROLLO CULTURAL"
+  },
+  {
+    "id": 377,
+    "nombre": "SECRETARIA DE DESARROLLO INDUSTRIAL"
+  },
+  {
+    "id": 225,
+    "nombre": "SECRETARIA DE DESARROLLO REGIONAL"
+  },
+  {
+    "id": 3414,
+    "nombre": "SECRETARIA DE DESARROLLO RURAL Y AGRICULTURA FAMILIAR"
+  },
+  {
+    "id": 294,
+    "nombre": "SECRETARIA DE DESARROLLO SOCIAL"
+  },
+  {
+    "id": 484,
+    "nombre": "SECRETARIA DE DESARROLLO SUSTENTABLE Y POLITICA AM"
+  },
+  {
+    "id": 3977,
+    "nombre": "SECRETARIA DE DESARROLLO TERRITORIAL"
+  },
+  {
+    "id": 4124,
+    "nombre": "SECRETARIA DE DESARROLLO TERRITORIAL HABITAT Y VIVIENDA"
+  },
+  {
+    "id": 85,
+    "nombre": "SECRETARIA DE ECONOMIA"
+  },
+  {
+    "id": 4065,
+    "nombre": "SECRETARIA DE ECONOMIA DEL CONOCIMIENTO"
+  },
+  {
+    "id": 3822,
+    "nombre": "SECRETARIA DE ECONOMIA SOCIAL"
+  },
+  {
+    "id": 788,
+    "nombre": "SECRETARIA DE EDUCACION"
+  },
+  {
+    "id": 495,
+    "nombre": "SECRETARIA DE EDUCACION SUPERIOR"
+  },
+  {
+    "id": 475,
+    "nombre": "SECRETARIA DE EMPLEO"
+  },
+  {
+    "id": 3608,
+    "nombre": "SECRETARIA DE EMPLEO PUBLICO"
+  },
+  {
+    "id": 3723,
+    "nombre": "SECRETARIA DE EMPLEO PUBLICO -"
+  },
+  {
+    "id": 340,
+    "nombre": "SECRETARIA DE EMPLEO Y CAPACITACION LABORAL"
+  },
+  {
+    "id": 311,
+    "nombre": "SECRETARIA DE EMPLEO Y FORMACION PROFESIONAL"
+  },
+  {
+    "id": 3605,
+    "nombre": "SECRETARIA DE EMPRENDEDORES Y DE LA PEQUEÑA Y MEDIANA EMPRES"
+  },
+  {
+    "id": 4135,
+    "nombre": "SECRETARIA DE EMPRESAS Y SOCIEDADES DEL ESTADO"
+  },
+  {
+    "id": 242,
+    "nombre": "SECRETARIA DE ENERGIA"
+  },
+  {
+    "id": 86,
+    "nombre": "SECRETARIA DE ENERGIA ELECTRICA"
+  },
+  {
+    "id": 318,
+    "nombre": "SECRETARIA DE ENERGIA, TRANSPORTE Y COMUNICACIONES"
+  },
+  {
+    "id": 297,
+    "nombre": "SECRETARIA DE ENERGIA Y COMUNICACIONES"
+  },
+  {
+    "id": 496,
+    "nombre": "SECRETARIA DE ENERGIA Y MINERIA"
+  },
+  {
+    "id": 349,
+    "nombre": "SECRETARIA DE ENERGIA Y PUERTOS"
+  },
+  {
+    "id": 336,
+    "nombre": "SECRETARIA DE ENERGIA Y TRANSPORTE"
+  },
+  {
+    "id": 3989,
+    "nombre": "SECRETARIA DE EQUIDAD EN SALUD"
+  },
+  {
+    "id": 3359,
+    "nombre": "SECRETARIA DE ESTRATEGIA Y ASUNTOS MILITARES"
+  },
+  {
+    "id": 3687,
+    "nombre": "SECRETARIA DE ETICA PUBLICA TRANSPARENCIA Y LUCHA CONTRA LA"
+  },
+  {
+    "id": 3344,
+    "nombre": "SECRETARIA DE EVALUACION PRESUPUESTARIA"
+  },
+  {
+    "id": 3993,
+    "nombre": "SECRETARIA DE EVALUACION PRESUPUESTARIA INVERSION PUBLICA Y"
+  },
+  {
+    "id": 480,
+    "nombre": "SECRETARIA DE FINANZAS"
+  },
+  {
+    "id": 278,
+    "nombre": "SECRETARIA DE FINANZAS, BANCOS Y SEGUROS"
+  },
+  {
+    "id": 3686,
+    "nombre": "SECRETARIA DE FRONTERAS"
+  },
+  {
+    "id": 3423,
+    "nombre": "SECRETARIA DE GABINETE"
+  },
+  {
+    "id": 3473,
+    "nombre": "SECRETARIA DE GABINETE Y COORDINACION ADMINISTRATIVA"
+  },
+  {
+    "id": 3339,
+    "nombre": "SECRETARIA DE GABINETE Y GESTION PUBLICA"
+  },
+  {
+    "id": 572,
+    "nombre": "SECRETARIA DE GABINETE Y RELACIONES PARLAMENTARIAS"
+  },
+  {
+    "id": 3877,
+    "nombre": "SECRETARIA DE GESTION ADMINISTRATIVA"
+  },
+  {
+    "id": 3925,
+    "nombre": "SECRETARIA DE GESTION CULTURAL"
+  },
+  {
+    "id": 3602,
+    "nombre": "SECRETARIA DE GESTION DE TRANSPORTE"
+  },
+  {
+    "id": 3799,
+    "nombre": "SECRETARIA DE GESTION EDUCATIVA"
+  },
+  {
+    "id": 3620,
+    "nombre": "SECRETARIA DE GESTION E INNOVACION PUBLICA"
+  },
+  {
+    "id": 3750,
+    "nombre": "SECRETARIA DE GESTION PRESUPUESTARIA Y CONTROL"
+  },
+  {
+    "id": 4181,
+    "nombre": "SECRETARIA DE GESTION SANITARIA"
+  },
+  {
+    "id": 3867,
+    "nombre": "SECRETARIA DE GESTION Y EMPLEO PUBLICO"
+  },
+  {
+    "id": 3779,
+    "nombre": "SECRETARIA DE GOBIERNO DE AGROINDUSTRIA"
+  },
+  {
+    "id": 3762,
+    "nombre": "SECRETARIA DE GOBIERNO DE AMBIENTE Y DESARROLLO SUSTENTABLE"
+  },
+  {
+    "id": 3786,
+    "nombre": "SECRETARIA DE GOBIERNO DE CIENCIA TECNOLOGIA E INNOVACION P"
+  },
+  {
+    "id": 3772,
+    "nombre": "SECRETARIA DE GOBIERNO DE CULTURA"
+  },
+  {
+    "id": 3760,
+    "nombre": "SECRETARIA DE GOBIERNO DE ENERGIA"
+  },
+  {
+    "id": 3767,
+    "nombre": "SECRETARIA DE GOBIERNO DE MODERNIZACION"
+  },
+  {
+    "id": 3771,
+    "nombre": "SECRETARIA DE GOBIERNO DE SALUD"
+  },
+  {
+    "id": 3764,
+    "nombre": "SECRETARIA DE GOBIERNO DE TRABAJO Y EMPLEO"
+  },
+  {
+    "id": 3778,
+    "nombre": "SECRETARIA DE GOBIERNO DE TURISMO"
+  },
+  {
+    "id": 3934,
+    "nombre": "SECRETARIA DE HABITAT"
+  },
+  {
+    "id": 89,
+    "nombre": "SECRETARIA DE HACIENDA"
+  },
+  {
+    "id": 587,
+    "nombre": "SECRETARIA DE HACIENDA Y ADMINISTRACION DE LA U.B."
+  },
+  {
+    "id": 90,
+    "nombre": "SECRETARIA DE HIDROCARBUROS Y MINERIA"
+  },
+  {
+    "id": 3945,
+    "nombre": "SECRETARIA DE INCLUSION SOCIAL"
+  },
+  {
+    "id": 91,
+    "nombre": "SECRETARIA DE INDUSTRIA"
+  },
+  {
+    "id": 355,
+    "nombre": "SECRETARIA DE INDUSTRIA, AGRICULTURA, PESCA Y ALIM"
+  },
+  {
+    "id": 503,
+    "nombre": "SECRETARIA DE INDUSTRIA, COMERCIO E INVERSIONES"
+  },
+  {
+    "id": 663,
+    "nombre": "SECRETARIA DE INDUSTRIA, COMERCIO Y DE LA PEQUEÑA"
+  },
+  {
+    "id": 367,
+    "nombre": "SECRETARIA DE INDUSTRIA, COMERCIO Y MINERIA"
+  },
+  {
+    "id": 3861,
+    "nombre": "SECRETARIA DE INDUSTRIA ECONOMIA DEL CONOCIMIENTO Y GESTION"
+  },
+  {
+    "id": 234,
+    "nombre": "SECRETARIA DE INDUSTRIA Y COMERCIO"
+  },
+  {
+    "id": 92,
+    "nombre": "SECRETARIA DE INDUSTRIA Y COMERCIO EXTERIOR"
+  },
+  {
+    "id": 3467,
+    "nombre": "SECRETARIA DE INDUSTRIA Y COMERCIO INTERIOR"
+  },
+  {
+    "id": 4063,
+    "nombre": "SECRETARIA DE INDUSTRIA Y DESARROLLO PRODUCTIVO"
+  },
+  {
+    "id": 309,
+    "nombre": "SECRETARIA DE INDUSTRIA Y MINERIA"
+  },
+  {
+    "id": 3614,
+    "nombre": "SECRETARIA DE INDUSTRIA Y SERVICIOS"
+  },
+  {
+    "id": 3742,
+    "nombre": "SECRETARIA DE INFRAESTRUCTURA URBANA"
+  },
+  {
+    "id": 3726,
+    "nombre": "SECRETARIA DE INFRAESTRUCTURA Y POLITICA HIDRICA"
+  },
+  {
+    "id": 93,
+    "nombre": "SECRETARIA DE INGRESOS PUBLICOS"
+  },
+  {
+    "id": 4122,
+    "nombre": "SECRETARIA DE INNOVACION CIENCIA Y TECNOLOGIA"
+  },
+  {
+    "id": 3868,
+    "nombre": "SECRETARIA DE INNOVACION PUBLICA"
+  },
+  {
+    "id": 4044,
+    "nombre": "SECRETARIA DE INNOVACION TECNOLOGICA DEL SECTOR PUBLICO"
+  },
+  {
+    "id": 3844,
+    "nombre": "SECRETARIA DE INNOVACION Y CALIDAD EDUCATIVA"
+  },
+  {
+    "id": 3667,
+    "nombre": "SECRETARIA DE INTEGRACION FEDERAL Y COOPERACION INTERNACIONA"
+  },
+  {
+    "id": 3466,
+    "nombre": "SECRETARIA DE INTEGRACION NACIONAL"
+  },
+  {
+    "id": 3657,
+    "nombre": "SECRETARIA DE INTEGRACION PRODUCTIVA"
+  },
+  {
+    "id": 3958,
+    "nombre": "SECRETARIA DE INTEGRACION SOCIO-URBANA"
+  },
+  {
+    "id": 3486,
+    "nombre": "SECRETARIA DE INTERESES MARITIMOS"
+  },
+  {
+    "id": 3318,
+    "nombre": "SECRETARIA DE INTERIOR"
+  },
+  {
+    "id": 3777,
+    "nombre": "SECRETARIA DE INVESTIGACION POLITICA INDUSTRIAL Y PRODUCCION"
+  },
+  {
+    "id": 244,
+    "nombre": "SECRETARIA DE JUSTICIA"
+  },
+  {
+    "id": 477,
+    "nombre": "SECRETARIA DE JUSTICIA Y ASUNTOS LEGISLATIVOS"
+  },
+  {
+    "id": 520,
+    "nombre": "SECRETARIA DE LA COMPETENCIA, LA DESREGULACION Y L"
+  },
+  {
+    "id": 87,
+    "nombre": "SECRETARIA DE LA FUNCION PUBLICA"
+  },
+  {
+    "id": 435,
+    "nombre": "SECRETARIA DE LA FUNCION PUBLICA DE LA JEFATURA DE"
+  },
+  {
+    "id": 3311,
+    "nombre": "SECRETARIA DE LA GESTION PUBLICA"
+  },
+  {
+    "id": 139,
+    "nombre": "SECRETARIA DE LA MARINA MERCANTE"
+  },
+  {
+    "id": 4143,
+    "nombre": "SECRETARIA DE LA PEQUENA Y MEDIANA EMPRESA EMPRENDEDORES Y"
+  },
+  {
+    "id": 3872,
+    "nombre": "SECRETARIA DE LA PEQUENA Y MEDIANA EMPRESA Y LOS EMPRENDEDO"
+  },
+  {
+    "id": 3916,
+    "nombre": "SECRETARIA DE LA PEQUENA Y MEDIANA EMPRESA Y LOS EMPRENDEDOR"
+  },
+  {
+    "id": 409,
+    "nombre": "SECRETARIA DE LA PEQUEÑA Y MEDIANA EMPRESA"
+  },
+  {
+    "id": 581,
+    "nombre": "SECRETARIA DE LA PEQUEÑA Y MEDIANA EMPRESA Y DESAR"
+  },
+  {
+    "id": 508,
+    "nombre": "SECRETARIA DE LA PRODUCCION"
+  },
+  {
+    "id": 127,
+    "nombre": "SECRETARIA DEL AREA DE PROM.DESARROLLO Y SERVICIOS"
+  },
+  {
+    "id": 3330,
+    "nombre": "SECRETARIA DE LA SEGURIDAD SOCIAL"
+  },
+  {
+    "id": 3624,
+    "nombre": "SECRETARIA DE LA TRANSFORMACION PRODUCTIVA"
+  },
+  {
+    "id": 339,
+    "nombre": "SECRETARIA DEL INTERIOR"
+  },
+  {
+    "id": 3887,
+    "nombre": "SECRETARIA DE MALVINAS ANTARTIDA Y ATLANTICO SUR"
+  },
+  {
+    "id": 95,
+    "nombre": "SECRETARIA DE MEDIOS DE COMUNICACION"
+  },
+  {
+    "id": 3875,
+    "nombre": "SECRETARIA DE MEDIOS Y COMUNICACION PUBLICA"
+  },
+  {
+    "id": 3618,
+    "nombre": "SECRETARIA DE MERCADOS AGROINDUSTRIALES"
+  },
+  {
+    "id": 218,
+    "nombre": "SECRETARIA DE MINERIA"
+  },
+  {
+    "id": 323,
+    "nombre": "SECRETARIA DE MINERIA E INDUSTRIA"
+  },
+  {
+    "id": 3603,
+    "nombre": "SECRETARIA DE MODERNIZACION ADMINISTRATIVA"
+  },
+  {
+    "id": 3619,
+    "nombre": "SECRETARIA DE OBRAS DE TRANSPORTE"
+  },
+  {
+    "id": 299,
+    "nombre": "SECRETARIA DE OBRAS PUBLICAS"
+  },
+  {
+    "id": 240,
+    "nombre": "SECRETARIA DE OBRAS PUBLICAS Y COMUNICACIONES"
+  },
+  {
+    "id": 369,
+    "nombre": "SECRETARIA DE OBRAS PUBLICAS Y TRANSPORTE"
+  },
+  {
+    "id": 96,
+    "nombre": "SECRETARIA DE OBRAS Y SERVICIOS PUBLICOS"
+  },
+  {
+    "id": 537,
+    "nombre": "SECRETARIA DE ORDENAMIENTO Y POLITICA AMBIENTAL"
+  },
+  {
+    "id": 3751,
+    "nombre": "SECRETARIA DE PARTICIPACION PUBLICO PRIVADA"
+  },
+  {
+    "id": 3700,
+    "nombre": "SECRETARIA DE PATRIMONIO CULTURAL"
+  },
+  {
+    "id": 3269,
+    "nombre": "SECRETARIA DE PLANEAMIENTO"
+  },
+  {
+    "id": 4150,
+    "nombre": "SECRETARIA DE PLANEAMIENTO Y GESTION PARA EL DESARROLLO PROD"
+  },
+  {
+    "id": 3744,
+    "nombre": "SECRETARIA DE PLANEAMIENTO Y POLITICAS EN CIENCIA TECNOLOGIA"
+  },
+  {
+    "id": 97,
+    "nombre": "SECRETARIA DE PLANIFICACION"
+  },
+  {
+    "id": 4090,
+    "nombre": "SECRETARIA DE PLANIFICACION DEL DESARROLLO Y LA COMPETITIVID"
+  },
+  {
+    "id": 3604,
+    "nombre": "SECRETARIA DE PLANIFICACION DEL TRANSPORTE"
+  },
+  {
+    "id": 3692,
+    "nombre": "SECRETARIA DE PLANIFICACION DE TRANSPORTE"
+  },
+  {
+    "id": 3819,
+    "nombre": "SECRETARIA DE PLANIFICACION TERRITORIAL Y COORDINACION DE OB"
+  },
+  {
+    "id": 284,
+    "nombre": "SECRETARIA DE POBLACION Y RELACIONES CON COMUNIDAD"
+  },
+  {
+    "id": 3831,
+    "nombre": "SECRETARIA DE POLITICA AMBIENTAL EN RECURSOS NATURALES"
+  },
+  {
+    "id": 550,
+    "nombre": "SECRETARIA DE POLITICA CRIMINAL"
+  },
+  {
+    "id": 449,
+    "nombre": "SECRETARIA DE POLITICA CRIMINAL, PENITENCIARIA Y D"
+  },
+  {
+    "id": 487,
+    "nombre": "SECRETARIA DE POLITICA CRIMINAL Y ASUNTOS PENITENC"
+  },
+  {
+    "id": 504,
+    "nombre": "SECRETARIA DE POLITICA ECONOMICA"
+  },
+  {
+    "id": 3483,
+    "nombre": "SECRETARIA DE POLITICA ECONOMICA Y PLANIFICACION DEL DESARRO"
+  },
+  {
+    "id": 3790,
+    "nombre": "SECRETARIA DE POLITICA MINERA"
+  },
+  {
+    "id": 718,
+    "nombre": "SECRETARIA DE POLITICA PENITENCIARIA Y DE READAPTA"
+  },
+  {
+    "id": 346,
+    "nombre": "SECRETARIA DE POLITICAS DE SALUD Y REGULACION SANI"
+  },
+  {
+    "id": 3675,
+    "nombre": "SECRETARIA DE POLITICAS INTEGRALES SOBRE DROGAS DE LA NACION"
+  },
+  {
+    "id": 3302,
+    "nombre": "SECRETARIA DE POLITICAS REGLUACION E INSTITUTOS"
+  },
+  {
+    "id": 3303,
+    "nombre": "SECRETARIA DE POLITICAS REGULACION E INSTITUTOS"
+  },
+  {
+    "id": 3212,
+    "nombre": "SECRETARIA DE POLITICAS REGULACION Y RELACIONES SANITARIAS"
+  },
+  {
+    "id": 732,
+    "nombre": "SECRETARIA DE POLITICAS SOCIALES"
+  },
+  {
+    "id": 779,
+    "nombre": "SECRETARIA DE POLITICAS SOCIALES Y DESARROLLO HUMA"
+  },
+  {
+    "id": 589,
+    "nombre": "SECRETARIA DE POLITICAS  UNIVERSITARIAS"
+  },
+  {
+    "id": 592,
+    "nombre": "SECRETARIA DE POLITICAS Y REGULACION Y RELACIONES"
+  },
+  {
+    "id": 396,
+    "nombre": "SECRETARIA DE POLITICA Y REGULACION DE SALUD"
+  },
+  {
+    "id": 482,
+    "nombre": "SECRETARIA DE POLITICA Y REGULACION SANITARIA"
+  },
+  {
+    "id": 4136,
+    "nombre": "SECRETARIA DE PRENSA"
+  },
+  {
+    "id": 138,
+    "nombre": "SECRETARIA DE PRENSA Y DIFUSION"
+  },
+  {
+    "id": 98,
+    "nombre": "SECRETARIA DE PROGRAMACION ECONOMICA"
+  },
+  {
+    "id": 424,
+    "nombre": "SECRETARIA DE PROGRAMACION ECONOMICA Y REGIONAL"
+  },
+  {
+    "id": 3472,
+    "nombre": "SECRETARIA DE PROGRAMACION Y COORDINACION ECONOMICA"
+  },
+  {
+    "id": 317,
+    "nombre": "SECRETARIA DE PROGRAMACION Y EVALUACION EDUCATIVA"
+  },
+  {
+    "id": 389,
+    "nombre": "SECRETARIA DE PROGRAMAS DE SALUD"
+  },
+  {
+    "id": 588,
+    "nombre": "SECRETARIA DE PROGRAMAS SANITARIAS"
+  },
+  {
+    "id": 99,
+    "nombre": "SECRETARIA DE PROMOCION FEDERAL (DEP.SEC.TURISMO)"
+  },
+  {
+    "id": 3613,
+    "nombre": "SECRETARIA DE PROMOCION PROGRAMAS SANITARIOS Y SALUD COMUNI"
+  },
+  {
+    "id": 3794,
+    "nombre": "SECRETARIA DE PROMOCION PROTECCION Y CAMBIO TECNOLOGICO"
+  },
+  {
+    "id": 4027,
+    "nombre": "SECRETARIA DE PROMOCION TURISTICA"
+  },
+  {
+    "id": 3457,
+    "nombre": "SECRETARIA DE PROMOCION Y PROGRAMAS SANITARIOS"
+  },
+  {
+    "id": 3743,
+    "nombre": "SECRETARIA DE PROTECCION CIVIL"
+  },
+  {
+    "id": 709,
+    "nombre": "SECRETARIA DE PROVINCIAS"
+  },
+  {
+    "id": 3780,
+    "nombre": "SECRETARIA DE PROVINCIAS Y MUNICIPIOS"
+  },
+  {
+    "id": 54,
+    "nombre": "SECRETARIA DE RECURSOS HIDRICOS"
+  },
+  {
+    "id": 3628,
+    "nombre": "SECRETARIA DE RECURSOS HIDROCARBURIFEROS"
+  },
+  {
+    "id": 3556,
+    "nombre": "SECRETARIA DE RECURSOS MARITIMOS"
+  },
+  {
+    "id": 100,
+    "nombre": "SECRETARIA DE RECURSOS NATURALES Y AMBIENTE HUMANO"
+  },
+  {
+    "id": 356,
+    "nombre": "SECRETARIA DE RECURSOS NATURALES Y DESARROLLO SUST"
+  },
+  {
+    "id": 3817,
+    "nombre": "SECRETARIA DE RECURSOS NO RENOVABLES Y MERCADO DE LOS COMBUS"
+  },
+  {
+    "id": 3802,
+    "nombre": "SECRETARIA DE RECURSOS RENOVABLES Y MERCADO ELECTRICO"
+  },
+  {
+    "id": 325,
+    "nombre": "SECRETARIA DE RECURSOS Y PROGRAMAS DE SALUD"
+  },
+  {
+    "id": 3745,
+    "nombre": "SECRETARIA DE REGULACION Y GESTION SANITARIA"
+  },
+  {
+    "id": 425,
+    "nombre": "SECRETARIA DE RELACIONES CON LA COMUNIDAD"
+  },
+  {
+    "id": 4084,
+    "nombre": "SECRETARIA DE RELACIONES CON LA SOCIEDAD CIVIL Y DESARROLLO"
+  },
+  {
+    "id": 743,
+    "nombre": "SECRETARIA DE RELACIONES EXTERIORES"
+  },
+  {
+    "id": 298,
+    "nombre": "SECRETARIA DE RELACIONES INSTITUCIONALES"
+  },
+  {
+    "id": 490,
+    "nombre": "SECRETARIA DE RELACIONES LABORALES"
+  },
+  {
+    "id": 3347,
+    "nombre": "SECRETARIA DE RELACIONES PARLAMENTARIAS"
+  },
+  {
+    "id": 3944,
+    "nombre": "SECRETARIA DE RELACIONES PARLAMENTARIAS INSTITUCIONALES Y"
+  },
+  {
+    "id": 4043,
+    "nombre": "SECRETARIA DE RELACIONES PARLAMENTARIAS Y CON LA SOCIEDAD CI"
+  },
+  {
+    "id": 101,
+    "nombre": "SECRETARIA DE SALUD"
+  },
+  {
+    "id": 3596,
+    "nombre": "SECRETARIA DE SALUD COMUNITARIA"
+  },
+  {
+    "id": 3342,
+    "nombre": "SECRETARIA DE SALUD PUBLICA"
+  },
+  {
+    "id": 273,
+    "nombre": "SECRETARIA DE SEGURIDAD"
+  },
+  {
+    "id": 426,
+    "nombre": "SECRETARIA DE SEGURIDAD INTERIOR"
+  },
+  {
+    "id": 131,
+    "nombre": "SECRETARIA DE SEGURIDAD SOCIAL"
+  },
+  {
+    "id": 3937,
+    "nombre": "SECRETARIA DE SEGURIDAD Y POLITICA CRIMINAL"
+  },
+  {
+    "id": 3769,
+    "nombre": "SECRETARIA DE SIMPLIFICACION PRODUCTIVA"
+  },
+  {
+    "id": 3651,
+    "nombre": "SECRETARIA DE TECNOLOGIAS DE LA INFORMACION Y LAS COMUNICACI"
+  },
+  {
+    "id": 102,
+    "nombre": "SECRETARIA DE TRABAJO"
+  },
+  {
+    "id": 4121,
+    "nombre": "SECRETARIA DE TRABAJO EMPLEO Y SEGURIDAD SOCIAL"
+  },
+  {
+    "id": 3480,
+    "nombre": "SECRETARIA DE TRABAJO Y PREVISION"
+  },
+  {
+    "id": 4148,
+    "nombre": "SECRETARIA DE TRANSFORMACION DEL ESTADO Y FUNCION PUBLICA"
+  },
+  {
+    "id": 103,
+    "nombre": "SECRETARIA DE TRANSPORTE"
+  },
+  {
+    "id": 338,
+    "nombre": "SECRETARIA DE TRANSPORTE Y OBRAS PUBLICAS"
+  },
+  {
+    "id": 104,
+    "nombre": "SECRETARIA DE TURISMO"
+  },
+  {
+    "id": 4145,
+    "nombre": "SECRETARIA DE TURISMO AMBIENTE Y DEPORTES"
+  },
+  {
+    "id": 4226,
+    "nombre": "SECRETARIA DE TURISMO Y AMBIENTE"
+  },
+  {
+    "id": 580,
+    "nombre": "SECRETARIA DE TURISMO Y DEPORTES"
+  },
+  {
+    "id": 3773,
+    "nombre": "SECRETARIA DE VIVIENDA"
+  },
+  {
+    "id": 3681,
+    "nombre": "SECRETARIA DE VIVIENDA Y HABITAT"
+  },
+  {
+    "id": 4233,
+    "nombre": "SECRETARIA ECONOMICO FINANCIERA"
+  },
+  {
+    "id": 4234,
+    "nombre": "SECRETARIA EJECUTIVA"
+  },
+  {
+    "id": 4138,
+    "nombre": "SECRETARIA EJECUTIVA DE GOBIERNO"
+  },
+  {
+    "id": 3721,
+    "nombre": "SECRETARIA EJECUTIVA DEL ORGANO DE REVISION DE LA NACION"
+  },
+  {
+    "id": 295,
+    "nombre": "SECRETARIA GENERAL"
+  },
+  {
+    "id": 4097,
+    "nombre": "SECRETARIA GENERAL DE ADMINISTRACION"
+  },
+  {
+    "id": 4098,
+    "nombre": "SECRETARIA GENERAL DE DERECHOS HUMANOS GERONTOLOGIA COMUNIT"
+  },
+  {
+    "id": 3914,
+    "nombre": "SECRETARIA GENERAL DE LA ARMADA"
+  },
+  {
+    "id": 237,
+    "nombre": "SECRETARIA GESTION ECONOMICA"
+  },
+  {
+    "id": 88,
+    "nombre": "SECRETARIA GRAL. DE LA PRESIDENCIA DE LA NACION"
+  },
+  {
+    "id": 514,
+    "nombre": "SECRETARIA LEGAL Y ADMINISTRATIVA"
+  },
+  {
+    "id": 3427,
+    "nombre": "SECRETARIA LEGAL Y TECNICA DE LA ANSES"
+  },
+  {
+    "id": 3426,
+    "nombre": "SECRETARIA LEGAL Y TECNICA DE LA ANSESS"
+  },
+  {
+    "id": 94,
+    "nombre": "SECRETARIA LEGAL Y TECNICA (PRESID.DE LA NACION)"
+  },
+  {
+    "id": 4232,
+    "nombre": "SECRETARIA NACIONAL DE DISCAPACIDAD"
+  },
+  {
+    "id": 3983,
+    "nombre": "SECRETARIA NACIONAL DE NINEZ ADOLESCENCIA Y FAMILIA"
+  },
+  {
+    "id": 3308,
+    "nombre": "SECRETARIA NACIONAL DE NIÑEZ ADOLESCENCIA Y FAMILIA"
+  },
+  {
+    "id": 523,
+    "nombre": "SECRETARIA PARA LA MODERNIZACION DEL ESTADO"
+  },
+  {
+    "id": 494,
+    "nombre": "SECRETARIA PARA LA TECNOLOGIA, LA CIENCIA Y LA INN"
+  },
+  {
+    "id": 3719,
+    "nombre": "SECRET. DE RECURSOS HIDROCARBURIFEROS"
+  },
+  {
+    "id": 700,
+    "nombre": "SECRET.D/LA PROGRAMACION P/LA PREVENCION D/LA DROG"
+  },
+  {
+    "id": 3266,
+    "nombre": "SEGUNDA COMISION NAC. SALARIOS IND. VESTIDO DE TRABAJO A DOM"
+  },
+  {
+    "id": 3492,
+    "nombre": "SEGUNDA COMISION SALARIOS DE TRAB DOM INDUSTRIA DEL VESTIDO"
+  },
+  {
+    "id": 3659,
+    "nombre": "SERVICIO DE CONCILIACION LABORAL OBLIGATORIA"
+  },
+  {
+    "id": 4216,
+    "nombre": "SERVICIO DE HIDROGRAFIA NAVAL"
+  },
+  {
+    "id": 3392,
+    "nombre": "SERVICIO GEOLOGICO MINERO ARGENTINO"
+  },
+  {
+    "id": 3276,
+    "nombre": "SERVICIO METEOROLOGICO NACIONAL"
+  },
+  {
+    "id": 384,
+    "nombre": "SERVICIO NAC. DE SANIDAD Y CALIDAD AGROALIMENTARIA"
+  },
+  {
+    "id": 3487,
+    "nombre": "SERVICIO NACIONAL DE PESCA"
+  },
+  {
+    "id": 803,
+    "nombre": "SERVICIO NACIONAL DE REHABILITACION"
+  },
+  {
+    "id": 485,
+    "nombre": "SERVICIO NACIONAL DE REHABILITACION Y PROMOCION DE"
+  },
+  {
+    "id": 105,
+    "nombre": "SERVICIO NACIONAL DE SANIDAD ANIMAL (SENASA)"
+  },
+  {
+    "id": 3996,
+    "nombre": "SERVICIO NACIONAL DE SANIDAD VEGETAL"
+  },
+  {
+    "id": 372,
+    "nombre": "SERVICIO NACIONAL DE SANIDAD Y CALIDAD AGROALIMENT"
+  },
+  {
+    "id": 289,
+    "nombre": "SINDICATURA GENERAL DE LA NACION"
+  },
+  {
+    "id": 530,
+    "nombre": "SISTEMA DE PRESTACIONES BASICAS DE ATENCION INTEGR"
+  },
+  {
+    "id": 3597,
+    "nombre": "SISTEMA FEDERAL DE MEDIOS Y CONTENIDOS PUBLICOS"
+  },
+  {
+    "id": 576,
+    "nombre": "SISTEMA NACIONAL DE MEDIOS PUBLICOS"
+  },
+  {
+    "id": 328,
+    "nombre": "SISTEMA UNICO DE REGISTRO LABORAL"
+  },
+  {
+    "id": 4111,
+    "nombre": "SUB DE PROMOCION Y DESARROLLO DE CAPACI PARA LA ECO DEL CONO"
+  },
+  {
+    "id": 3228,
+    "nombre": "SUBD. GENERAL DE OPERACIONES IMPOSITIVAS METROPOLITANAS"
+  },
+  {
+    "id": 3227,
+    "nombre": "SUBD. GENERAL DE OPERACIONES IMPOSITIVAS METROPOLITANAS - DG"
+  },
+  {
+    "id": 3217,
+    "nombre": "SUBD. GRAL DE OPER. IMPOSITIVAS GRANDES CONTRIBUYENTES NAC."
+  },
+  {
+    "id": 3566,
+    "nombre": "SUBD. GRAL. DE TEC. LEGAL DE LOS RECURSOS DE LA SEG. SOCIAL"
+  },
+  {
+    "id": 3892,
+    "nombre": "SUBDIRECCION EJECUTIVA DE ADMINISTRACION"
+  },
+  {
+    "id": 3893,
+    "nombre": "SUBDIRECCION EJECUTIVA DE OPERACION DEL FGS"
+  },
+  {
+    "id": 4214,
+    "nombre": "SUBDIRECCION GENERAL DE ADMINISTRACION"
+  },
+  {
+    "id": 3285,
+    "nombre": "SUBDIRECCION GENERAL DE ADMINISTRACION FINANCIERA"
+  },
+  {
+    "id": 3291,
+    "nombre": "SUBDIRECCION GENERAL DE ASUNTOS JURIDICOS"
+  },
+  {
+    "id": 3238,
+    "nombre": "SUBDIRECCION GENERAL DE AUDITORIA INTERNA"
+  },
+  {
+    "id": 3249,
+    "nombre": "SUBDIRECCION GENERAL DE CONTROL ADUANERO"
+  },
+  {
+    "id": 3451,
+    "nombre": "SUBDIRECCION GENERAL DE COORDINACION OPERATIVA DE LOS RECUR."
+  },
+  {
+    "id": 3497,
+    "nombre": "SUBDIRECCION GENERAL DE COORDINACION TECNICO INSTITUCIONAL"
+  },
+  {
+    "id": 3496,
+    "nombre": "SUBDIRECCION GENERAL DE FISCALIZACION"
+  },
+  {
+    "id": 407,
+    "nombre": "SUBDIRECCION GENERAL DE LEGAL Y TECNICA ADUANERA"
+  },
+  {
+    "id": 804,
+    "nombre": "SUBDIRECCION GENERAL DE LEGAL Y TECNICA IMPOSITIVA"
+  },
+  {
+    "id": 3257,
+    "nombre": "SUBDIRECCION GENERAL DE OPERACIONES ADUANERAS DEL INTERIOR"
+  },
+  {
+    "id": 552,
+    "nombre": "SUBDIRECCION GENERAL DE OPERACIONES ADUANERAS METR"
+  },
+  {
+    "id": 4208,
+    "nombre": "SUBDIRECCION GENERAL DE OPERACIONES IMPOSITIVAS DE GRANDES C"
+  },
+  {
+    "id": 3234,
+    "nombre": "SUBDIRECCION GENERAL DE OPERACIONES IMPOSITIVAS DEL INTERIOR"
+  },
+  {
+    "id": 3355,
+    "nombre": "SUBDIRECCION GENERAL DE OPERACIONES IMPOSITIVAS METROPOLITAN"
+  },
+  {
+    "id": 3246,
+    "nombre": "SUBDIRECCION GENERAL DE PLANIFICACION"
+  },
+  {
+    "id": 737,
+    "nombre": "SUBDIRECCION GENERAL DE PLANIFICACION Y ADMINISTRA"
+  },
+  {
+    "id": 755,
+    "nombre": "SUBDIRECCION GENERAL DE RECAUDACION"
+  },
+  {
+    "id": 544,
+    "nombre": "SUBDIRECCION GENERAL DE RECURSOS HUMANOS"
+  },
+  {
+    "id": 3379,
+    "nombre": "SUBDIRECCION GENERAL DE SERVICIOS AL CONTRIBUYENTE"
+  },
+  {
+    "id": 3241,
+    "nombre": "SUBDIRECCION GENERAL DE TECNICO LEGAL ADUANERA"
+  },
+  {
+    "id": 3625,
+    "nombre": "SUBDIRECCION GENERAL DE TECNICO LEGAL DE LOS RECURSOS DE LA"
+  },
+  {
+    "id": 3298,
+    "nombre": "SUBDIRECCION GENERAL TECNICO LEGAL IMPOSITIVA"
+  },
+  {
+    "id": 3385,
+    "nombre": "SUBDIRECCION GRAL DE COORDINACION OPERATIVA DE LOS REC. SS"
+  },
+  {
+    "id": 3295,
+    "nombre": "SUBDIRECCION GRAL. DE OPERACIONES IMPOSITIVAS METROPOLITANAS"
+  },
+  {
+    "id": 3600,
+    "nombre": "SUBDIRECCION GRAL DE TECNICO LEGAL DE LOS RECURSOS DE LA SEG"
+  },
+  {
+    "id": 3644,
+    "nombre": "SUBDIRECCION NACIONAL DEL REGISTRO NACIONAL DE LAS PERSONAS"
+  },
+  {
+    "id": 3578,
+    "nombre": "SUBDIRECCION NACIONAL DE MIGRACIONES"
+  },
+  {
+    "id": 3274,
+    "nombre": "SUBDIRECCION NACIONAL DE RELACIONES DEL TRABAJO"
+  },
+  {
+    "id": 3523,
+    "nombre": "SUBDIRECCION NACIONAL ELECTORAL"
+  },
+  {
+    "id": 3335,
+    "nombre": "SUBDIRECCION NAC. REGISTROS NAC. PROP. AUTO. Y CRED. PREND."
+  },
+  {
+    "id": 515,
+    "nombre": "SUBDIREC.NAC. DE CINE Y ARTES AUDIOVISUALES"
+  },
+  {
+    "id": 591,
+    "nombre": "SUBDIR. GENERAL DE OPERACIONES IMPOSITIVAS I"
+  },
+  {
+    "id": 546,
+    "nombre": "SUBDIR. GENERAL DE OPERACIONES IMPOSITIVAS II"
+  },
+  {
+    "id": 3547,
+    "nombre": "SUBDIR. GRAL. DE OPERAC. IMPOSIT. GRANDES CONTRIBUYENTES NAC"
+  },
+  {
+    "id": 637,
+    "nombre": "SUBDIR. GRAL DE OPERACIONES IMPOSITIVAS III"
+  },
+  {
+    "id": 3972,
+    "nombre": "SUBGERENCIA DE FISCALIZACION A LA INDUSTRIA AUDIOVISUAL"
+  },
+  {
+    "id": 3639,
+    "nombre": "SUBGERENCIA DE SISTEMAS"
+  },
+  {
+    "id": 578,
+    "nombre": "SUBPROCURACION DEL TESORO DE LA NACION"
+  },
+  {
+    "id": 265,
+    "nombre": "SUBSEC.COORD.DE SEC.GRAL. DE LA PRES. DE LA NACION"
+  },
+  {
+    "id": 68,
+    "nombre": "SUB.SEC.DE ADM.DE SERVICIOS Y PROGRAMAS DE SALUD"
+  },
+  {
+    "id": 3314,
+    "nombre": "SUBSEC DE ADMINISTRACION DE SERVICIOS Y PROGAMAS DE SALUD"
+  },
+  {
+    "id": 282,
+    "nombre": "SUBSEC. DE COORDINACION TECNICA Y ADMINISTRATIVA"
+  },
+  {
+    "id": 321,
+    "nombre": "SUBSEC. GENERAL DE LA PRESIDENCIA DE LA NACION"
+  },
+  {
+    "id": 3994,
+    "nombre": "SUBSECRETARIA ADMINISTRATIVA"
+  },
+  {
+    "id": 3999,
+    "nombre": "SUBSECRETARIA DE ABORDAJE INTEGRAL DE LAS VIOLENCIAS POR RAZ"
+  },
+  {
+    "id": 3753,
+    "nombre": "SUBSECRETARIA DE ACCESO A LA JUSTICIA"
+  },
+  {
+    "id": 3880,
+    "nombre": "SUBSECRETARIA DE ACCIONES PARA LA DEFENSA DE LAS Y LOS CONSU"
+  },
+  {
+    "id": 116,
+    "nombre": "SUBSECRETARIA DE ACCION POLITICA"
+  },
+  {
+    "id": 746,
+    "nombre": "SUBSECRETARIA DE ADMINISTRACION"
+  },
+  {
+    "id": 308,
+    "nombre": "SUBSECRETARIA DE ADMINISTRACION DE BIENES"
+  },
+  {
+    "id": 3476,
+    "nombre": "SUBSECRETARIA DE ADMINISTRACION Y NORMALIZACION PATRIMONIAL"
+  },
+  {
+    "id": 3699,
+    "nombre": "SUBSECRETARIA DE AGRICULTURA"
+  },
+  {
+    "id": 3404,
+    "nombre": "SUBSECRETARIA DE AGRICULTURA FAMILIAR"
+  },
+  {
+    "id": 69,
+    "nombre": "SUBSECRETARIA DE AGRICULTURA, GANADERIA Y PESCA"
+  },
+  {
+    "id": 3702,
+    "nombre": "SUBSECRETARIA DE AHORRO Y EFICIENCIA ENERGETICA"
+  },
+  {
+    "id": 4064,
+    "nombre": "SUBSECRETARIA DE ALIMENTOS BIOECONOMIA Y DESARROLLO REGIONA"
+  },
+  {
+    "id": 3717,
+    "nombre": "SUBSECRETARIA DE ALIMENTOS Y BEBIDAS"
+  },
+  {
+    "id": 4151,
+    "nombre": "SUBSECRETARIA DE AMBIENTE"
+  },
+  {
+    "id": 307,
+    "nombre": "SUBSECRETARIA DE AMBIENTE HUMANO"
+  },
+  {
+    "id": 4011,
+    "nombre": "SUBSECRETARIA DE ARTICULACION TERRITORIAL"
+  },
+  {
+    "id": 3765,
+    "nombre": "SUBSECRETARIA DE ASUNTOS CONTENCIOSOS"
+  },
+  {
+    "id": 4018,
+    "nombre": "SUBSECRETARIA DE ASUNTOS NACIONALES"
+  },
+  {
+    "id": 3391,
+    "nombre": "SUBSECRETARIA DE ASUNTOS PENITENCIARIOS"
+  },
+  {
+    "id": 3575,
+    "nombre": "SUBSECRETARIA DE ASUNTOS POLITICOS"
+  },
+  {
+    "id": 3319,
+    "nombre": "SUBSECRETARIA DE ASUNTOS POLITICOS Y ELECTORALES"
+  },
+  {
+    "id": 4217,
+    "nombre": "SUBSECRETARIA DE ASUNTOS PRESIDENCIALES"
+  },
+  {
+    "id": 3252,
+    "nombre": "SUBSECRETARIA DE ASUNTOS REGISTRALES"
+  },
+  {
+    "id": 533,
+    "nombre": "SUBSECRETARIA DE ATENCION PRIMARIA DE LA SALUD"
+  },
+  {
+    "id": 3905,
+    "nombre": "SUBSECRETARIA DE ATENCION Y ACOMPANAMIENTO EN MATERIA DE DRO"
+  },
+  {
+    "id": 406,
+    "nombre": "SUBSECRETARIA DE BANCOS Y SEGUROS"
+  },
+  {
+    "id": 4134,
+    "nombre": "SUBSECRETARIA DE BIOINDUSTRIAS BIOTECNOLOGIAS E INNOVACION"
+  },
+  {
+    "id": 3897,
+    "nombre": "SUBSECRETARIA DE CALIDAD ACCESIBILIDAD Y SUSTENTABILIDAD DE"
+  },
+  {
+    "id": 3732,
+    "nombre": "SUBSECRETARIA DE CALIDAD REGULACION Y FISCALIZACION"
+  },
+  {
+    "id": 119,
+    "nombre": "SUBSECRETARIA DE CIENCIA Y TECNOLOGIA"
+  },
+  {
+    "id": 70,
+    "nombre": "SUBSECRETARIA DE COMBUSTIBLES"
+  },
+  {
+    "id": 245,
+    "nombre": "SUBSECRETARIA DE COMERCIO EXTERIOR"
+  },
+  {
+    "id": 415,
+    "nombre": "SUBSECRETARIA DE COMERCIO INTERIOR"
+  },
+  {
+    "id": 3733,
+    "nombre": "SUBSECRETARIA DE COMPRE ARGENTINO Y DESARROLLO DE PROVEEDORE"
+  },
+  {
+    "id": 117,
+    "nombre": "SUBSECRETARIA DE COMUNICACIONES"
+  },
+  {
+    "id": 3720,
+    "nombre": "SUBSECRETARIA DE CONTENIDOS DE DIFUSION"
+  },
+  {
+    "id": 3690,
+    "nombre": "SUBSECRETARIA DE CONTROL COMERCIAL AGROPECUARIO"
+  },
+  {
+    "id": 3633,
+    "nombre": "SUBSECRETARIA DE CONTROL Y FISCALIZACION AMBIENTAL Y PREVENC"
+  },
+  {
+    "id": 3849,
+    "nombre": "SUBSECRETARIA DE CONTROL Y VIGILANCIA DE FRONTERA"
+  },
+  {
+    "id": 3774,
+    "nombre": "SUBSECRETARIA DE CONTROL Y VIGILANCIA DE FRONTERAS"
+  },
+  {
+    "id": 3685,
+    "nombre": "SUBSECRETARIA DE COOPERACION CULTURAL"
+  },
+  {
+    "id": 474,
+    "nombre": "SUBSECRETARIA DE COORDINACION"
+  },
+  {
+    "id": 584,
+    "nombre": "SUBSECRETARIA DE COORDINACION ADMINISTRATIVA"
+  },
+  {
+    "id": 3583,
+    "nombre": "SUBSECRETARIA DE COORDINACION ECONOMICA"
+  },
+  {
+    "id": 3558,
+    "nombre": "SUBSECRETARIA DE COORDINACION ECONOMICA Y MEJORA DE LA COMPE"
+  },
+  {
+    "id": 740,
+    "nombre": "SUBSECRETARIA DE COORDINACION E INNOVACION"
+  },
+  {
+    "id": 3555,
+    "nombre": "SUBSECRETARIA DE COORDINACION MONITOREO Y LOGISTICA"
+  },
+  {
+    "id": 4062,
+    "nombre": "SUBSECRETARIA DE COORDINACION PRESUPUESTARIA"
+  },
+  {
+    "id": 3508,
+    "nombre": "SUBSECRETARIA DE COORDINACION TECNICA Y ADMINISTRATIVA"
+  },
+  {
+    "id": 3975,
+    "nombre": "SUBSECRETARIA DE COORDINACION TECNICA Y ANALISIS DE LA INFOR"
+  },
+  {
+    "id": 4183,
+    "nombre": "SUBSECRETARIA DE COORDINACION Y ADMINISTRACION EXTERIOR"
+  },
+  {
+    "id": 785,
+    "nombre": "SUBSECRETARIA DE COORDINACION Y CONTROL DE GESTION"
+  },
+  {
+    "id": 3383,
+    "nombre": "SUBSECRETARIA DE COORDINACION Y COOPERACION INTERNACIONAL"
+  },
+  {
+    "id": 629,
+    "nombre": "SUBSECRETARIA DE COORDINACION Y EVALUACION PRESUPU"
+  },
+  {
+    "id": 333,
+    "nombre": "SUBSECRETARIA DE CULTO"
+  },
+  {
+    "id": 71,
+    "nombre": "SUBSECRETARIA DE CULTURA"
+  },
+  {
+    "id": 3635,
+    "nombre": "SUBSECRETARIA DE CULTURA CIUDADANA"
+  },
+  {
+    "id": 667,
+    "nombre": "SUBSECRETARIA DE DEFENSA DE LA COMPETENCIA Y DEFEN"
+  },
+  {
+    "id": 3256,
+    "nombre": "SUBSECRETARIA DE DEFENSA DEL CONSUMIDOR"
+  },
+  {
+    "id": 4137,
+    "nombre": "SUBSECRETARIA DE DEFENSA DEL CONSUMIDOR Y LEALTAD COMERCIAL"
+  },
+  {
+    "id": 458,
+    "nombre": "SUBSECRETARIA DE DERECHOS HUMANOS Y SOCIALES"
+  },
+  {
+    "id": 4013,
+    "nombre": "SUBSECRETARIA DE DESARROLLO ESTRATEGICO"
+  },
+  {
+    "id": 3734,
+    "nombre": "SUBSECRETARIA DE DESARROLLO MINERO"
+  },
+  {
+    "id": 3606,
+    "nombre": "SUBSECRETARIA DE DESARROLLO PROVINCIAL"
+  },
+  {
+    "id": 241,
+    "nombre": "SUBSECRETARIA DE DESARROLLO REGIONAL"
+  },
+  {
+    "id": 359,
+    "nombre": "SUBSECRETARIA DE DESARROLLO SUSTENTABLE"
+  },
+  {
+    "id": 3718,
+    "nombre": "SUBSECRETARIA DE DESARROLLO TERRITORIAL"
+  },
+  {
+    "id": 3429,
+    "nombre": "SUBSECRETARIA DE DESARROLLO URBANO Y VIVIENDA"
+  },
+  {
+    "id": 3368,
+    "nombre": "SUBSECRETARIA DE DESARROLLO Y FOMENTO PROVINCIAL"
+  },
+  {
+    "id": 4163,
+    "nombre": "SUBSECRETARIA DE DESARROLLO Y MODERNIZACION DEL EMPLEO PUBLI"
+  },
+  {
+    "id": 3541,
+    "nombre": "SUBSECRETARIA DE DISEÑO MONITOREO Y EVALUACION DE ABORDAJE.."
+  },
+  {
+    "id": 248,
+    "nombre": "SUBSECRETARIA DE ECONOMIA"
+  },
+  {
+    "id": 3622,
+    "nombre": "SUBSECRETARIA DE ECONOMIA CREATIVA"
+  },
+  {
+    "id": 3942,
+    "nombre": "SUBSECRETARIA DE ECONOMIA DEL CONOCIMIENTO"
+  },
+  {
+    "id": 526,
+    "nombre": "SUBSECRETARIA DE EDUCACION BASICA"
+  },
+  {
+    "id": 3416,
+    "nombre": "SUBSECRETARIA DE EJECUCION OPERATIVA"
+  },
+  {
+    "id": 316,
+    "nombre": "SUBSECRETARIA DE EMPLEO"
+  },
+  {
+    "id": 3704,
+    "nombre": "SUBSECRETARIA DE EMPRENDEDORES"
+  },
+  {
+    "id": 124,
+    "nombre": "SUBSECRETARIA DE EMPRESAS PUBLICAS"
+  },
+  {
+    "id": 262,
+    "nombre": "SUBSECRETARIA DE ENERGIA"
+  },
+  {
+    "id": 72,
+    "nombre": "SUBSECRETARIA DE ENERGIA ELECTRICA"
+  },
+  {
+    "id": 3701,
+    "nombre": "SUBSECRETARIA DE ENERGIAS RENOVABLES"
+  },
+  {
+    "id": 3797,
+    "nombre": "SUBSECRETARIA DE ENERGIAS RENOVABLES Y EFICIENCIA ENERGETICA"
+  },
+  {
+    "id": 3678,
+    "nombre": "SUBSECRETARIA DE ESCENARIOS Y EVALUACION DE PROYECTOS"
+  },
+  {
+    "id": 3984,
+    "nombre": "SUBSECRETARIA DE ESTRATEGIAS SANITARIAS"
+  },
+  {
+    "id": 3351,
+    "nombre": "SUBSECRETARIA DE EVALUACION DEL PRESUPUESTO NACIONAL"
+  },
+  {
+    "id": 3421,
+    "nombre": "SUBSECRETARIA DE EVALUACION DE PROYECTOS CON FINANC. EXT."
+  },
+  {
+    "id": 431,
+    "nombre": "SUBSECRETARIA DE EVALUACION, INFRAESTRUCTURA Y CON"
+  },
+  {
+    "id": 3708,
+    "nombre": "SUBSECRETARIA DE EVALUACION PRESUPUESTARIA E INVERSION PUBLI"
+  },
+  {
+    "id": 3805,
+    "nombre": "SUBSECRETARIA DE FACILITACION DEL COMERCIO"
+  },
+  {
+    "id": 306,
+    "nombre": "SUBSECRETARIA DE FINANCIAMIENTO"
+  },
+  {
+    "id": 3646,
+    "nombre": "SUBSECRETARIA DE FINANCIAMIENTO DE LA PRODUCCION"
+  },
+  {
+    "id": 4089,
+    "nombre": "SUBSECRETARIA DE FINANCIAMIENTO Y REGULACION DE LA ECONOMIA"
+  },
+  {
+    "id": 73,
+    "nombre": "SUBSECRETARIA DE FINANZAS PUBLICAS"
+  },
+  {
+    "id": 3881,
+    "nombre": "SUBSECRETARIA DE FISCALIZACION DEL TRABAJO"
+  },
+  {
+    "id": 3489,
+    "nombre": "SUBSECRETARIA DE FISCALIZACION DEL TRABAJO Y DE LA SEGURIDAD"
+  },
+  {
+    "id": 3933,
+    "nombre": "SUBSECRETARIA DE FORMACION INVESTIGACION Y POLITICAS CULTUR"
+  },
+  {
+    "id": 3793,
+    "nombre": "SUBSECRETARIA DE FORMACION Y CARRERA DEL PERSONAL DE LAS FUE"
+  },
+  {
+    "id": 4078,
+    "nombre": "SUBSECRETARIA DE FORTALECIMIENTO PRODUCTIVO Y SUSTENTABLE PA"
+  },
+  {
+    "id": 3848,
+    "nombre": "SUBSECRETARIA DE GANADERIA"
+  },
+  {
+    "id": 3511,
+    "nombre": "SUBSECRETARIA DE GESTION ADMINISTRATIVA"
+  },
+  {
+    "id": 3910,
+    "nombre": "SUBSECRETARIA DE GESTION ADMINISTRATIVA DE INNOVACION PUBLIC"
+  },
+  {
+    "id": 3522,
+    "nombre": "SUBSECRETARIA DE GESTION ADMINISTRATIVA DEL TRANSPORTE"
+  },
+  {
+    "id": 4207,
+    "nombre": "SUBSECRETARIA DE GESTION ADMINISTRATIVA DE TRABAJO EMPLEO Y"
+  },
+  {
+    "id": 228,
+    "nombre": "SUBSECRETARIA DE GESTION COMERCIAL"
+  },
+  {
+    "id": 511,
+    "nombre": "SUBSECRETARIA DE GESTION COMERCIAL EXTERNA"
+  },
+  {
+    "id": 3974,
+    "nombre": "SUBSECRETARIA DE GESTION DE ESPACIOS Y PROYECTOS ESPECIALES"
+  },
+  {
+    "id": 3357,
+    "nombre": "SUBSECRETARIA DE GESTION DE SERVICIOS ASISTENCIALES"
+  },
+  {
+    "id": 4037,
+    "nombre": "SUBSECRETARIA DE GESTION DE SERVICIOS E INSTITUTOS"
+  },
+  {
+    "id": 4187,
+    "nombre": "SUBSECRETARIA DE GESTION INSTITUCIONAL"
+  },
+  {
+    "id": 3696,
+    "nombre": "SUBSECRETARIA DE GESTION INTEGRAL DE RIESGOS DE DESASTRES"
+  },
+  {
+    "id": 3408,
+    "nombre": "SUBSECRETARIA DE GESTION MUNICIPAL"
+  },
+  {
+    "id": 3534,
+    "nombre": "SUBSECRETARIA DE GESTION PENITENCIARIA"
+  },
+  {
+    "id": 3705,
+    "nombre": "SUBSECRETARIA DE GESTION PRODUCTIVA"
+  },
+  {
+    "id": 472,
+    "nombre": "SUBSECRETARIA DE GESTION PUBLICA"
+  },
+  {
+    "id": 3365,
+    "nombre": "SUBSECRETARIA DE GESTION Y EMPLEO PUBLICO"
+  },
+  {
+    "id": 3895,
+    "nombre": "SUBSECRETARIA DE GOBIERNO ABIERTO Y PAIS DIGITAL"
+  },
+  {
+    "id": 3669,
+    "nombre": "SUBSECRETARIA DE GOBIERNO DIGITAL"
+  },
+  {
+    "id": 74,
+    "nombre": "SUBSECRETARIA DE HACIENDA"
+  },
+  {
+    "id": 4002,
+    "nombre": "SUBSECRETARIA DE HIDROCARBUROS"
+  },
+  {
+    "id": 3807,
+    "nombre": "SUBSECRETARIA DE HIDROCARBUROS Y COMBUSTIBLES"
+  },
+  {
+    "id": 75,
+    "nombre": "SUBSECRETARIA DE INDUSTRIA"
+  },
+  {
+    "id": 478,
+    "nombre": "SUBSECRETARIA DE INDUSTRIA, COMERCIO Y MINERIA"
+  },
+  {
+    "id": 76,
+    "nombre": "SUBSECRETARIA DE INDUSTRIA Y COMERCIO"
+  },
+  {
+    "id": 4059,
+    "nombre": "SUBSECRETARIA DE INFRAESTRUCTURA DEPORTIVA Y COMPETENCIAS NA"
+  },
+  {
+    "id": 3448,
+    "nombre": "SUBSECRETARIA DE INFRAESTRUCTURA PENITENCIARIA"
+  },
+  {
+    "id": 324,
+    "nombre": "SUBSECRETARIA DE INGRESOS PUBLICOS"
+  },
+  {
+    "id": 4132,
+    "nombre": "SUBSECRETARIA DE INNOVACION"
+  },
+  {
+    "id": 3909,
+    "nombre": "SUBSECRETARIA DE INNOVACION ADMINISTRATIVA"
+  },
+  {
+    "id": 4152,
+    "nombre": "SUBSECRETARIA DE INNOVACION EN ECONOMIA SOLIDARIA"
+  },
+  {
+    "id": 3766,
+    "nombre": "SUBSECRETARIA DE INNOVACION PUBLICA Y GOBIERNO ABIERTO"
+  },
+  {
+    "id": 4128,
+    "nombre": "SUBSECRETARIA DE INSTITUTOS Y FISCALIZACION"
+  },
+  {
+    "id": 4020,
+    "nombre": "SUBSECRETARIA DE INTEGRACION DE LOS SISTDE SALUD Y ATENCION"
+  },
+  {
+    "id": 3334,
+    "nombre": "SUBSECRETARIA DE INTERIOR"
+  },
+  {
+    "id": 4076,
+    "nombre": "SUBSECRETARIA DE INTERVENCION FEDERAL"
+  },
+  {
+    "id": 3384,
+    "nombre": "SUBSECRETARIA DE INVESTIGACION CIENTIFICA Y DESARROLLO TECNO"
+  },
+  {
+    "id": 3927,
+    "nombre": "SUBSECRETARIA DE INVESTIGACION CRIMINAL Y COOPERACION JUDICI"
+  },
+  {
+    "id": 120,
+    "nombre": "SUBSECRETARIA DE JUSTICIA"
+  },
+  {
+    "id": 483,
+    "nombre": "SUBSECRETARIA DE JUSTICIA Y ASUNTOS LEGISLATIVOS"
+  },
+  {
+    "id": 476,
+    "nombre": "SUBSECRETARIA DE LA GESTION PUBLICA"
+  },
+  {
+    "id": 3343,
+    "nombre": "SUBSECRETARIA DE LA GESTION Y EMPLEO PUBLICO"
+  },
+  {
+    "id": 4066,
+    "nombre": "SUBSECRETARIA DE LA PEQUENA Y MEDIANA EMPRESA"
+  },
+  {
+    "id": 701,
+    "nombre": "SUBSECRETARIA DE LA PEQUEÑA Y MEDIANA EMPRESA Y DE"
+  },
+  {
+    "id": 3630,
+    "nombre": "SUBSECRETARIA DE LECHERIA"
+  },
+  {
+    "id": 122,
+    "nombre": "SUBSECRETARIA DEL INTERIOR"
+  },
+  {
+    "id": 3601,
+    "nombre": "SUBSECRETARIA DE LUCHA CONTRA EL NARCOTRAFICO"
+  },
+  {
+    "id": 3968,
+    "nombre": "SUBSECRETARIA DE MEDICAMENTOS E INFORMACION ESTRATEGICA"
+  },
+  {
+    "id": 3363,
+    "nombre": "SUBSECRETARIA DE MEDICINA SOCIAL Y FISCALIZACION SANIARIA"
+  },
+  {
+    "id": 3364,
+    "nombre": "SUBSECRETARIA DE MEDICINA SOCIAL Y FISCALIZACION SANITARIA"
+  },
+  {
+    "id": 3818,
+    "nombre": "SUBSECRETARIA DE MERCADO ELECTRICO"
+  },
+  {
+    "id": 4165,
+    "nombre": "SUBSECRETARIA DE MERCADOS AGROALIMENTARIOS E INSERCION INTER"
+  },
+  {
+    "id": 3846,
+    "nombre": "SUBSECRETARIA DE MERCADOS AGROPECUARIOS"
+  },
+  {
+    "id": 536,
+    "nombre": "SUBSECRETARÍA DE MINERÍA"
+  },
+  {
+    "id": 3714,
+    "nombre": "SUBSECRETARIA DE MOVILIDAD URBANA"
+  },
+  {
+    "id": 4014,
+    "nombre": "SUBSECRETARIA DE OBRAS HIDRAULICAS"
+  },
+  {
+    "id": 627,
+    "nombre": "SUBSECRETARIA DE OBRAS PUBLICAS"
+  },
+  {
+    "id": 3306,
+    "nombre": "SUBSECRETARIA DE OBRAS Y SERVICIOS PUBLICOS"
+  },
+  {
+    "id": 443,
+    "nombre": "SUBSECRETARIA DE ORDENAMIENTO AMBIENTAL"
+  },
+  {
+    "id": 539,
+    "nombre": "SUBSECRETARIA DE ORDENAMIENTO Y POLITICA AMBIENTAL"
+  },
+  {
+    "id": 611,
+    "nombre": "SUBSECRETARIA DE ORIENTACION Y FORMACION PROFESION"
+  },
+  {
+    "id": 3713,
+    "nombre": "SUBSECRETARIA DE PARTICIPACION PUBLICO PRIVADA"
+  },
+  {
+    "id": 357,
+    "nombre": "SUBSECRETARIA DE PESCA"
+  },
+  {
+    "id": 593,
+    "nombre": "SUBSECRETARIA DE PESCA Y ACUICULTURA"
+  },
+  {
+    "id": 4054,
+    "nombre": "SUBSECRETARIA DE PLANEAMIENTO ENERGETICO"
+  },
+  {
+    "id": 3886,
+    "nombre": "SUBSECRETARIA DE PLANEAMIENTO OPERATIVO Y SERVICIO LOGISTICO"
+  },
+  {
+    "id": 3851,
+    "nombre": "SUBSECRETARIA DE PLANIFICACION DE EMPLEO PUBLICO"
+  },
+  {
+    "id": 4092,
+    "nombre": "SUBSECRETARIA DE PLANIFICACION GENERAL"
+  },
+  {
+    "id": 806,
+    "nombre": "SUBSECRETARIA DE PLANIFICACION, ORDENAMIENTO Y CAL"
+  },
+  {
+    "id": 3679,
+    "nombre": "SUBSECRETARIA DE PLANIFICACION TERRITORIAL DE LA INVERSION P"
+  },
+  {
+    "id": 3417,
+    "nombre": "SUBSECRETARIA DE PLANIFICACION Y GESTION PARA LA INTEGRACION"
+  },
+  {
+    "id": 4202,
+    "nombre": "SUBSECRETARIA DE PLANIFICACION Y PROGRAMACION SANITARIA"
+  },
+  {
+    "id": 341,
+    "nombre": "SUBSECRETARIA DE POBLACION"
+  },
+  {
+    "id": 720,
+    "nombre": "SUBSECRETARIA DE POLITICA CRIMINAL"
+  },
+  {
+    "id": 224,
+    "nombre": "SUBSECRETARIA DE POLITICA DE EXPORTACIONES"
+  },
+  {
+    "id": 285,
+    "nombre": "SUBSECRETARIA DE POLITICA DE SALUD Y ACCION SOCIAL"
+  },
+  {
+    "id": 3920,
+    "nombre": "SUBSECRETARIA DE POLITICA DE SUELO Y URBANISMO"
+  },
+  {
+    "id": 382,
+    "nombre": "SUBSECRETARIA DE POLITICA ECONOMICA"
+  },
+  {
+    "id": 4147,
+    "nombre": "SUBSECRETARIA DE POLITICA INDUSTRIAL"
+  },
+  {
+    "id": 3450,
+    "nombre": "SUBSECRETARIA DE POLITICAS DE EMPLEO Y FORMACION PROFESIONAL"
+  },
+  {
+    "id": 3955,
+    "nombre": "SUBSECRETARIA DE POLITICAS DE IGUALDAD"
+  },
+  {
+    "id": 4024,
+    "nombre": "SUBSECRETARIA DE POLITICAS DE INCLUSION EN EL MUNDO LABORAL"
+  },
+  {
+    "id": 3250,
+    "nombre": "SUBSECRETARIA DE POLITICAS DE LA SEGURIDAD SOCIAL"
+  },
+  {
+    "id": 3828,
+    "nombre": "SUBSECRETARIA DE POLITICAS DE MERCADO INTERNO"
+  },
+  {
+    "id": 3981,
+    "nombre": "SUBSECRETARIA DE POLITICAS PARA EL MERCADO INTERNO"
+  },
+  {
+    "id": 3263,
+    "nombre": "SUBSECRETARIA DE POLITICAS REGULACION Y FISCALIZACION"
+  },
+  {
+    "id": 3820,
+    "nombre": "SUBSECRETARIA DE POLITICA TRIBUTARIA"
+  },
+  {
+    "id": 573,
+    "nombre": "SUBSECRETARIA DE POLITICA Y GESTION COMERCIAL"
+  },
+  {
+    "id": 446,
+    "nombre": "SUBSECRETARIA DE PRESUPUESTO"
+  },
+  {
+    "id": 657,
+    "nombre": "SUBSECRETARIA DE PRIVATIZACIONES"
+  },
+  {
+    "id": 4158,
+    "nombre": "SUBSECRETARIA DE PRODUCCION AGROPECUARIA Y FORESTAL"
+  },
+  {
+    "id": 618,
+    "nombre": "SUBSECRETARIA DE PROGRAMACION ECONOMICA"
+  },
+  {
+    "id": 408,
+    "nombre": "SUBSECRETARIA DE PROGRAMACION MACROECONOMICA"
+  },
+  {
+    "id": 3528,
+    "nombre": "SUBSECRETARIA DE PROGRAMACION TECNICA Y ESTUDIOS LABORALES"
+  },
+  {
+    "id": 3283,
+    "nombre": "SUBSECRETARIA DE PROGRAMAS DE PREVENCION Y PROMOCION"
+  },
+  {
+    "id": 3460,
+    "nombre": "SUBSECRETARIA DE PROMOCION AL FINANCIAMIENTO DE LA PEQUEÑA Y"
+  },
+  {
+    "id": 4220,
+    "nombre": "SUBSECRETARIA DE PROMOCION CULTURAL Y ARTISTICA"
+  },
+  {
+    "id": 3340,
+    "nombre": "SUBSECRETARIA DE PROMOCION DEL DESARROLLO SUSTENTABLE"
+  },
+  {
+    "id": 4019,
+    "nombre": "SUBSECRETARIA DE PROMOCION DEL EMPLEO"
+  },
+  {
+    "id": 3573,
+    "nombre": "SUBSECRETARIA DE PROMOCION DEL SECTOR SOCIAL DE LA ECONOMIA"
+  },
+  {
+    "id": 251,
+    "nombre": "SUBSECRETARIA DE PROMOCION DESARROLLO Y SERVICIOS"
+  },
+  {
+    "id": 78,
+    "nombre": "SUBSECRETARIA DE PROMOCION FEDERAL"
+  },
+  {
+    "id": 4184,
+    "nombre": "SUBSECRETARIA DE PROMOCION HUMANA"
+  },
+  {
+    "id": 3949,
+    "nombre": "SUBSECRETARIA DE PROMOCION TURISTICA Y NUEVOS PRODUCTOS"
+  },
+  {
+    "id": 3571,
+    "nombre": "SUBSECRETARIA DE PROTECCION CIVIL Y ABORDAJE INTEGRAL DE EME"
+  },
+  {
+    "id": 3775,
+    "nombre": "SUBSECRETARIA DE PUERTOS VIAS NAVEGABLES Y MARINA MERCANTE"
+  },
+  {
+    "id": 3326,
+    "nombre": "SUBSECRETARIA DE PUERTOS Y TRANSPORTE DE LARGA DISTANCIA"
+  },
+  {
+    "id": 352,
+    "nombre": "SUBSECRETARIA DE PUERTOS Y VIAS NAVEGABLES"
+  },
+  {
+    "id": 4141,
+    "nombre": "SUBSECRETARIA DE RECURSOS ACUATICOS Y PESCA"
+  },
+  {
+    "id": 121,
+    "nombre": "SUBSECRETARIA DE RECURSOS HIDRICOS"
+  },
+  {
+    "id": 3729,
+    "nombre": "SUBSECRETARIA DE RECURSOS HIDROCARBURIFEROS"
+  },
+  {
+    "id": 3709,
+    "nombre": "SUBSECRETARIA DE REDUCCION DEL RIESGO DE DESASTRES"
+  },
+  {
+    "id": 3716,
+    "nombre": "SUBSECRETARIA DE REFINACION Y COMERCIALIZACION"
+  },
+  {
+    "id": 3612,
+    "nombre": "SUBSECRETARIA DE REFORMA INSTITUCIONAL Y FORTALECIMIENTO DE"
+  },
+  {
+    "id": 3542,
+    "nombre": "SUBSECRETARIA DE REGULACION NORMATIVA DEL TRANSPORTE"
+  },
+  {
+    "id": 272,
+    "nombre": "SUBSECRETARIA DE REGULACION Y CONTROL"
+  },
+  {
+    "id": 4110,
+    "nombre": "SUBSECRETARIA DE RELACIONES CON LA SOCIEDAD CIVIL"
+  },
+  {
+    "id": 620,
+    "nombre": "SUBSECRETARIA DE RELACIONES CON PROVINCIAS"
+  },
+  {
+    "id": 4126,
+    "nombre": "SUBSECRETARIA DE RELACIONES DEL TRABAJO"
+  },
+  {
+    "id": 3407,
+    "nombre": "SUBSECRETARIA DE RELACIONES INSTITUCIONALES"
+  },
+  {
+    "id": 269,
+    "nombre": "SUBSECRETARIA DE RELACIONES LABORALES"
+  },
+  {
+    "id": 3440,
+    "nombre": "SUBSECRETARIA DE RELACIONES SANITARIAS E INVESTIGACION"
+  },
+  {
+    "id": 4219,
+    "nombre": "SUBSECRETARIA DE RELACIONES SECTORIALES Y ARTICULACION"
+  },
+  {
+    "id": 125,
+    "nombre": "SUBSECRETARIA DE SALUD"
+  },
+  {
+    "id": 3441,
+    "nombre": "SUBSECRETARIA DE SALUD COMUNITARIA"
+  },
+  {
+    "id": 640,
+    "nombre": "SUBSECRETARIA DE SEGURIDAD INTERIOR"
+  },
+  {
+    "id": 79,
+    "nombre": "SUBSECRETARIA DE SEGURIDAD SOCIAL"
+  },
+  {
+    "id": 605,
+    "nombre": "SUBSECRETARIA DE SEGURIDAD Y PROTECCION CIVIL"
+  },
+  {
+    "id": 601,
+    "nombre": "SUBSECRETARIA DE SERVICIOS FINANCIEROS"
+  },
+  {
+    "id": 3656,
+    "nombre": "SUBSECRETARIA DE SERVICIOS TECNOLOGICOS Y PRODUCTIVOS"
+  },
+  {
+    "id": 3301,
+    "nombre": "SUBSECRETARIA DE SERVICIOS Y NEGOCIACIONES TURISTICAS"
+  },
+  {
+    "id": 4073,
+    "nombre": "SUBSECRETARIA DE SERVICIOS Y PAIS DIGITAL"
+  },
+  {
+    "id": 3348,
+    "nombre": "SUBSECRETARIA DE TECNOLOGIAS DE GESTION"
+  },
+  {
+    "id": 4093,
+    "nombre": "SUBSECRETARIA DE TECNOLOGIAS DE LA INFORMACION"
+  },
+  {
+    "id": 460,
+    "nombre": "SUBSECRETARIA DE TECNOLOGIAS INFORMATICAS"
+  },
+  {
+    "id": 3666,
+    "nombre": "SUBSECRETARIA DE TECNOLOGIA Y CIBERSEGURIDAD"
+  },
+  {
+    "id": 268,
+    "nombre": "SUBSECRETARIA DE TRABAJO"
+  },
+  {
+    "id": 80,
+    "nombre": "SUBSECRETARIA DE TRABAJO Y ACCION SOCIAL"
+  },
+  {
+    "id": 4146,
+    "nombre": "SUBSECRETARIA DE TRANSICION Y PLANEAMIENTO ENERGETICO"
+  },
+  {
+    "id": 81,
+    "nombre": "SUBSECRETARIA DE TRANSP.MARITIMOS Y FLUVIALES"
+  },
+  {
+    "id": 118,
+    "nombre": "SUBSECRETARIA DE TRANSPORTE"
+  },
+  {
+    "id": 4154,
+    "nombre": "SUBSECRETARIA DE TRANSPORTE AEREO"
+  },
+  {
+    "id": 331,
+    "nombre": "SUBSECRETARIA DE TRANSPORTE AEROCOMERCIAL"
+  },
+  {
+    "id": 575,
+    "nombre": "SUBSECRETARIA DE TRANSPORTE AUTOMOTOR"
+  },
+  {
+    "id": 3498,
+    "nombre": "SUBSECRETARIA DE TRANSPORTE FERROVIARIO"
+  },
+  {
+    "id": 535,
+    "nombre": "SUBSECRETARIA DE TRANSPORTE FERROVIARIO, FLUVIAL Y"
+  },
+  {
+    "id": 345,
+    "nombre": "SUBSECRETARIA DE TRANSPORTE METROPOLITANO"
+  },
+  {
+    "id": 473,
+    "nombre": "SUBSECRETARIA DE TRANSPORTE POR AGUA Y PUERTOS"
+  },
+  {
+    "id": 393,
+    "nombre": "SUBSECRETARIA DE TRANSPORTE TERRESTRE"
+  },
+  {
+    "id": 375,
+    "nombre": "SUBSECRETARIA DE TURISMO"
+  },
+  {
+    "id": 4130,
+    "nombre": "SUBSECRETARIA DE VOCERIA Y COMUNICACION DE GOBIERNO"
+  },
+  {
+    "id": 625,
+    "nombre": "SUBSECRETARIA GENERAL"
+  },
+  {
+    "id": 3930,
+    "nombre": "SUBSECRETARIA INTERJURISDICCIONAL E INTERINSTITUCIONAL"
+  },
+  {
+    "id": 617,
+    "nombre": "SUBSECRETARIA LEGAL"
+  },
+  {
+    "id": 509,
+    "nombre": "SUBSECRETARIA LEGAL Y ADMINISTRATIVA"
+  },
+  {
+    "id": 3382,
+    "nombre": "SUBSECRETARIA TECNICA DE PLANEAMIENTO Y CONTROL DEL NARCOTRA"
+  },
+  {
+    "id": 3356,
+    "nombre": "SUBSECRTARIA DE GESTION DE SERVICIOS ASISTENCIALES"
+  },
+  {
+    "id": 3322,
+    "nombre": "SUBS. PARA LA REFORMA INST. Y FORTALEC. DE LA DEMOCRACIA"
+  },
+  {
+    "id": 3587,
+    "nombre": "SUBS. PROTEC. INFRAESTRUCTURAS CRITICAS DE INFORM Y CIBER"
+  },
+  {
+    "id": 411,
+    "nombre": "SUBTESORERIA GENERAL DE LA NACION"
+  },
+  {
+    "id": 253,
+    "nombre": "SUP. DE ADM. DE FONDOS DE JUBILACIONES Y PENSIONES"
+  },
+  {
+    "id": 327,
+    "nombre": "SUPERINTENDENCIA DE RIESGOS DEL TRABAJO"
+  },
+  {
+    "id": 107,
+    "nombre": "SUPERINTENDENCIA DE SEGUROS DE LA NACION"
+  },
+  {
+    "id": 401,
+    "nombre": "SUPERINTENDENCIA DE SERVICIOS DE SALUD"
+  },
+  {
+    "id": 615,
+    "nombre": "SUPERINTENDENCIA DE SERVICIOS SOCIALES"
+  },
+  {
+    "id": 106,
+    "nombre": "SUPERINTENDENCIA NACIONAL DE FRONTERAS"
+  },
+  {
+    "id": 649,
+    "nombre": "TEATRO NACIONAL CERVANTES"
+  },
+  {
+    "id": 250,
+    "nombre": "TESORERIA GENERAL DE LA NACION"
+  },
+  {
+    "id": 420,
+    "nombre": "TRIBUNAL ARBITRAL DE OBRAS PUBLICAS DE LA NACION"
+  },
+  {
+    "id": 108,
+    "nombre": "TRIBUNAL DE CUENTAS DE LA NACION"
+  },
+  {
+    "id": 4229,
+    "nombre": "TRIBUNAL DE DEFENSA DE LA COMPETENCIA"
+  },
+  {
+    "id": 801,
+    "nombre": "TRIBUNAL DE SUPERINTENDENCIA DE LA CAMARA FEDERAL"
+  },
+  {
+    "id": 353,
+    "nombre": "TRIBUNAL DE TASACIONES DE LA NACION"
+  },
+  {
+    "id": 518,
+    "nombre": "TRIBUNAL FISCAL DE LA NACION"
+  },
+  {
+    "id": 3800,
+    "nombre": "UNIDAD DE COORDINACION GENERAL"
+  },
+  {
+    "id": 3273,
+    "nombre": "UNIDAD DE COORDINACION TECNICA - C.N.C.P.S."
+  },
+  {
+    "id": 3468,
+    "nombre": "UNIDAD DE COORDINACION Y EVALUACION DE SUBSIDIOS AL CONSUMO"
+  },
+  {
+    "id": 616,
+    "nombre": "UNIDAD DE INFORMACION FINANCIERA"
+  },
+  {
+    "id": 714,
+    "nombre": "UNIDAD DE REESTRUCTURACION DEL SIST. FINANCIERO"
+  },
+  {
+    "id": 805,
+    "nombre": "UNIDAD DE RENEG. Y ANA. DE CONTR. DE SERV. PUB."
+  },
+  {
+    "id": 3415,
+    "nombre": "UNIDAD EJECUTORA DE INGRESO SOCIAL CON TRABAJO"
+  },
+  {
+    "id": 4196,
+    "nombre": "UNIDAD EJECUTORA ESPECIAL TEMPORARIA AGENCIA DE TRANSFORM"
+  },
+  {
+    "id": 3928,
+    "nombre": "UNIDAD GABINETE DE ASESORES"
+  },
+  {
+    "id": 802,
+    "nombre": "UNIDAD TURISTICA EMBALSE"
+  },
+  {
+    "id": 586,
+    "nombre": "UNIVERSIDAD DE BUENOS AIRES"
+  },
+  {
+    "id": 3860,
+    "nombre": "UNIVERSIDAD NACIONAL ARTURO JAURETCHE"
+  },
+  {
+    "id": 3434,
+    "nombre": "UNIVERSIDAD NACIONAL DE CUYO"
+  },
+  {
+    "id": 3710,
+    "nombre": "UNIVERSIDAD NACIONAL DE GENERAL SAN MARTIN"
+  },
+  {
+    "id": 3707,
+    "nombre": "UNIVERSIDAD NACIONAL DE HURLINGHAM"
+  },
+  {
+    "id": 733,
+    "nombre": "UNIVERSIDAD NACIONAL DE LANUS"
+  },
+  {
+    "id": 4079,
+    "nombre": "UNIVERSIDAD NACIONAL DE LA PAMPA"
+  },
+  {
+    "id": 4106,
+    "nombre": "UNIVERSIDAD NACIONAL DE LOMAS DE ZAMORA"
+  },
+  {
+    "id": 3929,
+    "nombre": "UNIVERSIDAD NACIONAL DE MORENO"
+  },
+  {
+    "id": 3443,
+    "nombre": "UNIVERSIDAD NACIONAL DE RIO NEGRO"
+  },
+  {
+    "id": 3320,
+    "nombre": "UNIVERSIDAD NACIONAL DE ROSARIO"
+  },
+  {
+    "id": 3698,
+    "nombre": "UNIVERSIDAD NACIONAL DE SAN ANTONIO DE ARECO"
+  },
+  {
+    "id": 791,
+    "nombre": "UNIVERSIDAD NACIONAL DE VILLA MARIA"
+  },
+  {
+    "id": 4114,
+    "nombre": "UNIVERSIDAD NACIONAL MADRES DE PLAZA DE MAYO"
+  },
+  {
+    "id": 4140,
+    "nombre": "VICEJEFATURA DE GABINETE DEL INTERIOR"
+  },
+  {
+    "id": 4155,
+    "nombre": "VICEJEFATURA DE GABINETE EJECUTIVA"
+  },
+  {
+    "id": 3213,
+    "nombre": "YACIMIENTO CARBONIFERO DE RIO TURBIO Y DE LOS SERVICIOS...."
+  },
+  {
+    "id": 1013,
+    "nombre": "YACIMIENTOS CARBONIFEROS FISCALES"
+  },
+  {
+    "id": 3535,
+    "nombre": "YACIMIENTOS PETROLIFEROS FISCALES"
+  }
+]

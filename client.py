@@ -5,7 +5,7 @@ from models import BusquedaNormaRequest, BusquedaNormaResponse, PaginacionReques
                    , ParamsVerNorma, VerNormaResponse \
                    , ParamsVerVinculos, VerVinculosResponse
 
-from parsers import InfoLegParser
+from parsers import *
 
 BASE_URL = "https://servicios.infoleg.gob.ar/infolegInternet"
 
@@ -31,7 +31,10 @@ class InfolegClient:
         raise NotImplemented()
 
     def ver_norma(self, session: requests.Session, params: ParamsVerNorma) -> VerNormaResponse:
-        raise NotImplemented()
+        params = params.model_dump(exclude_none=True)
+        r = session.get(f"{BASE_URL}/verNorma.do", params=params)
+        r.raise_for_status()
+        return InfolegNormaParser().parse(r.text)
 
     def buscar_boletin(self, session: requests.Session, request: BusquedaBoletinRequest) -> BusquedaBoletinResponse:
         raise NotImplemented()
@@ -44,7 +47,7 @@ class InfolegClient:
         r = session.post(f"{BASE_URL}/buscarNormas.do", data=payload)
         r.raise_for_status()
         
-        return InfoLegParser.parse_busqueda_resultados(r.text)
+        return InfoLegBusquedasParser.parse(r.text)
 
     def navegar_normas(self, session: requests.Session, request: PaginacionRequest) -> BusquedaNormaResponse:
         """
@@ -54,21 +57,24 @@ class InfolegClient:
         r = session.post(f"{BASE_URL}/buscarNormas.do", data=payload)
         r.raise_for_status()
         
-        return InfoLegParser.parse_busqueda_resultados(r.text)
+        return InfoLegBusquedasParser.parse(r.text)
 
 if __name__ == "__main__":
     # Prueba rápida: Ley 27430
     import json
     
-    session_manager = SearchSession()
     client = InfolegClient()
+    session = requests.Session()
     test_request = BusquedaNormaRequest(
         tipoNorma=1, # Ley
         texto="apuestas",
     )
     
-    print(f"Buscando Ley 27430...")
-    response = client.buscar_normas(session_manager.session, test_request)
-    
-    print(f"\nResultados encontrados: {response.total}")
+    # print(f"Buscando Ley 27430...")
+    # response = client.buscar_normas(session, test_request)
+    # print(f"\nResultados encontrados: {response.total}")
+    # print(response.model_dump_json(indent=2))
+
+    test_params = ParamsVerNorma(id=274045) 
+    response = client.ver_norma(session, test_params)
     print(response.model_dump_json(indent=2))

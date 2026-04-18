@@ -76,11 +76,17 @@ class BusquedaBoletinResponse(BaseModel):
 # VerNorma.do
 class ParamsVerNorma(BaseModel):
     id : int
-    resaltar: Optional[bool]
+    resaltar: Optional[bool] = None
 
 
 class VerNormaResponse(BaseModel):
-    id : int
+    summary: NormaSummary
+    fecha_emision: Optional[date] = None
+    pagina_boletin: Optional[int] = None
+    url_texto_completo: Optional[str] = None
+    url_texto_actualizado: Optional[str] = None
+    normas_que_modifica : Optional[int] = None
+    normas_que_modifican_esta: Optional[int] = None
 
 
 # VerVinculos.do

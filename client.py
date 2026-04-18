@@ -1,6 +1,10 @@
 import requests
 import uuid
-from models import BusquedaNormaRequest, BusquedaNormaResponse, PaginacionRequest
+from models import BusquedaNormaRequest, BusquedaNormaResponse, PaginacionRequest \
+                   , BusquedaBoletinRequest, BusquedaBoletinResponse \
+                   , ParamsVerNorma, VerNormaResponse \
+                   , ParamsVerVinculos, VerVinculosResponse
+
 from parsers import InfoLegParser
 
 BASE_URL = "https://servicios.infoleg.gob.ar/infolegInternet"
@@ -22,6 +26,16 @@ class SearchSession:
         return PaginacionRequest(desplazamiento="RP", irAPagina=self.pagina_actual)
 
 class InfolegClient:
+
+    def ver_vinculos(self, session: requests.Session, params: ParamsVerVinculos) -> VerVinculosResponse:
+        raise NotImplemented()
+
+    def ver_norma(self, session: requests.Session, params: ParamsVerNorma) -> VerNormaResponse:
+        raise NotImplemented()
+
+    def buscar_boletin(self, session: requests.Session, request: BusquedaBoletinRequest) -> BusquedaBoletinResponse:
+        raise NotImplemented()
+
     def buscar_normas(self, session: requests.Session, request: BusquedaNormaRequest) -> BusquedaNormaResponse:
         """
         Realiza la petición POST inicial de búsqueda.

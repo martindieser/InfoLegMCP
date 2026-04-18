@@ -19,6 +19,9 @@ class BusquedaNorma(BaseModel):
     fecha_pub_desde: Optional[date] = None
     fecha_pub_hasta: Optional[date] = None
 
+
+
+# BuscarNormas.do
 class BusquedaNormaRequest(BaseModel):
     # Nombres exactos de los parámetros del formulario POST de InfoLeg
     tipoNorma: Optional[int] = None
@@ -33,9 +36,6 @@ class BusquedaNormaRequest(BaseModel):
     mesPubHasta: Optional[int] = None
     anioPubHasta: Optional[int] = None
 
-class PaginacionRequest(BaseModel):
-    desplazamiento: str  # 'AP' para avanzar, 'RP' para retroceder
-    irAPagina: int
 
 class NormaSummary(BaseModel):
     id: int
@@ -57,3 +57,47 @@ class BusquedaNormaResponse(BaseModel):
     @property
     def cant_resultados(self) -> int:
         return len(self.resultados)
+
+
+
+# BuscarBoletin.do
+class BusquedaBoletinRequest(BaseModel):
+    diaPub: Optional[int] = None
+    mesPub: Optional[int] = None
+    anioPub: Optional[int] = None
+    buscarPorNro: bool
+    nro: Optional[int] = None
+
+
+class BusquedaBoletinResponse(BaseModel):
+    id : int
+
+
+# VerNorma.do
+class ParamsVerNorma(BaseModel):
+    id : int
+    resaltar: Optional[bool]
+
+
+class VerNormaResponse(BaseModel):
+    id : int
+
+
+# VerVinculos.do
+class ParamsVerVinculos(BaseModel):
+    # id norma
+    id : int 
+
+    # 1 indica las normas que esta norma modifica o complementa.
+    # 2 son las normas por las que esta norma es modificada o complementada
+    modo: int 
+
+
+class VerVinculosResponse(BaseModel):
+    id : int 
+
+
+class PaginacionRequest(BaseModel):
+    desplazamiento: str  # 'AP' para avanzar, 'RP' para retroceder
+    irAPagina: int
+

@@ -50,7 +50,7 @@ if __name__ == "__main__":
     client = InfolegClient()
     test_request = BusquedaNormaRequest(
         tipoNorma=1, # Ley
-        numero=27430
+        texto="apuestas",
     )
     
     print(f"Buscando Ley 27430...")

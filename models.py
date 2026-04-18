@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, computed_field 
 from typing import Optional, List
 from datetime import date
 
@@ -42,8 +42,8 @@ class NormaSummary(BaseModel):
     identidad_norma : str
     organismo_emisor: str
 
-    id_boletin: int
-    fecha_publicacion: date
+    id_boletin: Optional[int] = None
+    fecha_publicacion: Optional[date] = None
 
     organismo_padre: str
     tema : str
@@ -53,3 +53,7 @@ class BusquedaNormaResponse(BaseModel):
     resultados: List[NormaSummary]
     nro_pag: int
     total: int
+    @computed_field
+    @property
+    def cant_resultados(self) -> int:
+        return len(self.resultados)

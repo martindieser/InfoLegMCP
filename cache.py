@@ -29,7 +29,7 @@ class SessionCache:
         self._cache.close()
 
 class PageCache:
-    def __init__(self, directory: str = ".cache/pages", ttl: int = 300):
+    def __init__(self, directory: str = ".cache/pages", ttl: int = 3000):
         self.ttl = ttl
         self._cache = diskcache.Cache(directory)
 

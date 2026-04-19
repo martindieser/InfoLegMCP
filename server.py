@@ -24,13 +24,24 @@ def normalize(text: str) -> str:
 
 @mcp.resource("file://tipos-norma")
 def get_tipos_norma() -> str:
-    """Catálogo completo de tipos de norma disponibles."""
+    """Devuelve el catálogo de tipos de norma con su ID y nombre.
+    SIEMPRE llamar esta tool antes de usar tipo_norma en buscar_normas()."""
     with open(PATH_TIPOS_NORMA) as f:
         return f.read()
 
 @mcp.tool()
 def get_dependencia_by_id(id: int) -> dict:
-    """Obtiene una dependencia por su ID exacto."""
+    """
+    Obtiene los datos de una dependencia por su ID exacto.
+
+    CUÁNDO USARLA: Cuando ya se conoce el ID de la dependencia y se quieren ver sus datos.
+    Si no se conoce el ID, usar buscar_dependencias() primero.
+
+    PARÁMETROS:
+    - id: ID numérico exacto de la dependencia.
+
+    DEVUELVE: Datos de la dependencia (id, nombre, etc.).
+    """
     with open(PATH_DEPENDENCIAS) as f:
         deps = json.load(f)
 
@@ -43,7 +54,20 @@ def get_dependencia_by_id(id: int) -> dict:
 
 @mcp.tool()
 def buscar_dependencias(query: str, limit: int = 10) -> list:
-    """Busca dependencias por nombre usando fuzzy search."""
+    """
+     Busca organismos/dependencias por nombre usando fuzzy search.
+
+     CUÁNDO USARLA: Antes de llamar a buscar_normas() con el parámetro `dependencia`,
+     para obtener el ID numérico del organismo emisor.
+
+     PARÁMETROS:
+     - query: Nombre o parte del nombre del organismo. Ej: "ministerio de salud", "AFIP", "ANSES".
+     - limit: Cantidad máxima de resultados (default: 10).
+
+     DEVUELVE: Lista de dependencias con su ID y nombre. Usar el campo `id` en buscar_normas().
+
+     NOTA: La búsqueda es tolerante a errores tipográficos y variaciones menores.
+     """
     with open(PATH_DEPENDENCIAS) as f:
         deps = json.load(f)
 
@@ -60,7 +84,19 @@ def buscar_dependencias(query: str, limit: int = 10) -> list:
 
 @mcp.tool()
 def ver_norma(id: int) -> dict:
-    """Obtiene el texto y metadatos completos de una norma por ID."""
+    """
+    Obtiene el texto completo y metadatos de una norma por su ID de Infoleg.
+
+    CUÁNDO USARLA: Cuando se conoce el ID de la norma (obtenido de buscar_normas()).
+    Para buscar normas sin ID, usar buscar_normas() primero.
+
+    PARÁMETROS:
+    - id: ID numérico de la norma en Infoleg.
+
+    DEVUELVE: Texto completo (si disponible) y metadatos de la norma.
+    NOTA: Las normas anteriores a 1997 o de carácter particular pueden no tener texto completo,
+    pero sí sus vínculos y referencias.
+    """
     session = requests.Session()
     client = InfolegClient()
     params = ParamsVerNorma(id=id)
@@ -69,7 +105,19 @@ def ver_norma(id: int) -> dict:
 
 @mcp.tool()
 def ver_normas_que_modifica(id: int) -> dict:
-    """Devuelve las normas que esta norma modifica o complementa."""
+    """
+    Devuelve las normas que esta norma modifica, deroga o complementa.
+
+    CUÁNDO USARLA: Para rastrear el impacto de una norma sobre otras normas anteriores.
+    Es la dirección ACTIVA: "esta norma actuó sobre cuáles otras".
+
+    NO CONFUNDIR con ver_normas_que_la_modifican(), que es la dirección inversa.
+
+    PARÁMETROS:
+    - id: ID numérico de la norma en Infoleg.
+
+    DEVUELVE: Lista de normas que fueron modificadas/derogadas/complementadas por esta norma.
+    """
     session = requests.Session()
     client = InfolegClient()
     params = ParamsVerVinculos(id=id, modo=ModoVinculo.MODIFICA_A)
@@ -78,7 +126,20 @@ def ver_normas_que_modifica(id: int) -> dict:
 
 @mcp.tool()
 def ver_normas_que_la_modifican(id: int) -> dict:
-    """Devuelve las normas por las que esta norma fue modificada o complementada."""
+    """
+    Devuelve las normas que modificaron, derogaron o complementaron a esta norma.
+
+    CUÁNDO USARLA: Para conocer el historial de modificaciones que recibió una norma,
+    es decir, si está vigente o fue alterada. 
+    Es la dirección PASIVA: "quién actuó sobre esta norma".
+
+    NO CONFUNDIR con ver_normas_que_modifica(), que es la dirección inversa.
+
+    PARÁMETROS:
+    - id: ID numérico de la norma en Infoleg.
+
+    DEVUELVE: Lista de normas que modificaron/derogaron/complementaron a esta norma.
+    """
     session = requests.Session()
     client = InfolegClient()
     params = ParamsVerVinculos(id=id, modo=ModoVinculo.MODIFICADA_POR)
@@ -95,7 +156,56 @@ def buscar_normas(
     publicado_hasta: Optional[date] = None,
     nro_pag: Optional[int] = None,
 ) -> dict:
-    """Busca normas en Infoleg por texto, tipo, número, dependencia o rango de fechas de publicación."""
+    """
+    Busca normas jurídicas en Infoleg (Leyes, Decretos, Resoluciones, Disposiciones, etc.).
+    Los resultados se ordenan por fecha de publicación, del más reciente al más antiguo.
+
+    CUÁNDO USARLA: Cuando no se conoce el ID de la norma. Si ya tenés el ID, usá ver_norma().
+
+    RESTRICCIONES:
+    - Se requieren al menos 2 parámetros, EXCEPTO si se usa `texto` (que puede usarse solo).
+    - Para Leyes (tipo_norma=1), NO ingresar anio_sancion (no es necesario).
+    - Los números de norma deben ingresarse SIN puntos. Ej: 27275, no 27.275.
+
+    PAGINACIÓN:
+    - Primera llamada: no incluir nro_pag.
+    - El resultado incluye `pagina_actual` y `total_pags`.
+    - Para páginas siguientes, repetir la misma llamada agregando nro_pag=2, 3, etc.
+
+    PARÁMETROS:
+    - tipo_norma: ID numérico del tipo de norma (consultar recurso `tipos-norma`).
+                  Ej: 1=Ley, 2=Decreto.
+    - numero: Número de la norma sin puntos. Si no se ingresa año, trae ese número de todos los años.
+    - anio_sancion: Año de sanción en 4 dígitos. Acota resultados cuando se usa con `numero`.
+                    NO usar si tipo_norma=1 (Ley).
+    - dependencia: ID del organismo emisor. Usar buscar_dependencias() para obtener el ID.
+    - publicado_desde / publicado_hasta: Rango de fechas de publicación en el Boletín Oficial.
+                                         OJO: es fecha de publicación, NO de sanción. 
+                                         Una norma sancionada a fin de año puede publicarse el año siguiente.
+    - texto: Búsqueda por palabras clave. Puede usarse solo sin otros parámetros.
+             El sistema busca por RAÍZ de palabra, por lo que se recomienda usar el comodín * .
+             
+             OPERADORES DISPONIBLES:
+             - Y / AND         → ambas palabras. Ej: "aranceles Y aduaneros"
+             - O / OR          → cualquiera. Ej: "aranceles O aduaneros" (operador por defecto)
+             - NO / NOT        → excluye. Ej: "energía NOT eólica"
+             - + palabra       → la palabra DEBE estar presente
+             - - palabra       → la palabra NO debe estar presente
+             - (...)           → agrupa términos, se evalúan primero
+             - "frase exacta"  → busca la frase literal (NO se puede combinar con *)
+             - * (comodín)     → reemplaza varios caracteres al final. Ej: "recurs*" encuentra recurso/recursos/recursivo
+             - ? (comodín)     → reemplaza un solo carácter. Ej: "INT?" encuentra INTI o INTA
+
+             EJEMPLOS DE TEXTO:
+             - residu*                                      → residuo, residuos, residual...
+             - "transporte de carga"                        → frase exacta
+             - transporte Y (terrestre O marítimo)          → transporte terrestre o marítimo
+             - exporta* AND bienes AND servicio*            → combina raíces
+             - "plan nacional" NOT "política económica"     → incluye una frase, excluye otra
+
+    DEVUELVE: Lista de normas con metadatos (tipo, número, título, fecha, dependencia) + pagina_actual + total_pags.
+    """
+
     
     # Validar que se ingresen suficientes parámetros para evitar búsquedas demasiado amplias
     search_params = [tipo_norma, numero, anio_sancion, dependencia, publicado_desde, publicado_hasta]

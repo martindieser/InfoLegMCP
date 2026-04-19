@@ -3,7 +3,7 @@ import json
 from pydantic import BaseModel
 from typing import Optional
 import diskcache
-from models import BusquedaNormaRequest, BusquedaNormaResponse
+from models import BusquedaNormaRequest, BusquedaNormaResponse, VerNormaResponse
 
 class SearchSessionState(BaseModel):
     cookies: dict
@@ -44,6 +44,20 @@ class PageCache:
 
     def set(self, request: BusquedaNormaRequest, page: int, result: BusquedaNormaResponse) -> None:
         self._cache.set(self._key(request, page), result, expire=self.ttl)
+
+    def close(self):
+        self._cache.close()
+
+class NormaCache:
+    def __init__(self, directory: str = ".cache/normas", ttl: int = 86400):
+        self.ttl = ttl
+        self._cache = diskcache.Cache(directory)
+
+    def get(self, id: int) -> Optional[VerNormaResponse]:
+        return self._cache.get(str(id))
+
+    def set(self, id: int, result: VerNormaResponse) -> None:
+        self._cache.set(str(id), result, expire=self.ttl)
 
     def close(self):
         self._cache.close()

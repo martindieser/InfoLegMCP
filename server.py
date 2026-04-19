@@ -5,13 +5,14 @@ from mcp.server.fastmcp import FastMCP
 from rapidfuzz import process, fuzz
 from typing import Optional
 from client import InfolegClient
-from cache import SessionCache, PageCache, SearchSessionState
+from cache import SessionCache, PageCache, SearchSessionState, NormaCache
 from datetime import date
 from models import *
 
 mcp = FastMCP("InfoLeg MCP", json_response=True)
 session_cache = SessionCache()
 page_cache = PageCache()
+norma_cache = NormaCache()
 
 PATH_DEPENDENCIAS = "./data/dependencias.json"
 PATH_TIPOS_NORMA = "./data/tipos_norma.json"
@@ -97,10 +98,20 @@ def ver_norma(id: int) -> dict:
     NOTA: Las normas anteriores a 1997 o de carácter particular pueden no tener texto completo,
     pero sí sus vínculos y referencias.
     """
+    # Intentar obtener de la caché
+    cached_norma = norma_cache.get(id)
+    if cached_norma:
+        return cached_norma.model_dump_json(indent=2)
+
     session = requests.Session()
     client = InfolegClient()
     params = ParamsVerNorma(id=id)
-    return client.ver_norma(session, params).model_dump_json(indent=2)
+    result = client.ver_norma(session, params)
+    
+    # Guardar en caché
+    norma_cache.set(id, result)
+    
+    return result.model_dump_json(indent=2)
 
 
 @mcp.tool()

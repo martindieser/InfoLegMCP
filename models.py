@@ -110,7 +110,6 @@ class VerVinculosResponse(BaseModel):
 
 class ModoDesplazamiento(str, Enum):
     # 'AP' para avanzar, 'RP' para retroceder
-    RETROCEDER = "RP"
     AVANZAR = "AP"
 
 class PaginacionRequest(BaseModel):

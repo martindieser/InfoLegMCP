@@ -91,7 +91,7 @@ def buscar_normas(
     dependencia: Optional[int] = None,
     publicado_desde: Optional[date] = None,
     publicado_hasta: Optional[date] = None,
-    offset: Optional[int] = None,
+    nro_pag: Optional[int] = None,
 ) -> dict:
     """Busca normas en Infoleg por texto, tipo, número, dependencia o rango de fechas de publicación."""
     request = BusquedaNormaRequest(
@@ -123,7 +123,7 @@ def buscar_normas(
         result_dict["total_pags"] = result.total_pags
         return json.dumps(result_dict, indent=2, default=str)
 
-    if ((offset is None) or (offset == 0)) and cached:
+    if ((nro_pag is None) or (nro_pag == 0)) and cached:
         result_dict = cached.result.model_dump()
         result_dict["pagina_actual"] = 1
         result_dict["total_pags"] = cached.total_pags
@@ -133,22 +133,14 @@ def buscar_normas(
     max_page = cached.total_pags
     current_page = cached.current_page
     # health checks
-    target_page = current_page + offset
+    target_page = nro_pag
     if target_page > max_page: # se pasa en la cota superior
-        offset = max_page - current_page
+        target_page = max_page
 
     if target_page <= 0: # se pasa en la cota inferior
-        offset = 1 - current_page 
+        target_page = 1
 
-    # si después del clampeo no hay movimiento, devolvemos lo que hay
-    if offset == 0:
-        return cached.result.model_dump_json(indent=2)
-
-    # recalculamos con el nuevo offset
-    target_page = current_page + offset
-    accion = ModoDesplazamiento.AVANZAR if offset > 0 else ModoDesplazamiento.RETROCEDER
-
-    pag_request = PaginacionRequest(irAPagina=offset, desplazamiento=accion)
+    pag_request = PaginacionRequest(irAPagina=target_page, desplazamiento=ModoDesplazamiento.AVANZAR)
     result = client.navegar_normas(cached.session, pag_request)
     search_cache.set(request, CachedSearch(session=cached.session, 
                         result=result, current_page=target_page, total_pags=result.total_pags))

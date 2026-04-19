@@ -3,7 +3,8 @@ import uuid
 from models import BusquedaNormaRequest, BusquedaNormaResponse, PaginacionRequest \
                    , BusquedaBoletinRequest, BusquedaBoletinResponse \
                    , ParamsVerNorma, VerNormaResponse \
-                   , ParamsVerVinculos, VerVinculosResponse
+                   , ParamsVerVinculos, VerVinculosResponse \
+                   , ModoVinculo
 
 from parsers import *
 
@@ -28,7 +29,9 @@ class SearchSession:
 class InfolegClient:
 
     def ver_vinculos(self, session: requests.Session, params: ParamsVerVinculos) -> VerVinculosResponse:
-        raise NotImplemented()
+        r = session.get(f"{BASE_URL}/verVinculos.do", params=params.model_dump(exclude_none=True))
+        r.raise_for_status()
+        return VerVinculosParser(r.text, params.id).parse()
 
     def ver_norma(self, session: requests.Session, params: ParamsVerNorma) -> VerNormaResponse:
         params = params.model_dump(exclude_none=True)
@@ -47,7 +50,7 @@ class InfolegClient:
         r = session.post(f"{BASE_URL}/buscarNormas.do", data=payload)
         r.raise_for_status()
         
-        return InfoLegBusquedasParser.parse(r.text)
+        return InfoLegBusquedasParser().parse(r.text)
 
     def navegar_normas(self, session: requests.Session, request: PaginacionRequest) -> BusquedaNormaResponse:
         """
@@ -57,7 +60,7 @@ class InfolegClient:
         r = session.post(f"{BASE_URL}/buscarNormas.do", data=payload)
         r.raise_for_status()
         
-        return InfoLegBusquedasParser.parse(r.text)
+        return InfoLegBusquedasParser().parse(r.text)
 
 if __name__ == "__main__":
     # Prueba rápida: Ley 27430
@@ -70,11 +73,12 @@ if __name__ == "__main__":
         texto="apuestas",
     )
     
-    # print(f"Buscando Ley 27430...")
     # response = client.buscar_normas(session, test_request)
     # print(f"\nResultados encontrados: {response.total}")
     # print(response.model_dump_json(indent=2))
-
-    test_params = ParamsVerNorma(id=274045) 
-    response = client.ver_norma(session, test_params)
+    # test_params = ParamsVerNorma(id=274045) 
+    # response = client.ver_norma(session, test_params)
+    # print(response.model_dump_json(indent=2))
+    test_params = ParamsVerVinculos(id=274045, modo=ModoVinculo.MODIFICADA_POR) 
+    response = client.ver_vinculos(session, test_params)
     print(response.model_dump_json(indent=2))

@@ -1,6 +1,8 @@
-from pydantic import BaseModel, computed_field 
+from pydantic import BaseModel, computed_field, ConfigDict
 from typing import Optional, List
 from datetime import date
+from enum import IntEnum
+
 
 class TipoNorma(BaseModel):
     id: int
@@ -90,17 +92,27 @@ class VerNormaResponse(BaseModel):
 
 
 # VerVinculos.do
+class ModoVinculo(IntEnum):
+    MODIFICA_A = 1      # normas que esta norma modifica o complementa
+    MODIFICADA_POR = 2  # normas por las que esta norma es modificada o complementada
+
 class ParamsVerVinculos(BaseModel):
-    # id norma
-    id : int 
+    id: int
+    modo: ModoVinculo
+    model_config = ConfigDict(use_enum_values=True)
 
-    # 1 indica las normas que esta norma modifica o complementa.
-    # 2 son las normas por las que esta norma es modificada o complementada
-    modo: int 
 
+class VinculoNormaSummary(BaseModel):
+    id: int
+    identidad_norma : str
+    organismo_emisor: str
+    fecha_publicacion: Optional[date] = None
+    organismo_padre: str
+    tema : str
 
 class VerVinculosResponse(BaseModel):
     id : int 
+    vinculos: List[VinculoNormaSummary]   # normas que la modifican/complementan
 
 
 class PaginacionRequest(BaseModel):

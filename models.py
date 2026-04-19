@@ -1,7 +1,7 @@
 from pydantic import BaseModel, computed_field, ConfigDict
 from typing import Optional, List
 from datetime import date
-from enum import IntEnum
+from enum import IntEnum, Enum
 
 
 class TipoNorma(BaseModel):
@@ -16,18 +16,6 @@ class Dependencia(BaseModel):
 class BusquedaConfig(BaseModel):
     tipos_norma: List[TipoNorma] 
     dependencias: List[Dependencia]
-
-
-
-class BusquedaNorma(BaseModel):
-    tipo_norma: Optional[TipoNorma] = None
-    numero: Optional[int] = None
-    anio_sancion: Optional[int] = None
-    texto: Optional[str] = None
-    dependencia: Optional[Dependencia] = None
-    fecha_pub_desde: Optional[date] = None
-    fecha_pub_hasta: Optional[date] = None
-
 
 
 # BuscarNormas.do
@@ -60,7 +48,7 @@ class NormaSummary(BaseModel):
 
 class BusquedaNormaResponse(BaseModel):
     resultados: List[NormaSummary]
-    nro_pag: int
+    total_pags: int
     total: int
     @computed_field
     @property
@@ -108,7 +96,6 @@ class ParamsVerVinculos(BaseModel):
     modo: ModoVinculo
     model_config = ConfigDict(use_enum_values=True)
 
-
 class VinculoNormaSummary(BaseModel):
     id: int
     identidad_norma : str
@@ -121,8 +108,11 @@ class VerVinculosResponse(BaseModel):
     id : int 
     vinculos: List[VinculoNormaSummary]   # normas que la modifican/complementan
 
+class ModoDesplazamiento(str, Enum):
+    # 'AP' para avanzar, 'RP' para retroceder
+    RETROCEDER = "RP"
+    AVANZAR = "AP"
 
 class PaginacionRequest(BaseModel):
-    desplazamiento: str  # 'AP' para avanzar, 'RP' para retroceder
+    desplazamiento: ModoDesplazamiento
     irAPagina: int
-

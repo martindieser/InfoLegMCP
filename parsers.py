@@ -77,7 +77,7 @@ class InfoLegBusquedasParser(BaseParser):
         match = re.search(r"Cantidad de Normas Encontradas:\s*(\d+)[\s\S]*?en\s*(\d+)", html)
         if not match:
             return {} 
-        return {"total": int(match.group(1)), "nro_pag": int(match.group(2))}
+        return {"total": int(match.group(1)), "total_pags": int(match.group(2))}
 
     def _parse_tabla_resultados(self, soup: BeautifulSoup) -> Optional[Tag]:
         """Extrae la tabla de resultados del soup."""
@@ -141,12 +141,12 @@ class InfoLegBusquedasParser(BaseParser):
     def parse(self, html: str) -> BusquedaNormaResponse:
         paginacion = self._parse_total_y_pagina(html)
         total = paginacion.get("total", 0)
-        pagina = paginacion.get("nro_pag", 1)
+        pagina = paginacion.get("total_pags", 1)
 
         soup = self._get_soup(html)
         tabla = self._parse_tabla_resultados(soup)
         if tabla is None:
-            return BusquedaNormaResponse(resultados=[], nro_pag=pagina, total=total)
+            return BusquedaNormaResponse(resultados=[], total_pags=pagina, total=total)
 
         resultados = []
         for tr in tabla.find_all("tr"):
@@ -167,7 +167,7 @@ class InfoLegBusquedasParser(BaseParser):
                 **datos_tema
             ))
 
-        return BusquedaNormaResponse(resultados=resultados, nro_pag=pagina, total=total)
+        return BusquedaNormaResponse(resultados=resultados, total_pags=pagina, total=total)
 
 
 class InfolegNormaParser(BaseParser):

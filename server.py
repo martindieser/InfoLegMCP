@@ -96,6 +96,17 @@ def buscar_normas(
     nro_pag: Optional[int] = None,
 ) -> dict:
     """Busca normas en Infoleg por texto, tipo, número, dependencia o rango de fechas de publicación."""
+    
+    # Validar que se ingresen suficientes parámetros para evitar búsquedas demasiado amplias
+    search_params = [tipo_norma, numero, anio_sancion, dependencia, publicado_desde, publicado_hasta]
+    provided_params = sum(1 for p in search_params if p is not None)
+    
+    if not texto and provided_params < 2:
+        raise ValueError(
+            "Debe ingresar al menos 2 parámetros de búsqueda (por ejemplo: tipo_norma y numero) "
+            "a menos que realice una búsqueda por texto."
+        )
+
     request = BusquedaNormaRequest(
         tipoNorma=tipo_norma,
         numero=numero,

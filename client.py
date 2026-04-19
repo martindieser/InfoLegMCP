@@ -28,6 +28,33 @@ class SearchSession:
 
 class InfolegClient:
 
+
+    def consultar_anexo(self, session: requests.Session, url_relativa : str):
+
+        from markdownify import markdownify as md
+        if url_relativa.startswith(".."):
+            base_parts = BASE_URL.split("/")
+            if base_parts[-1] == "infolegInternet":
+                 url_absoluta = "/".join(base_parts[:-1]) + "/" + url_relativa.replace("../", "")
+            else:
+                 url_absoluta = BASE_URL + "/" + url_relativa
+        else:
+            url_absoluta = BASE_URL + "/" + url_relativa
+
+        session = requests.Session()
+        response = session.get(url_absoluta)
+        response.raise_for_status()
+        
+        if response.encoding == 'ISO-8859-1':
+            response.encoding = 'latin-1'
+
+        soup = BeautifulSoup(response.text, "html.parser")
+        for tag in soup(["script", "style", "header", "footer", "nav"]):
+            tag.decompose()
+
+        return md(str(soup), heading_style="ATX")
+
+
     def mostrar_opciones_busqueda_de_normas(self, session: requests.Session) -> BusquedaConfig:
         r = session.get(f"{BASE_URL}/mostrarBusquedaNormas.do")
         r.raise_for_status()

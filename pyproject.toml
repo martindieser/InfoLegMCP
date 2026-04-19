@@ -9,5 +9,6 @@ dependencies = [
     "mcp[cli]>=1.27.0",
     "requests",
     "beautifulsoup4",
-    "rapidfuzz"
+    "rapidfuzz",
+    "markdownify",
 ]

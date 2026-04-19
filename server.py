@@ -4,7 +4,7 @@ import unicodedata
 from mcp.server.fastmcp import FastMCP
 from rapidfuzz import process, fuzz
 from typing import Optional
-from client import InfolegClient
+from client import InfolegClient, BASE_URL
 from cache import SessionCache, PageCache, SearchSessionState, NormaCache
 from datetime import date
 from models import *
@@ -112,6 +112,48 @@ def ver_norma(id: int) -> dict:
     norma_cache.set(id, result)
     
     return result.model_dump_json(indent=2)
+
+
+@mcp.tool()
+def obtener_texto_actualizado(id: int) -> str:
+    """
+    Obtiene el texto VIGENTE de una norma (con todas sus modificaciones aplicadas).
+
+    CUÁNDO USARLA: Es la opción preferida para conocer la ley tal cual rige hoy.
+    Si no existe una versión actualizada, intentará devolver la original avisando al usuario.
+
+    PARÁMETROS:
+    - id: ID numérico de la norma en Infoleg.
+    """
+    session = requests.Session()
+    norma_data = VerNormaResponse.model_validate_json(ver_norma(id))
+    client = InfolegClient()
+    
+    if norma_data.url_texto_actualizado:
+        return client.consultar_anexo(session, norma_data.url_texto_actualizado)
+
+    return f"No se encontró texto disponible para la norma {id}."
+
+
+@mcp.tool()
+def obtener_texto_original(id: int) -> str:
+    """
+    Obtiene el texto ORIGINAL de una norma tal cual fue sancionada.
+
+    CUÁNDO USARLA: Para investigación histórica o para ver la redacción inicial de una ley
+    antes de cualquier reforma. No refleja necesariamente la ley vigente.
+
+    PARÁMETROS:
+    - id: ID numérico de la norma en Infoleg.
+    """
+    session = requests.Session()
+    norma_data = VerNormaResponse.model_validate_json(ver_norma(id))
+    client = InfolegClient()
+    
+    if not norma_data.url_texto_completo:
+        return f"No se encontró el texto original para la norma {id}."
+        
+    return client.consultar_anexo(norma_data.url_texto_completo)
 
 
 @mcp.tool()

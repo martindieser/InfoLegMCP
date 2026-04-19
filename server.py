@@ -107,6 +107,9 @@ def buscar_normas(
             "a menos que realice una búsqueda por texto."
         )
 
+    if tipo_norma == 1 and anio_sancion is not None:
+        raise ValueError("No se debe ingresar el año (anio_sancion) cuando se busca por tipo de norma Ley (tipo_norma=1).")
+
     request = BusquedaNormaRequest(
         tipoNorma=tipo_norma,
         numero=numero,

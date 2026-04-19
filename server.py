@@ -5,12 +5,14 @@ from mcp.server.fastmcp import FastMCP
 from rapidfuzz import process, fuzz
 from typing import Optional
 from client import InfolegClient
-from cache import SearchCache, CachedSearch
+from cache import SessionCache, PageCache, SearchSessionState
 from datetime import date
 from models import *
 
 mcp = FastMCP("InfoLeg MCP", json_response=True)
-search_cache = SearchCache(ttl=300, max_size=100)
+session_cache = SessionCache()
+page_cache = PageCache()
+
 PATH_DEPENDENCIAS = "./data/dependencias.json"
 PATH_TIPOS_NORMA = "./data/tipos_norma.json"
 
@@ -110,43 +112,52 @@ def buscar_normas(
 
     client = InfolegClient()
     session = requests.Session()
-    cached = search_cache.get(request)
+    
+    # Check for existing session
+    session_state = session_cache.get(request)
+    target_page = nro_pag if nro_pag and nro_pag > 0 else 1
 
-    if not cached:
+    if not session_state:
+        # No session exists, start from page 1
         result = client.buscar_normas(session, request)
-        search_cache.set(request, CachedSearch(session=session, 
-                        result=result, current_page=1, total_pags=result.total_pags))
+        session_state = SearchSessionState(
+            cookies=session.cookies.get_dict(),
+            total_pags=result.total_pags
+        )
+        session_cache.set(request, session_state)
+        page_cache.set(request, 1, result)
+        
+        if target_page == 1:
+            result_dict = result.model_dump()
+            result_dict["pagina_actual"] = 1
+            result_dict["total_pags"] = session_state.total_pags
+            return json.dumps(result_dict, indent=2, default=str)
 
-        cached = search_cache.get(request)
-        result_dict = cached.result.model_dump()
-        result_dict["pagina_actual"] = 1
-        result_dict["total_pags"] = result.total_pags
+    # We have a session, validate bounds
+    if target_page > session_state.total_pags:
+        target_page = session_state.total_pags
+
+    # Check for cached page results
+    cached_page = page_cache.get(request, target_page)
+    if cached_page:
+        result_dict = cached_page.model_dump()
+        result_dict["pagina_actual"] = target_page
+        result_dict["total_pags"] = session_state.total_pags
         return json.dumps(result_dict, indent=2, default=str)
 
-    if ((nro_pag is None) or (nro_pag == 0)) and cached:
-        result_dict = cached.result.model_dump()
-        result_dict["pagina_actual"] = 1
-        result_dict["total_pags"] = cached.total_pags
-        return json.dumps(result_dict, indent=2, default=str)
-     
-    # (offset is not None -> (offset > 0) or (offset < 0)) and cached exists...
-    max_page = cached.total_pags
-    current_page = cached.current_page
-    # health checks
-    target_page = nro_pag
-    if target_page > max_page: # se pasa en la cota superior
-        target_page = max_page
-
-    if target_page <= 0: # se pasa en la cota inferior
-        target_page = 1
-
+    # Page not in cache, fetch it using existing session
+    session.cookies.update(session_state.cookies)
     pag_request = PaginacionRequest(irAPagina=target_page, desplazamiento=ModoDesplazamiento.AVANZAR)
-    result = client.navegar_normas(cached.session, pag_request)
-    search_cache.set(request, CachedSearch(session=cached.session, 
-                        result=result, current_page=target_page, total_pags=result.total_pags))
+    result = client.navegar_normas(session, pag_request)
+    
+    # Update cache
+    page_cache.set(request, target_page, result)
+    session_state.cookies = session.cookies.get_dict() # Update cookies in case they changed
+    session_cache.set(request, session_state)
+    
     result_dict = result.model_dump()
     result_dict["pagina_actual"] = target_page
-    result_dict["total_pags"] = cached.total_pags
+    result_dict["total_pags"] = session_state.total_pags
     return json.dumps(result_dict, indent=2, default=str)
 
 

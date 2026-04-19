@@ -3,8 +3,8 @@ import uuid
 from models import BusquedaNormaRequest, BusquedaNormaResponse, PaginacionRequest \
                    , BusquedaBoletinRequest, BusquedaBoletinResponse \
                    , ParamsVerNorma, VerNormaResponse \
-                   , ParamsVerVinculos, VerVinculosResponse \
-                   , ModoVinculo
+                   , ParamsVerVinculos, VerVinculosResponse, ModoVinculo \
+                   , BusquedaConfig, TipoNorma, Dependencia
 
 from parsers import *
 
@@ -27,6 +27,12 @@ class SearchSession:
         return PaginacionRequest(desplazamiento="RP", irAPagina=self.pagina_actual)
 
 class InfolegClient:
+
+    def mostrar_opciones_busqueda_de_normas(self, session: requests.Session) -> BusquedaConfig:
+        r = session.get(f"{BASE_URL}/mostrarBusquedaNormas.do")
+        r.raise_for_status()
+        return InfoLegConfigParser().parse(r.text)
+
 
     def ver_vinculos(self, session: requests.Session, params: ParamsVerVinculos) -> VerVinculosResponse:
         r = session.get(f"{BASE_URL}/verVinculos.do", params=params.model_dump(exclude_none=True))
@@ -72,6 +78,9 @@ if __name__ == "__main__":
         tipoNorma=1, # Ley
         texto="apuestas",
     )
+
+    response = client.mostrar_opciones_busqueda_de_normas(session)
+    print(response)
     
     # response = client.buscar_normas(session, test_request)
     # print(f"\nResultados encontrados: {response.total}")

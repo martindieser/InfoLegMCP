@@ -2,7 +2,8 @@ from models import NormaSummary \
                 , BusquedaNormaResponse \
                 , VerNormaResponse \
                 , VerVinculosResponse \
-                , VinculoNormaSummary
+                , VinculoNormaSummary \
+                , BusquedaConfig, TipoNorma, Dependencia
 
 from typing import Optional, List, Dict, Any, Tuple
 from datetime import date
@@ -295,4 +296,32 @@ class VerVinculosParser(BaseParser):
             fecha_publicacion=fecha_pub,
             organismo_padre=organismo_padre,
             tema=tema,
+        )
+
+
+class InfoLegConfigParser(BaseParser):
+    """Parser para extraer dependencias y tipos de norma."""
+    def parse(self, html: str) -> BusquedaConfig:
+        soup = self._get_soup(html)
+        
+        # 1. Dependencias
+
+        select_dep = soup.find("select", {"name": "dependencia"})
+        deps = [
+            Dependencia(id = int(opt["value"]), nombre=self._clean_text(opt.text))
+            for opt in select_dep.find_all("option")
+            if opt.get("value") and opt["value"].strip().isdigit()
+        ] if select_dep else []
+
+        # 2. Tipos de Norma
+        select_tipo = soup.find("select", {"name": "tipoNorma"})
+        tipos = [
+            TipoNorma(id = int(opt["value"]), nombre=self._clean_text(opt.text))
+            for opt in select_tipo.find_all("option")
+            if opt.get("value") and opt["value"].strip().isdigit()
+        ] if select_tipo else []
+
+        return BusquedaConfig(
+            dependencias=deps,
+            tipos_norma=tipos,
         )

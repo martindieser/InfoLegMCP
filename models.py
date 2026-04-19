@@ -12,6 +12,13 @@ class Dependencia(BaseModel):
     id: int
     nombre: str
 
+
+class BusquedaConfig(BaseModel):
+    tipos_norma: List[TipoNorma] 
+    dependencias: List[Dependencia]
+
+
+
 class BusquedaNorma(BaseModel):
     tipo_norma: Optional[TipoNorma] = None
     numero: Optional[int] = None

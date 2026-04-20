@@ -21,25 +21,14 @@ class SessionManager:
 
     def _build_session(self) -> requests.Session:
         session = requests.Session()
-
-        retry = Retry(
-            total=5,
-            connect=5,
-            read=5,
-            backoff_factor=0.5,
-            status_forcelist=(500, 502, 503, 504),
-            allowed_methods=["GET", "POST"],
-            raise_on_status=False,
-        )
-
-        adapter = HTTPAdapter(max_retries=retry)
-
-        session.mount("http://", adapter)
-        session.mount("https://", adapter)
-        session.headers.update({
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
-        })
-
+        # session.proxies = {
+        #     'http' : 'http://192.168.0.2:9999',
+        #     'https' : 'http://192.168.0.2:9999',
+        # }
+        # session.verify = False
+        # session.headers.update({
+        #     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
+        # })
         return session
 
     def __init__(self):

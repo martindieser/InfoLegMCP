@@ -16,7 +16,8 @@ class SearchSessionState(BaseModel):
 
 class SessionManager:
     def __init__(self):
-        self.globsess = requests.Session()
+        self.globsess: requests.Session = None
+        self.globtimestamp: int = None
         self.active_searches: Dict[str, SearchSessionState] = {}
         self.ttl = 300
 
@@ -26,13 +27,22 @@ class SessionManager:
         ).hexdigest()
 
     def get_session(self) -> requests.Session:
+        now = int(time.time())
+        is_new = self.globtimestamp is None
+        is_expired = not is_new and (now - self.globtimestamp) > self.ttl
+        if is_expired:
+            self.globsess.close()
+            
+        if is_new or is_expired:
+            self.globsess = requests.Session()
+            self.globtimestamp = now
         return self.globsess
 
     def close_expired(self):
         delete_keys = []
         for k in self.active_searches:
             val = self.active_searches[k]
-            now = time.time()
+            now = int(time.time())
             if (now - val.created_at) > self.ttl:
                 val.session.close()
                 delete_keys.append(k)
@@ -62,4 +72,3 @@ class SessionManager:
                 first_request=False,
             )
             self.active_searches[key] = new_state
-            print('new_state', self.active_searches[key])

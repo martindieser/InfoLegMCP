@@ -20,6 +20,14 @@ MESES = {
 class NotFindingPageNumeration(Exception):
     pass
 
+class SearchQueryMaximumExceeded(Exception):
+    """Excepción lanzada cuando los filtros utilizados no son lo suficientemente especificos (abarcan más de 10 normas como resultado)"""
+    pass
+
+class NormaNotFoundError(Exception):
+    """Excepción lanzada cuando la norma no se encuentra en la base de datos."""
+    pass
+
 class BaseParser:
     """Clase base con utilidades comunes para los parsers de InfoLeg."""
     
@@ -143,6 +151,9 @@ class InfoLegBusquedasParser(BaseParser):
         total = paginacion.get("total", 0)
         pagina = paginacion.get("total_pags", 1)
 
+        if total > 10:
+            raise SearchQueryMaximumExceeded()
+
         soup = self._get_soup(html)
         tabla = self._parse_tabla_resultados(soup)
         if tabla is None:
@@ -170,9 +181,7 @@ class InfoLegBusquedasParser(BaseParser):
         return BusquedaNormaResponse(resultados=resultados, total_pags=pagina, total=total)
 
 
-class NormaNotFoundError(Exception):
-    """Excepción lanzada cuando la norma no se encuentra en la base de datos."""
-    pass
+
 
 class InfolegNormaParser(BaseParser):
     def __init__(self, norma_id):

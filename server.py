@@ -9,7 +9,7 @@ from cache import PageCache, NormaCache
 from datetime import date
 from models import *
 from sessmanager import SessionManager
-from parsers import NormaNotFoundError
+from parsers import NormaNotFoundError, SearchQueryMaximumExceeded
 
 
 PATH_DEPENDENCIAS = "./data/dependencias.json"
@@ -91,7 +91,7 @@ def buscar_dependencias(query: str, limit: int = 10) -> list:
 @mcp.tool()
 def ver_norma(id: int) -> dict:
     """
-    Obtiene el texto completo y metadatos de una norma por su ID de Infoleg.
+    Obtiene los metadatos de una norma por su ID de Infoleg.
 
     CUÁNDO USARLA: Cuando se conoce el ID de la norma (obtenido de buscar_normas()).
     Para buscar normas sin ID, usar buscar_normas() primero.
@@ -99,9 +99,7 @@ def ver_norma(id: int) -> dict:
     PARÁMETROS:
     - id: ID numérico de la norma en Infoleg.
 
-    DEVUELVE: Texto completo (si disponible) y metadatos de la norma.
-    NOTA: Las normas anteriores a 1997 o de carácter particular pueden no tener texto completo,
-    pero sí sus vínculos y referencias.
+    DEVUELVE: Metadatos de la norma.
     """
     # Intentar obtener de la caché
     cached_norma = norma_cache.get(id)
@@ -306,49 +304,53 @@ def buscar_normas(
 
     client = InfolegClient()
     
-    # Check for existing session
-    session_state = session_manager.get_search_session(request)
-    session = session_state.session
-    target_page = nro_pag if nro_pag and nro_pag > 0 else 1
 
-    if session_state.first_request:
-        # No session exists, start from page 1
-        result = client.buscar_normas(session, request)
-        session_manager.put_pages_count(request, result.total_pags)
+    try: 
+        # Check for existing session
         session_state = session_manager.get_search_session(request)
-        page_cache.set(request, 1, result)
-        
-        if target_page == 1:
-            result_dict = result.model_dump()
-            result_dict["pagina_actual"] = 1
-            result_dict["total_pags"] = result.total_pags
+        session = session_state.session
+        target_page = nro_pag if nro_pag and nro_pag > 0 else 1
+
+        if session_state.first_request:
+            # No session exists, start from page 1
+            result = client.buscar_normas(session, request)
+            session_manager.put_pages_count(request, result.total_pags)
+            session_state = session_manager.get_search_session(request)
+            page_cache.set(request, 1, result)
+            
+            if target_page == 1:
+                result_dict = result.model_dump()
+                result_dict["pagina_actual"] = 1
+                result_dict["total_pags"] = result.total_pags
+                return json.dumps(result_dict, indent=2, default=str)
+
+        # We have a session, validate bounds
+        if target_page > session_state.total_pags:
+            target_page = session_state.total_pags
+
+        # Check for cached page results
+        cached_page = page_cache.get(request, target_page)
+        if cached_page:
+            result_dict = cached_page.model_dump()
+            result_dict["pagina_actual"] = target_page
+            result_dict["total_pags"] = session_state.total_pags
             return json.dumps(result_dict, indent=2, default=str)
 
-    # We have a session, validate bounds
-    if target_page > session_state.total_pags:
-        target_page = session_state.total_pags
-
-    # Check for cached page results
-    cached_page = page_cache.get(request, target_page)
-    if cached_page:
-        result_dict = cached_page.model_dump()
+        # Page not in cache, fetch it using existing session
+        pag_request = PaginacionRequest(irAPagina=target_page, desplazamiento=ModoDesplazamiento.AVANZAR)
+        result = client.navegar_normas(session, pag_request)
+        
+        # Update cache
+        page_cache.set(request, target_page, result)
+        
+        result_dict = result.model_dump()
         result_dict["pagina_actual"] = target_page
         result_dict["total_pags"] = session_state.total_pags
         return json.dumps(result_dict, indent=2, default=str)
-
-    # Page not in cache, fetch it using existing session
-    pag_request = PaginacionRequest(irAPagina=target_page, desplazamiento=ModoDesplazamiento.AVANZAR)
-    result = client.navegar_normas(session, pag_request)
-    
-    # Update cache
-    page_cache.set(request, target_page, result)
-    
-    result_dict = result.model_dump()
-    result_dict["pagina_actual"] = target_page
-    result_dict["total_pags"] = session_state.total_pags
-    return json.dumps(result_dict, indent=2, default=str)
+    except SearchQueryMaximumExceeded:
+        return 'Los filtros utilizados no son lo suficientemente especificos (abarcan más de 10 normas como resultado). Relee las instrucciones de esta tool e intenta de nuevo.'
 
 
 
 if __name__ == "__main__":
-    mcp.run(transport="streamable-http")
+    mcp.run(transport="sse")

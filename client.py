@@ -10,24 +10,7 @@ from parsers import *
 
 BASE_URL = "https://servicios.infoleg.gob.ar/infolegInternet"
 
-class SearchSession:
-    """Encapsula el estado de una búsqueda activa y su sesión HTTP."""
-    def __init__(self):
-        self.id = str(uuid.uuid4())
-        self.session = requests.Session()
-        self.pagina_actual = 1
-
-    def siguiente(self) -> PaginacionRequest:
-        self.pagina_actual += 1
-        return PaginacionRequest(desplazamiento="AP", irAPagina=self.pagina_actual)
-
-    def anterior(self) -> PaginacionRequest:
-        if self.pagina_actual > 1:
-            self.pagina_actual -= 1
-        return PaginacionRequest(desplazamiento="RP", irAPagina=self.pagina_actual)
-
 class InfolegClient:
-
 
     def consultar_anexo(self, session: requests.Session, url_relativa : str):
 
@@ -41,7 +24,6 @@ class InfolegClient:
         else:
             url_absoluta = BASE_URL + "/" + url_relativa
 
-        session = requests.Session()
         response = session.get(url_absoluta)
         response.raise_for_status()
         

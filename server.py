@@ -5,17 +5,21 @@ from mcp.server.fastmcp import FastMCP
 from rapidfuzz import process, fuzz
 from typing import Optional
 from client import InfolegClient, BASE_URL
-from cache import SessionCache, PageCache, SearchSessionState, NormaCache
+from cache import PageCache, NormaCache
 from datetime import date
 from models import *
+from sessmanager import SessionManager
 
-mcp = FastMCP("InfoLeg MCP", json_response=True)
-session_cache = SessionCache()
-page_cache = PageCache()
-norma_cache = NormaCache()
 
 PATH_DEPENDENCIAS = "./data/dependencias.json"
 PATH_TIPOS_NORMA = "./data/tipos_norma.json"
+
+
+mcp = FastMCP("InfoLeg MCP", json_response=True)
+page_cache = PageCache()
+norma_cache = NormaCache()
+session_manager = SessionManager()
+
 
 
 def normalize(text: str) -> str:
@@ -103,7 +107,7 @@ def ver_norma(id: int) -> dict:
     if cached_norma:
         return cached_norma.model_dump_json(indent=2)
 
-    session = requests.Session()
+    session = session_manager.get_session()
     client = InfolegClient()
     params = ParamsVerNorma(id=id)
     result = client.ver_norma(session, params)
@@ -125,7 +129,8 @@ def obtener_texto_actualizado(id: int) -> str:
     PARÁMETROS:
     - id: ID numérico de la norma en Infoleg.
     """
-    session = requests.Session()
+
+    session = session_manager.get_session()
     norma_data = VerNormaResponse.model_validate_json(ver_norma(id))
     client = InfolegClient()
     
@@ -146,14 +151,14 @@ def obtener_texto_original(id: int) -> str:
     PARÁMETROS:
     - id: ID numérico de la norma en Infoleg.
     """
-    session = requests.Session()
     norma_data = VerNormaResponse.model_validate_json(ver_norma(id))
     client = InfolegClient()
+    session = session_manager.get_session()
     
     if not norma_data.url_texto_completo:
         return f"No se encontró el texto original para la norma {id}."
         
-    return client.consultar_anexo(norma_data.url_texto_completo)
+    return client.consultar_anexo(session, norma_data.url_texto_completo)
 
 
 @mcp.tool()
@@ -171,7 +176,7 @@ def ver_normas_que_modifica(id: int) -> dict:
 
     DEVUELVE: Lista de normas que fueron modificadas/derogadas/complementadas por esta norma.
     """
-    session = requests.Session()
+    session = session_manager.get_session()
     client = InfolegClient()
     params = ParamsVerVinculos(id=id, modo=ModoVinculo.MODIFICA_A)
     return client.ver_vinculos(session, params).model_dump_json(indent=2)
@@ -193,7 +198,7 @@ def ver_normas_que_la_modifican(id: int) -> dict:
 
     DEVUELVE: Lista de normas que modificaron/derogaron/complementaron a esta norma.
     """
-    session = requests.Session()
+    session = session_manager.get_session()
     client = InfolegClient()
     params = ParamsVerVinculos(id=id, modo=ModoVinculo.MODIFICADA_POR)
     return client.ver_vinculos(session, params).model_dump_json(indent=2)
@@ -288,26 +293,23 @@ def buscar_normas(
     )
 
     client = InfolegClient()
-    session = requests.Session()
     
     # Check for existing session
-    session_state = session_cache.get(request)
+    session_state = session_manager.get_search_session(request)
+    session = session_state.session
     target_page = nro_pag if nro_pag and nro_pag > 0 else 1
 
-    if not session_state:
+    if session_state.first_request:
         # No session exists, start from page 1
         result = client.buscar_normas(session, request)
-        session_state = SearchSessionState(
-            cookies=session.cookies.get_dict(),
-            total_pags=result.total_pags
-        )
-        session_cache.set(request, session_state)
+        session_manager.put_pages_count(request, result.total_pags)
+        session_state = session_manager.get_search_session(request)
         page_cache.set(request, 1, result)
         
         if target_page == 1:
             result_dict = result.model_dump()
             result_dict["pagina_actual"] = 1
-            result_dict["total_pags"] = session_state.total_pags
+            result_dict["total_pags"] = result.total_pags
             return json.dumps(result_dict, indent=2, default=str)
 
     # We have a session, validate bounds
@@ -323,14 +325,11 @@ def buscar_normas(
         return json.dumps(result_dict, indent=2, default=str)
 
     # Page not in cache, fetch it using existing session
-    session.cookies.update(session_state.cookies)
     pag_request = PaginacionRequest(irAPagina=target_page, desplazamiento=ModoDesplazamiento.AVANZAR)
     result = client.navegar_normas(session, pag_request)
     
     # Update cache
     page_cache.set(request, target_page, result)
-    session_state.cookies = session.cookies.get_dict() # Update cookies in case they changed
-    session_cache.set(request, session_state)
     
     result_dict = result.model_dump()
     result_dict["pagina_actual"] = target_page

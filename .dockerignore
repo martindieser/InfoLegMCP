@@ -1,0 +1,10 @@
+.venv/
+.cache/
+__pycache__/
+.git/
+.python-version
+.gemini/
+uv.lock
+*.db
+*.db-shm
+*.db-wal

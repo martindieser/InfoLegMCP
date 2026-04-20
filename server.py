@@ -120,21 +120,49 @@ def ver_norma(id: int) -> dict:
         raise
 
 
+def recortar_texto(texto: str, inicio: int = 0, fin: Optional[int] = 500) -> str:
+    total = len(texto)
+    
+    if inicio < 0:
+        inicio = 0
+    if fin is None or fin > total:
+        fin = total
+    
+    # Asegurarnos de no devolver textos vacíos si se equivocan en los índices
+    if inicio >= total:
+        return f"[Error: El índice de inicio ({inicio}) es mayor o igual al total de caracteres ({total}).]"
+        
+    fragmento = texto[inicio:fin]
+    
+    # Agregar encabezado informativo
+    encabezado = f"[Mostrando caracteres {inicio} a {fin} de un total de {total} caracteres.]\n"
+    if fin < total:
+        encabezado += f"[Para seguir leyendo, vuelve a llamar a la herramienta usando inicio={fin} y fin={fin + 500} (o más)]\n"
+    encabezado += "-" * 50 + "\n\n"
+    
+    return encabezado + fragmento
+
+
 @mcp.tool()
-def obtener_texto_actualizado(id: int) -> str:
+def obtener_texto_actualizado(id: int, inicio: int = 0, fin: Optional[int] = 500) -> str:
     """
     Obtiene el texto VIGENTE de una norma (con todas sus modificaciones aplicadas).
 
     CUÁNDO USARLA: Es la opción preferida para conocer la ley tal cual rige hoy.
     Si no existe una versión actualizada, intentará devolver la original avisando al usuario.
 
+    Para evitar abrumar el contexto, el texto se devuelve paginado. 
+    Por defecto, devuelve los primeros 500 caracteres. Usa 'inicio' y 'fin' para iterar.
+
     PARÁMETROS:
     - id: ID numérico de la norma en Infoleg.
+    - inicio: Índice del carácter desde donde empezar a leer (por defecto 0).
+    - fin: Índice del carácter donde terminar de leer (por defecto 500).
     """
     # Intentar obtener de caché
     cached_texto = norma_cache.get_texto_actualizado(id)
     if cached_texto:
-        return cached_texto
+        return recortar_texto(cached_texto, inicio, fin)
 
     session = session_manager.get_session()
     try:
@@ -149,26 +177,31 @@ def obtener_texto_actualizado(id: int) -> str:
         # Guardar en caché si se obtuvo algo
         if texto and not texto.startswith("No se encontró"):
              norma_cache.set_texto_actualizado(id, texto)
-        return texto
+        return recortar_texto(texto, inicio, fin)
     return f"No se encontró texto disponible para la norma {id}."
 
 
 
 @mcp.tool()
-def obtener_texto_original(id: int) -> str:
+def obtener_texto_original(id: int, inicio: int = 0, fin: Optional[int] = 500) -> str:
     """
     Obtiene el texto ORIGINAL de una norma tal cual fue sancionada.
 
     CUÁNDO USARLA: Para investigación histórica o para ver la redacción inicial de una ley
     antes de cualquier reforma. No refleja necesariamente la ley vigente.
 
+    Para evitar abrumar el contexto, el texto se devuelve paginado. 
+    Por defecto, devuelve los primeros 500 caracteres. Usa 'inicio' y 'fin' para iterar.
+
     PARÁMETROS:
     - id: ID numérico de la norma en Infoleg.
+    - inicio: Índice del carácter desde donde empezar a leer (por defecto 0).
+    - fin: Índice del carácter donde terminar de leer (por defecto 500).
     """
     # Intentar obtener de caché
     cached_texto = norma_cache.get_texto_original(id)
     if cached_texto:
-        return cached_texto
+        return recortar_texto(cached_texto, inicio, fin)
 
     try:
         norma_data = VerNormaResponse.model_validate_json(ver_norma(id))
@@ -187,7 +220,7 @@ def obtener_texto_original(id: int) -> str:
     if texto and not texto.startswith("No se encontró"):
         norma_cache.set_texto_original(id, texto)
         
-    return texto
+    return recortar_texto(texto, inicio, fin)
 
 
 @mcp.tool()

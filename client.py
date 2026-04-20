@@ -12,6 +12,10 @@ BASE_URL = "https://servicios.infoleg.gob.ar/infolegInternet"
 
 class InfolegClient:
 
+    DEFAULT_TIMEOUT = (5, 20)
+
+
+
     def consultar_anexo(self, session: requests.Session, url_relativa : str):
 
         from markdownify import markdownify as md
@@ -24,7 +28,7 @@ class InfolegClient:
         else:
             url_absoluta = BASE_URL + "/" + url_relativa
 
-        response = session.get(url_absoluta)
+        response = session.get(url_absoluta, timeout=self.DEFAULT_TIMEOUT)
         response.raise_for_status()
         
         if response.encoding == 'ISO-8859-1':
@@ -38,19 +42,21 @@ class InfolegClient:
 
 
     def mostrar_opciones_busqueda_de_normas(self, session: requests.Session) -> BusquedaConfig:
-        r = session.get(f"{BASE_URL}/mostrarBusquedaNormas.do")
+        r = session.get(f"{BASE_URL}/mostrarBusquedaNormas.do", timeout=self.DEFAULT_TIMEOUT)
         r.raise_for_status()
         return InfoLegConfigParser().parse(r.text)
 
 
     def ver_vinculos(self, session: requests.Session, params: ParamsVerVinculos) -> VerVinculosResponse:
-        r = session.get(f"{BASE_URL}/verVinculos.do", params=params.model_dump(exclude_none=True))
+        r = session.get(f"{BASE_URL}/verVinculos.do",
+            params=params.model_dump(exclude_none=True),
+            timeout=self.DEFAULT_TIMEOUT )
         r.raise_for_status()
         return VerVinculosParser(r.text, params.id).parse()
 
     def ver_norma(self, session: requests.Session, params: ParamsVerNorma) -> VerNormaResponse:
         params = params.model_dump(exclude_none=True)
-        r = session.get(f"{BASE_URL}/verNorma.do", params=params)
+        r = session.get(f"{BASE_URL}/verNorma.do", params=params, timeout=self.DEFAULT_TIMEOUT)
         r.raise_for_status()
         return InfolegNormaParser().parse(r.text)
 
@@ -62,7 +68,7 @@ class InfolegClient:
         Realiza la petición POST inicial de búsqueda.
         """
         payload = request.model_dump(exclude_none=True)
-        r = session.post(f"{BASE_URL}/buscarNormas.do", data=payload)
+        r = session.post(f"{BASE_URL}/buscarNormas.do", data=payload, timeout=self.DEFAULT_TIMEOUT)
         r.raise_for_status()
         
         return InfoLegBusquedasParser().parse(r.text)
@@ -72,7 +78,7 @@ class InfolegClient:
         Realiza la petición POST de paginación.
         """
         payload = request.model_dump(exclude_none=True)
-        r = session.post(f"{BASE_URL}/buscarNormas.do", data=payload)
+        r = session.post(f"{BASE_URL}/buscarNormas.do", data=payload, timeout=self.DEFAULT_TIMEOUT)
         r.raise_for_status()
         
         return InfoLegBusquedasParser().parse(r.text)

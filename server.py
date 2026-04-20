@@ -131,6 +131,10 @@ def obtener_texto_actualizado(id: int) -> str:
     PARÁMETROS:
     - id: ID numérico de la norma en Infoleg.
     """
+    # Intentar obtener de caché
+    cached_texto = norma_cache.get_texto_actualizado(id)
+    if cached_texto:
+        return cached_texto
 
     session = session_manager.get_session()
     try:
@@ -141,7 +145,11 @@ def obtener_texto_actualizado(id: int) -> str:
     client = InfolegClient()
     
     if norma_data.url_texto_actualizado:
-        return client.consultar_anexo(session, norma_data.url_texto_actualizado)
+        texto = client.consultar_anexo(session, norma_data.url_texto_actualizado)
+        # Guardar en caché si se obtuvo algo
+        if texto and not texto.startswith("No se encontró"):
+             norma_cache.set_texto_actualizado(id, texto)
+        return texto
     return f"No se encontró texto disponible para la norma {id}."
 
 
@@ -157,6 +165,11 @@ def obtener_texto_original(id: int) -> str:
     PARÁMETROS:
     - id: ID numérico de la norma en Infoleg.
     """
+    # Intentar obtener de caché
+    cached_texto = norma_cache.get_texto_original(id)
+    if cached_texto:
+        return cached_texto
+
     try:
         norma_data = VerNormaResponse.model_validate_json(ver_norma(id))
     except NormaNotFoundError:
@@ -168,7 +181,13 @@ def obtener_texto_original(id: int) -> str:
     if not norma_data.url_texto_completo:
         return f"No se encontró el texto original para la norma {id}."
         
-    return client.consultar_anexo(session, norma_data.url_texto_completo)
+    texto = client.consultar_anexo(session, norma_data.url_texto_completo)
+    
+    # Guardar en caché si se obtuvo algo
+    if texto and not texto.startswith("No se encontró"):
+        norma_cache.set_texto_original(id, texto)
+        
+    return texto
 
 
 @mcp.tool()
@@ -186,10 +205,21 @@ def ver_normas_que_modifica(id: int) -> dict:
 
     DEVUELVE: Lista de normas que fueron modificadas/derogadas/complementadas por esta norma.
     """
+    # Intentar obtener de caché
+    cached_vinculos = norma_cache.get_vinculos_modifica_a(id)
+    if cached_vinculos:
+        return cached_vinculos
+
     session = session_manager.get_session()
     client = InfolegClient()
     params = ParamsVerVinculos(id=id, modo=ModoVinculo.MODIFICA_A)
-    return client.ver_vinculos(session, params).model_dump_json(indent=2)
+    
+    result_json = client.ver_vinculos(session, params).model_dump_json(indent=2)
+    
+    # Guardar en caché
+    norma_cache.set_vinculos_modifica_a(id, result_json)
+    
+    return result_json
 
 
 @mcp.tool()
@@ -208,10 +238,21 @@ def ver_normas_que_la_modifican(id: int) -> dict:
 
     DEVUELVE: Lista de normas que modificaron/derogaron/complementaron a esta norma.
     """
+    # Intentar obtener de caché
+    cached_vinculos = norma_cache.get_vinculos_modificada_por(id)
+    if cached_vinculos:
+        return cached_vinculos
+
     session = session_manager.get_session()
     client = InfolegClient()
     params = ParamsVerVinculos(id=id, modo=ModoVinculo.MODIFICADA_POR)
-    return client.ver_vinculos(session, params).model_dump_json(indent=2)
+    
+    result_json = client.ver_vinculos(session, params).model_dump_json(indent=2)
+    
+    # Guardar en caché
+    norma_cache.set_vinculos_modificada_por(id, result_json)
+    
+    return result_json
 
 @mcp.tool()
 def buscar_normas(

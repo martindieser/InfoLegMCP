@@ -38,5 +38,29 @@ class NormaCache:
     def set(self, id: int, result: VerNormaResponse) -> None:
         self._cache.set(str(id), result, expire=self.ttl)
 
+    def get_texto_actualizado(self, id: int) -> Optional[str]:
+        return self._cache.get(f"{id}_actualizado")
+
+    def set_texto_actualizado(self, id: int, texto: str) -> None:
+        self._cache.set(f"{id}_actualizado", texto, expire=self.ttl)
+
+    def get_texto_original(self, id: int) -> Optional[str]:
+        return self._cache.get(f"{id}_original")
+
+    def set_texto_original(self, id: int, texto: str) -> None:
+        self._cache.set(f"{id}_original", texto, expire=self.ttl)
+
+    def get_vinculos_modifica_a(self, id: int) -> Optional[str]:
+        return self._cache.get(f"{id}_modifica_a")
+
+    def set_vinculos_modifica_a(self, id: int, vinculos_json: str) -> None:
+        self._cache.set(f"{id}_modifica_a", vinculos_json, expire=self.ttl)
+
+    def get_vinculos_modificada_por(self, id: int) -> Optional[str]:
+        return self._cache.get(f"{id}_modificada_por")
+
+    def set_vinculos_modificada_por(self, id: int, vinculos_json: str) -> None:
+        self._cache.set(f"{id}_modificada_por", vinculos_json, expire=self.ttl)
+
     def close(self):
         self._cache.close()

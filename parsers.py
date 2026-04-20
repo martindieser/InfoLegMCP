@@ -170,9 +170,22 @@ class InfoLegBusquedasParser(BaseParser):
         return BusquedaNormaResponse(resultados=resultados, total_pags=pagina, total=total)
 
 
+class NormaNotFoundError(Exception):
+    """Excepción lanzada cuando la norma no se encuentra en la base de datos."""
+    pass
+
 class InfolegNormaParser(BaseParser):
+    def __init__(self, norma_id):
+        self.norma_id = norma_id
+
+
     def parse(self, html: str) -> VerNormaResponse:
         soup = self._get_soup(html)
+        error_span = soup.find("span", class_="error")
+        if error_span and "no se encuentra registrada" in error_span.get_text():
+            raise NormaNotFoundError(error_span.get_text(strip=True))
+
+
         textos = soup.find("div", id="Textos_Completos")
 
         identidad_norma, organismo_emisor = self._parse_identidad(textos)
@@ -182,12 +195,11 @@ class InfolegNormaParser(BaseParser):
         id_boletin, fecha_publicacion, pagina_boletin = self._parse_boletin(textos)
         sumario = self._parse_sumario(textos)
         url_completo, url_actualizado = self._parse_urls(textos)
-        norma_id = self._extract_id(url_completo or url_actualizado or "")
         normas_modifica, normas_modifican = self._parse_vinculos(textos)
 
         return VerNormaResponse(
             summary=NormaSummary(
-                id=norma_id,
+                id=self.norma_id,
                 identidad_norma=identidad_norma,
                 organismo_emisor=organismo_emisor,
                 id_boletin=id_boletin,
@@ -237,7 +249,7 @@ class InfolegNormaParser(BaseParser):
         return url_completo, url_actualizado
 
     def _parse_vinculos(self, textos) -> Tuple[Optional[int], Optional[int]]:
-        modifica = modifican = None
+        modifica = modifican = 0
         for a in textos.find_all("a"):
             match = re.search(r"(\d+)\s+norma", a.get_text(strip=True))
             if match:

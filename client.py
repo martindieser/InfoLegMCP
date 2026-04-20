@@ -12,7 +12,7 @@ BASE_URL = "https://servicios.infoleg.gob.ar/infolegInternet"
 
 class InfolegClient:
 
-    DEFAULT_TIMEOUT = (5, 20)
+    DEFAULT_TIMEOUT = 20
 
 
 
@@ -55,10 +55,11 @@ class InfolegClient:
         return VerVinculosParser(r.text, params.id).parse()
 
     def ver_norma(self, session: requests.Session, params: ParamsVerNorma) -> VerNormaResponse:
-        params = params.model_dump(exclude_none=True)
-        r = session.get(f"{BASE_URL}/verNorma.do", params=params, timeout=self.DEFAULT_TIMEOUT)
+        r = session.get(f"{BASE_URL}/verNorma.do",
+                        params=params.model_dump(exclude_none=True),
+                        timeout=self.DEFAULT_TIMEOUT)
         r.raise_for_status()
-        return InfolegNormaParser().parse(r.text)
+        return InfolegNormaParser(params.id).parse(r.text)
 
     def buscar_boletin(self, session: requests.Session, request: BusquedaBoletinRequest) -> BusquedaBoletinResponse:
         raise NotImplemented()

@@ -9,6 +9,7 @@ from cache import PageCache, NormaCache
 from datetime import date
 from models import *
 from sessmanager import SessionManager
+from parsers import NormaNotFoundError
 
 
 PATH_DEPENDENCIAS = "./data/dependencias.json"
@@ -110,12 +111,15 @@ def ver_norma(id: int) -> dict:
     session = session_manager.get_session()
     client = InfolegClient()
     params = ParamsVerNorma(id=id)
-    result = client.ver_norma(session, params)
-    
-    # Guardar en caché
-    norma_cache.set(id, result)
-    
-    return result.model_dump_json(indent=2)
+    try:
+        result = client.ver_norma(session, params)
+        
+        # Guardar en caché
+        norma_cache.set(id, result)
+        
+        return result.model_dump_json(indent=2)
+    except NormaNotFoundError:
+        raise
 
 
 @mcp.tool()
@@ -131,13 +135,17 @@ def obtener_texto_actualizado(id: int) -> str:
     """
 
     session = session_manager.get_session()
-    norma_data = VerNormaResponse.model_validate_json(ver_norma(id))
+    try:
+        norma_data = VerNormaResponse.model_validate_json(ver_norma(id))
+    except NormaNotFoundError:
+        return f"No se encontró una norma con el id incluido en la petición."
+        
     client = InfolegClient()
     
     if norma_data.url_texto_actualizado:
         return client.consultar_anexo(session, norma_data.url_texto_actualizado)
-
     return f"No se encontró texto disponible para la norma {id}."
+
 
 
 @mcp.tool()
@@ -151,7 +159,11 @@ def obtener_texto_original(id: int) -> str:
     PARÁMETROS:
     - id: ID numérico de la norma en Infoleg.
     """
-    norma_data = VerNormaResponse.model_validate_json(ver_norma(id))
+    try:
+        norma_data = VerNormaResponse.model_validate_json(ver_norma(id))
+    except NormaNotFoundError:
+        return f"No se encontró una norma con el id incluido en la petición."
+
     client = InfolegClient()
     session = session_manager.get_session()
     

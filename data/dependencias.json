@@ -73,11 +73,11 @@
   },
   {
     "id": 3239,
-    "nombre": "ADMINISTRACION  NACIONAL DE LA SEGURIDAD SOCIAL - GNP Y S"
+    "nombre": "ADMINISTRACION NACIONAL DE LA SEGURIDAD SOCIAL - GNP Y S"
   },
   {
     "id": 3223,
-    "nombre": "ADMINISTRACION  NACIONAL DE LA SEGURIDAD SOCIAL - GP"
+    "nombre": "ADMINISTRACION NACIONAL DE LA SEGURIDAD SOCIAL - GP"
   },
   {
     "id": 3,
@@ -481,7 +481,7 @@
   },
   {
     "id": 3579,
-    "nombre": "AUTORIDAD  FEDERAL DE TECNOLOGIAS DE LA INF Y LAS COMUNICA"
+    "nombre": "AUTORIDAD FEDERAL DE TECNOLOGIAS DE LA INF Y LAS COMUNICA"
   },
   {
     "id": 404,
@@ -1069,7 +1069,7 @@
   },
   {
     "id": 752,
-    "nombre": "CONS. NACIONAL  DEL EMPLEO, LA PRODUCTIVIDAD Y EL"
+    "nombre": "CONS. NACIONAL DEL EMPLEO, LA PRODUCTIVIDAD Y EL"
   },
   {
     "id": 19,
@@ -1165,7 +1165,7 @@
   },
   {
     "id": 3251,
-    "nombre": "DEPTO.  ASISTENCIA ADMINISTRATIVA Y TECNICA DE BUENOS AIRES"
+    "nombre": "DEPTO. ASISTENCIA ADMINISTRATIVA Y TECNICA DE BUENOS AIRES"
   },
   {
     "id": 800,
@@ -1670,6 +1670,10 @@
   {
     "id": 3829,
     "nombre": "DIRECCION NACIONAL DE ACCESO AL SUELO Y FORMALIZACIONES"
+  },
+  {
+    "id": 4236,
+    "nombre": "DIRECCION NACIONAL DE ACUICULTURA"
   },
   {
     "id": 3888,
@@ -2357,7 +2361,7 @@
   },
   {
     "id": 3231,
-    "nombre": "DIRECCION REGIONAL MICROCENTRO (AFIP-DGI)   (DV MJUR)."
+    "nombre": "DIRECCION REGIONAL MICROCENTRO (AFIP-DGI) (DV MJUR)."
   },
   {
     "id": 4189,
@@ -4853,7 +4857,7 @@
   },
   {
     "id": 589,
-    "nombre": "SECRETARIA DE POLITICAS  UNIVERSITARIAS"
+    "nombre": "SECRETARIA DE POLITICAS UNIVERSITARIAS"
   },
   {
     "id": 592,
@@ -5746,6 +5750,10 @@
   {
     "id": 526,
     "nombre": "SUBSECRETARIA DE EDUCACION BASICA"
+  },
+  {
+    "id": 4237,
+    "nombre": "SUBSECRETARIA DE EFICIENCIA E INFORMACION ENERGETICA"
   },
   {
     "id": 3416,

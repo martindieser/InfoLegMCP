@@ -1,68 +1,37 @@
-import requests
 import json
-import unicodedata
 from mcp.server.fastmcp import FastMCP
-from rapidfuzz import process, fuzz
-from typing import Optional, TypeVar, Generic, Callable, List, Tuple
-from client import InfolegClient, BASE_URL
-from cache import PageCache, NormaCache
+from typing import Optional
 from datetime import date
-from models import *
+from client import InfolegClient
+from models import ModoVinculo, TipoTexto
 from sessmanager import SessionManager
-from parsers import NormaNotFoundError
-
-T = TypeVar('T')
-
-class Paginator(Generic[T]):
-    """
-    Clase genérica para mapear páginas virtuales (usadas por la interfaz del MCP) 
-    a páginas reales (provistas por la API externa).
-    """
-    def __init__(self, virtual_page_size: int, real_page_size: int):
-        self.virtual_page_size = virtual_page_size
-        self.real_page_size = real_page_size
-
-    def get_page(self, virtual_page: int, fetch_real_page: Callable[[int], Tuple[List[T], int]]) -> Tuple[List[T], int, int]:
-        """
-        Obtiene una página virtual solicitando internamente la página real correspondiente.
-        """
-        real_page = ((virtual_page - 1) * self.virtual_page_size) // self.real_page_size + 1
-        offset_in_real = ((virtual_page - 1) * self.virtual_page_size) % self.real_page_size
-        
-        real_items, total_items = fetch_real_page(real_page)
-        
-        total_virtual_pages = (total_items + self.virtual_page_size - 1) // self.virtual_page_size
-        
-        virtual_items = real_items[offset_in_real : offset_in_real + self.virtual_page_size]
-        
-        return virtual_items, total_virtual_pages, total_items
-
-
-PATH_DEPENDENCIAS = "./data/dependencias.json"
-PATH_TIPOS_NORMA = "./data/tipos_norma.json"
-
-# Configuración de paginación y límites
-INFOLEG_PAGE_SIZE = 50  # Resultados que devuelve InfoLeg por página real
-MCP_PAGE_SIZE = 5       # Resultados que entrega el MCP por página virtual
-TEXT_CHUNK_SIZE = 500   # Tamaño por defecto de los fragmentos de texto
-
+from services import (
+    DependenciaService,
+    NormaService,
+)
 
 mcp = FastMCP("InfoLeg MCP", json_response=True)
 session_manager = SessionManager()
 client = InfolegClient()
 
-
-def normalize(text: str) -> str:
-    text = text.lower()
-    return unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode("utf-8")
-
+# Instanciar servicios por dominio con su configuración
+dependencia_svc = DependenciaService(
+    path_dependencias="./data/dependencias.json",
+    path_tipos_norma="./data/tipos_norma.json"
+)
+norma_svc = NormaService(
+    client, 
+    session_manager,
+    infoleg_page_size=50,
+    mcp_page_size=5,
+    text_chunk_size=500
+)
 
 @mcp.resource("file://tipos-norma")
 def get_tipos_norma() -> str:
     """Devuelve el catálogo de tipos de norma con su ID y nombre.
     SIEMPRE llamar esta tool antes de usar tipo_norma en buscar_normas()."""
-    with open(PATH_TIPOS_NORMA) as f:
-        return f.read()
+    return dependencia_svc.get_tipos_norma()
 
 @mcp.tool()
 def get_dependencia_by_id(id: int) -> dict:
@@ -77,15 +46,7 @@ def get_dependencia_by_id(id: int) -> dict:
 
     DEVUELVE: Datos de la dependencia (id, nombre, etc.).
     """
-    with open(PATH_DEPENDENCIAS) as f:
-        deps = json.load(f)
-
-    result = next((d for d in deps if d["id"] == id), None)
-
-    if not result:
-        raise ValueError(f"No se encontró dependencia con ID {id}")
-
-    return result
+    return dependencia_svc.get_by_id(id)
 
 @mcp.tool()
 def buscar_dependencias(query: str, limit: int = 10) -> list:
@@ -103,22 +64,10 @@ def buscar_dependencias(query: str, limit: int = 10) -> list:
 
      NOTA: La búsqueda es tolerante a errores tipográficos y variaciones menores.
      """
-    with open(PATH_DEPENDENCIAS) as f:
-        deps = json.load(f)
-
-    choices = {i: normalize(d["nombre"]) for i, d in enumerate(deps)}
-    matches = process.extract(
-        normalize(query),
-        choices,
-        scorer=fuzz.WRatio,
-        limit=limit,
-        score_cutoff=70
-    )
-
-    return [deps[i] for _, _, i in matches]
+    return dependencia_svc.buscar(query, limit)
 
 @mcp.tool()
-def ver_norma(id: int) -> dict:
+def ver_norma(id: int) -> str:
     """
     Obtiene los metadatos de una norma por su ID de Infoleg.
 
@@ -130,44 +79,10 @@ def ver_norma(id: int) -> dict:
 
     DEVUELVE: Metadatos de la norma.
     """
-    session = session_manager.get_session()
-    params = ParamsVerNorma(id=id)
-    try:
-        result = client.ver_norma(session, params)
-        return result.model_dump_json(indent=2)
-    except NormaNotFoundError:
-        raise
-
-
-def recortar_texto(texto: str, inicio: int = 0, fin: Optional[int] = None) -> str:
-    total = len(texto)
-    
-    if inicio < 0:
-        inicio = 0
-    
-    if fin is None:
-        fin = inicio + TEXT_CHUNK_SIZE
-        
-    if fin > total:
-        fin = total
-    
-    # Asegurarnos de no devolver textos vacíos si se equivocan en los índices
-    if inicio >= total:
-        return f"[Error: El índice de inicio ({inicio}) es mayor o igual al total de caracteres ({total}).]"
-        
-    fragmento = texto[inicio:fin]
-    
-    # Agregar encabezado informativo
-    encabezado = f"[Mostrando caracteres {inicio} a {fin} de un total de {total} caracteres.]\n"
-    if fin < total:
-        encabezado += f"[Para seguir leyendo, vuelve a llamar a la herramienta usando inicio={fin} y fin={fin + TEXT_CHUNK_SIZE} (o más)]\n"
-    encabezado += "-" * 50 + "\n\n"
-    
-    return encabezado + fragmento
-
+    return norma_svc.ver_norma(id)
 
 @mcp.tool()
-def obtener_texto_actualizado(id: int, inicio: int = 0, fin: int = TEXT_CHUNK_SIZE) -> str:
+def obtener_texto_actualizado(id: int, inicio: int = 0, fin: Optional[int] = None) -> str:
     """
     Obtiene el texto VIGENTE de una norma (con todas sus modificaciones aplicadas).
 
@@ -182,21 +97,10 @@ def obtener_texto_actualizado(id: int, inicio: int = 0, fin: int = TEXT_CHUNK_SI
     - inicio: Índice del carácter desde donde empezar a leer (por defecto 0).
     - fin: Índice del carácter donde terminar de leer (por defecto 500).
     """
-    session = session_manager.get_session()
-    try:
-        norma_data = VerNormaResponse.model_validate_json(ver_norma(id))
-    except NormaNotFoundError:
-        return f"No se encontró una norma con el id incluido en la petición."
-        
-    if norma_data.url_texto_actualizado:
-        texto = client.consultar_texto_actualizado(session, id, norma_data.url_texto_actualizado)
-        return recortar_texto(texto, inicio, fin)
-    return f"No se encontró texto disponible para la norma {id}."
-
-
+    return norma_svc.obtener_texto(id, TipoTexto.ACTUALIZADO, inicio, fin)
 
 @mcp.tool()
-def obtener_texto_original(id: int, inicio: int = 0, fin: int = TEXT_CHUNK_SIZE) -> str:
+def obtener_texto_original(id: int, inicio: int = 0, fin: Optional[int] = None) -> str:
     """
     Obtiene el texto ORIGINAL de una norma tal cual fue sancionada.
 
@@ -211,22 +115,10 @@ def obtener_texto_original(id: int, inicio: int = 0, fin: int = TEXT_CHUNK_SIZE)
     - inicio: Índice del carácter desde donde empezar a leer (por defecto 0).
     - fin: Índice del carácter donde terminar de leer (por defecto 500).
     """
-    try:
-        norma_data = VerNormaResponse.model_validate_json(ver_norma(id))
-    except NormaNotFoundError:
-        return f"No se encontró una norma con el id incluido en la petición."
-
-    session = session_manager.get_session()
-    
-    if not norma_data.url_texto_completo:
-        return f"No se encontró el texto original para la norma {id}."
-        
-    texto = client.consultar_texto_original(session, id, norma_data.url_texto_completo)
-    return recortar_texto(texto, inicio, fin)
-
+    return norma_svc.obtener_texto(id, TipoTexto.ORIGINAL, inicio, fin)
 
 @mcp.tool()
-def ver_normas_que_modifica(id: int) -> dict:
+def ver_normas_que_modifica(id: int) -> str:
     """
     Devuelve las normas que esta norma modifica, deroga o complementa.
 
@@ -240,14 +132,10 @@ def ver_normas_que_modifica(id: int) -> dict:
 
     DEVUELVE: Lista de normas que fueron modificadas/derogadas/complementadas por esta norma.
     """
-    session = session_manager.get_session()
-    params = ParamsVerVinculos(id=id, modo=ModoVinculo.MODIFICA_A)
-    result = client.ver_vinculos(session, params)
-    return result.model_dump_json(indent=2)
-
+    return norma_svc.ver_vinculos(id, ModoVinculo.MODIFICA_A)
 
 @mcp.tool()
-def ver_normas_que_la_modifican(id: int) -> dict:
+def ver_normas_que_la_modifican(id: int) -> str:
     """
     Devuelve las normas que modificaron, derogaron o complementaron a esta norma.
 
@@ -262,67 +150,7 @@ def ver_normas_que_la_modifican(id: int) -> dict:
 
     DEVUELVE: Lista de normas que modificaron/derogaron/complementaron a esta norma.
     """
-    session = session_manager.get_session()
-    params = ParamsVerVinculos(id=id, modo=ModoVinculo.MODIFICADA_POR)
-    result = client.ver_vinculos(session, params)
-    return result.model_dump_json(indent=2)
-
-def _build_search_request(
-    tipo_norma: Optional[int],
-    numero: Optional[int],
-    anio_sancion: Optional[int],
-    texto: Optional[str],
-    dependencia: Optional[int],
-    publicado_desde: Optional[date],
-    publicado_hasta: Optional[date],
-) -> BusquedaNormaRequest:
-    """Valida los parámetros de entrada y construye el request para InfoLeg."""
-    search_params = [tipo_norma, numero, anio_sancion, dependencia, publicado_desde, publicado_hasta]
-    provided_params = sum(1 for p in search_params if p is not None)
-    
-    if not texto and provided_params < 2:
-        raise ValueError(
-            "Debe ingresar al menos 2 parámetros de búsqueda (por ejemplo: tipo_norma y numero) "
-            "a menos que realice una búsqueda por texto."
-        )
-
-    if tipo_norma == 1 and anio_sancion is not None:
-        raise ValueError("No se debe ingresar el año (anio_sancion) cuando se busca por tipo de norma Ley (tipo_norma=1).")
-
-    return BusquedaNormaRequest(
-        tipoNorma=tipo_norma,
-        numero=numero,
-        anio_sancion=anio_sancion,
-        texto=texto,
-        dependencia=dependencia,
-        diaPubDesde=publicado_desde.day if publicado_desde else None,
-        mesPubDesde=publicado_desde.month if publicado_desde else None,
-        anioPubDesde=publicado_desde.year if publicado_desde else None,
-        diaPubHasta=publicado_hasta.day if publicado_hasta else None,
-        mesPubHasta=publicado_hasta.month if publicado_hasta else None,
-        anioPubHasta=publicado_hasta.year if publicado_hasta else None,
-    )
-
-def _fetch_infoleg_page(request: BusquedaNormaRequest, infoleg_page: int) -> BusquedaNormaResponse:
-    """Maneja la sesión, la caché y la petición de una página específica a InfoLeg (INFOLEG_PAGE_SIZE resultados)."""
-    session_state = session_manager.get_search_session(request)
-    session = session_state.session
-
-    if session_state.first_request:
-        result = client.buscar_normas(session, request)
-        session_manager.put_pages_count(request, result.total_pags)
-        session_state = session_manager.get_search_session(request)
-        if infoleg_page == 1:
-            return result
-
-    if infoleg_page > session_state.total_pags:
-        infoleg_page = session_state.total_pags
-
-    if infoleg_page == 1:
-        return client.buscar_normas(session, request)
-
-    pag_request = PaginacionRequest(irAPagina=infoleg_page, desplazamiento=ModoDesplazamiento.AVANZAR)
-    return client.navegar_normas(session, pag_request)
+    return norma_svc.ver_vinculos(id, ModoVinculo.MODIFICADA_POR)
 
 @mcp.tool()
 def buscar_normas(
@@ -334,7 +162,7 @@ def buscar_normas(
     publicado_desde: Optional[date] = None,
     publicado_hasta: Optional[date] = None,
     nro_pag: Optional[int] = None,
-) -> dict:
+) -> str:
     """
     Busca normas jurídicas en Infoleg (Leyes, Decretos, Resoluciones, Disposiciones, etc.).
     Los resultados se ordenan por fecha de publicación, del más reciente al más antiguo.
@@ -384,33 +212,16 @@ def buscar_normas(
 
     DEVUELVE: Lista de normas con metadatos + pagina_actual + total_pags.
     """
-
-    request = _build_search_request(
-        tipo_norma, numero, anio_sancion, texto, dependencia, publicado_desde, publicado_hasta
+    return norma_svc.buscar_normas(
+        tipo_norma=tipo_norma,
+        numero=numero,
+        anio_sancion=anio_sancion,
+        texto=texto,
+        dependencia=dependencia,
+        publicado_desde=publicado_desde,
+        publicado_hasta=publicado_hasta,
+        nro_pag=nro_pag
     )
-
-    mcp_page = nro_pag if nro_pag and nro_pag > 0 else 1
-    
-    paginator = Paginator(virtual_page_size=MCP_PAGE_SIZE, real_page_size=INFOLEG_PAGE_SIZE)
-    
-    def fetch_page(real_page_num: int):
-        res = _fetch_infoleg_page(request, real_page_num)
-        return res.resultados, res.total
-        
-    mcp_resultados, total_mcp_pages, total_resultados = paginator.get_page(mcp_page, fetch_page)
-    
-    result_dict = {
-        "resultados": [r.model_dump() for r in mcp_resultados],
-        "pagina_actual": mcp_page,
-        "total_pags": total_mcp_pages,
-        "total_resultados": total_resultados
-    }
-    
-    return json.dumps(result_dict, indent=2, default=str)
-
-
-
-
 
 if __name__ == "__main__":
     mcp.run(transport="sse")

@@ -115,3 +115,8 @@ class ModoDesplazamiento(str, Enum):
 class PaginacionRequest(BaseModel):
     desplazamiento: ModoDesplazamiento
     irAPagina: int
+
+
+class TipoTexto(str, Enum):
+    ACTUALIZADO = "actualizado"
+    ORIGINAL = "original"

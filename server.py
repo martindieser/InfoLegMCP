@@ -9,11 +9,16 @@ from cache import PageCache, NormaCache
 from datetime import date
 from models import *
 from sessmanager import SessionManager
-from parsers import NormaNotFoundError, SearchQueryMaximumExceeded
+from parsers import NormaNotFoundError
 
 
 PATH_DEPENDENCIAS = "./data/dependencias.json"
 PATH_TIPOS_NORMA = "./data/tipos_norma.json"
+
+# Configuración de paginación y límites
+INFOLEG_PAGE_SIZE = 50  # Resultados que devuelve InfoLeg por página real
+MCP_PAGE_SIZE = 5       # Resultados que entrega el MCP por página virtual
+TEXT_CHUNK_SIZE = 500   # Tamaño por defecto de los fragmentos de texto
 
 
 mcp = FastMCP("InfoLeg MCP", json_response=True)
@@ -120,12 +125,16 @@ def ver_norma(id: int) -> dict:
         raise
 
 
-def recortar_texto(texto: str, inicio: int = 0, fin: Optional[int] = 500) -> str:
+def recortar_texto(texto: str, inicio: int = 0, fin: Optional[int] = None) -> str:
     total = len(texto)
     
     if inicio < 0:
         inicio = 0
-    if fin is None or fin > total:
+    
+    if fin is None:
+        fin = inicio + TEXT_CHUNK_SIZE
+        
+    if fin > total:
         fin = total
     
     # Asegurarnos de no devolver textos vacíos si se equivocan en los índices
@@ -137,14 +146,14 @@ def recortar_texto(texto: str, inicio: int = 0, fin: Optional[int] = 500) -> str
     # Agregar encabezado informativo
     encabezado = f"[Mostrando caracteres {inicio} a {fin} de un total de {total} caracteres.]\n"
     if fin < total:
-        encabezado += f"[Para seguir leyendo, vuelve a llamar a la herramienta usando inicio={fin} y fin={fin + 500} (o más)]\n"
+        encabezado += f"[Para seguir leyendo, vuelve a llamar a la herramienta usando inicio={fin} y fin={fin + TEXT_CHUNK_SIZE} (o más)]\n"
     encabezado += "-" * 50 + "\n\n"
     
     return encabezado + fragmento
 
 
 @mcp.tool()
-def obtener_texto_actualizado(id: int, inicio: int = 0, fin: Optional[int] = 500) -> str:
+def obtener_texto_actualizado(id: int, inicio: int = 0, fin: int = TEXT_CHUNK_SIZE) -> str:
     """
     Obtiene el texto VIGENTE de una norma (con todas sus modificaciones aplicadas).
 
@@ -152,7 +161,7 @@ def obtener_texto_actualizado(id: int, inicio: int = 0, fin: Optional[int] = 500
     Si no existe una versión actualizada, intentará devolver la original avisando al usuario.
 
     Para evitar abrumar el contexto, el texto se devuelve paginado. 
-    Por defecto, devuelve los primeros 500 caracteres. Usa 'inicio' y 'fin' para iterar.
+    Por defecto, devuelve fragmentos de 500 caracteres. Usa 'inicio' y 'fin' para iterar.
 
     PARÁMETROS:
     - id: ID numérico de la norma en Infoleg.
@@ -183,7 +192,7 @@ def obtener_texto_actualizado(id: int, inicio: int = 0, fin: Optional[int] = 500
 
 
 @mcp.tool()
-def obtener_texto_original(id: int, inicio: int = 0, fin: Optional[int] = 500) -> str:
+def obtener_texto_original(id: int, inicio: int = 0, fin: int = TEXT_CHUNK_SIZE) -> str:
     """
     Obtiene el texto ORIGINAL de una norma tal cual fue sancionada.
 
@@ -191,7 +200,7 @@ def obtener_texto_original(id: int, inicio: int = 0, fin: Optional[int] = 500) -
     antes de cualquier reforma. No refleja necesariamente la ley vigente.
 
     Para evitar abrumar el contexto, el texto se devuelve paginado. 
-    Por defecto, devuelve los primeros 500 caracteres. Usa 'inicio' y 'fin' para iterar.
+    Por defecto, devuelve fragmentos de 500 caracteres. Usa 'inicio' y 'fin' para iterar.
 
     PARÁMETROS:
     - id: ID numérico de la norma en Infoleg.
@@ -287,6 +296,68 @@ def ver_normas_que_la_modifican(id: int) -> dict:
     
     return result_json
 
+def _build_search_request(
+    tipo_norma: Optional[int],
+    numero: Optional[int],
+    anio_sancion: Optional[int],
+    texto: Optional[str],
+    dependencia: Optional[int],
+    publicado_desde: Optional[date],
+    publicado_hasta: Optional[date],
+) -> BusquedaNormaRequest:
+    """Valida los parámetros de entrada y construye el request para InfoLeg."""
+    search_params = [tipo_norma, numero, anio_sancion, dependencia, publicado_desde, publicado_hasta]
+    provided_params = sum(1 for p in search_params if p is not None)
+    
+    if not texto and provided_params < 2:
+        raise ValueError(
+            "Debe ingresar al menos 2 parámetros de búsqueda (por ejemplo: tipo_norma y numero) "
+            "a menos que realice una búsqueda por texto."
+        )
+
+    if tipo_norma == 1 and anio_sancion is not None:
+        raise ValueError("No se debe ingresar el año (anio_sancion) cuando se busca por tipo de norma Ley (tipo_norma=1).")
+
+    return BusquedaNormaRequest(
+        tipoNorma=tipo_norma,
+        numero=numero,
+        anio_sancion=anio_sancion,
+        texto=texto,
+        dependencia=dependencia,
+        diaPubDesde=publicado_desde.day if publicado_desde else None,
+        mesPubDesde=publicado_desde.month if publicado_desde else None,
+        anioPubDesde=publicado_desde.year if publicado_desde else None,
+        diaPubHasta=publicado_hasta.day if publicado_hasta else None,
+        mesPubHasta=publicado_hasta.month if publicado_hasta else None,
+        anioPubHasta=publicado_hasta.year if publicado_hasta else None,
+    )
+
+def _fetch_infoleg_page(request: BusquedaNormaRequest, infoleg_page: int) -> BusquedaNormaResponse:
+    """Maneja la sesión, la caché y la petición de una página específica a InfoLeg (INFOLEG_PAGE_SIZE resultados)."""
+    client = InfolegClient()
+    session_state = session_manager.get_search_session(request)
+    session = session_state.session
+
+    if session_state.first_request:
+        result = client.buscar_normas(session, request)
+        session_manager.put_pages_count(request, result.total_pags)
+        session_state = session_manager.get_search_session(request)
+        page_cache.set(request, 1, result)
+        if infoleg_page == 1:
+            return result
+
+    if infoleg_page > session_state.total_pags:
+        infoleg_page = session_state.total_pags
+
+    cached_page = page_cache.get(request, infoleg_page)
+    if cached_page:
+        return cached_page
+
+    pag_request = PaginacionRequest(irAPagina=infoleg_page, desplazamiento=ModoDesplazamiento.AVANZAR)
+    result = client.navegar_normas(session, pag_request)
+    page_cache.set(request, infoleg_page, result)
+    return result
+
 @mcp.tool()
 def buscar_normas(
     tipo_norma: Optional[int] = None,
@@ -310,8 +381,8 @@ def buscar_normas(
     - Los números de norma deben ingresarse SIN puntos. Ej: 27275, no 27.275.
 
     PAGINACIÓN:
-    - Primera llamada: no incluir nro_pag.
-    - El resultado incluye `pagina_actual` y `total_pags`.
+    - Primera llamada: no incluir nro_pag (devuelve los primeros resultados).
+    - El resultado incluye `pagina_actual` y `total_pags` (basado en páginas virtuales del MCP).
     - Para páginas siguientes, repetir la misma llamada agregando nro_pag=2, 3, etc.
 
     PARÁMETROS:
@@ -345,84 +416,38 @@ def buscar_normas(
              - exporta* AND bienes AND servicio*            → combina raíces
              - "plan nacional" NOT "política económica"     → incluye una frase, excluye otra
 
-    DEVUELVE: Lista de normas con metadatos (tipo, número, título, fecha, dependencia) + pagina_actual + total_pags.
+    DEVUELVE: Lista de normas con metadatos + pagina_actual + total_pags.
     """
 
-    
-    # Validar que se ingresen suficientes parámetros para evitar búsquedas demasiado amplias
-    search_params = [tipo_norma, numero, anio_sancion, dependencia, publicado_desde, publicado_hasta]
-    provided_params = sum(1 for p in search_params if p is not None)
-    
-    if not texto and provided_params < 2:
-        raise ValueError(
-            "Debe ingresar al menos 2 parámetros de búsqueda (por ejemplo: tipo_norma y numero) "
-            "a menos que realice una búsqueda por texto."
-        )
-
-    if tipo_norma == 1 and anio_sancion is not None:
-        raise ValueError("No se debe ingresar el año (anio_sancion) cuando se busca por tipo de norma Ley (tipo_norma=1).")
-
-    request = BusquedaNormaRequest(
-        tipoNorma=tipo_norma,
-        numero=numero,
-        anio_sancion=anio_sancion,
-        texto=texto,
-        dependencia=dependencia,
-        diaPubDesde=publicado_desde.day if publicado_desde else None,
-        mesPubDesde=publicado_desde.month if publicado_desde else None,
-        anioPubDesde=publicado_desde.year if publicado_desde else None,
-        diaPubHasta=publicado_hasta.day if publicado_hasta else None,
-        mesPubHasta=publicado_hasta.month if publicado_hasta else None,
-        anioPubHasta=publicado_hasta.year if publicado_hasta else None,
+    request = _build_search_request(
+        tipo_norma, numero, anio_sancion, texto, dependencia, publicado_desde, publicado_hasta
     )
 
-    client = InfolegClient()
+    mcp_page = nro_pag if nro_pag and nro_pag > 0 else 1
     
+    # Cálculos para paginación interna (MCP=5 resultados, InfoLeg=50 resultados)
+    infoleg_page = ((mcp_page - 1) * MCP_PAGE_SIZE) // INFOLEG_PAGE_SIZE + 1
+    offset_in_infoleg = ((mcp_page - 1) * MCP_PAGE_SIZE) % INFOLEG_PAGE_SIZE
+    
+    infoleg_result = _fetch_infoleg_page(request, infoleg_page)
+    
+    # Recalcular total de páginas para el MCP
+    total_mcp_pages = (infoleg_result.total + MCP_PAGE_SIZE - 1) // MCP_PAGE_SIZE
+    
+    # Obtener el slice de resultados
+    mcp_resultados = infoleg_result.resultados[offset_in_infoleg : offset_in_infoleg + MCP_PAGE_SIZE]
+    
+    result_dict = {
+        "resultados": [r.model_dump() for r in mcp_resultados],
+        "pagina_actual": mcp_page,
+        "total_pags": total_mcp_pages,
+        # "infoleg_page" : infoleg_page,
+        "total_resultados": infoleg_result.total
+    }
+    
+    return json.dumps(result_dict, indent=2, default=str)
 
-    try: 
-        # Check for existing session
-        session_state = session_manager.get_search_session(request)
-        session = session_state.session
-        target_page = nro_pag if nro_pag and nro_pag > 0 else 1
 
-        if session_state.first_request:
-            # No session exists, start from page 1
-            result = client.buscar_normas(session, request)
-            session_manager.put_pages_count(request, result.total_pags)
-            session_state = session_manager.get_search_session(request)
-            page_cache.set(request, 1, result)
-            
-            if target_page == 1:
-                result_dict = result.model_dump()
-                result_dict["pagina_actual"] = 1
-                result_dict["total_pags"] = result.total_pags
-                return json.dumps(result_dict, indent=2, default=str)
-
-        # We have a session, validate bounds
-        if target_page > session_state.total_pags:
-            target_page = session_state.total_pags
-
-        # Check for cached page results
-        cached_page = page_cache.get(request, target_page)
-        if cached_page:
-            result_dict = cached_page.model_dump()
-            result_dict["pagina_actual"] = target_page
-            result_dict["total_pags"] = session_state.total_pags
-            return json.dumps(result_dict, indent=2, default=str)
-
-        # Page not in cache, fetch it using existing session
-        pag_request = PaginacionRequest(irAPagina=target_page, desplazamiento=ModoDesplazamiento.AVANZAR)
-        result = client.navegar_normas(session, pag_request)
-        
-        # Update cache
-        page_cache.set(request, target_page, result)
-        
-        result_dict = result.model_dump()
-        result_dict["pagina_actual"] = target_page
-        result_dict["total_pags"] = session_state.total_pags
-        return json.dumps(result_dict, indent=2, default=str)
-    except SearchQueryMaximumExceeded:
-        return 'Los filtros utilizados no son lo suficientemente especificos (abarcan más de 10 normas como resultado). Relee las instrucciones de esta tool e intenta de nuevo.'
 
 
 

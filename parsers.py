@@ -151,9 +151,6 @@ class InfoLegBusquedasParser(BaseParser):
         total = paginacion.get("total", 0)
         pagina = paginacion.get("total_pags", 1)
 
-        if total > 10:
-            raise SearchQueryMaximumExceeded()
-
         soup = self._get_soup(html)
         tabla = self._parse_tabla_resultados(soup)
         if tabla is None:

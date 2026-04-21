@@ -118,7 +118,7 @@ def obtener_texto_original(id: int, inicio: int = 0, fin: Optional[int] = None) 
     return norma_svc.obtener_texto(id, TipoTexto.ORIGINAL, inicio, fin)
 
 @mcp.tool()
-def ver_normas_que_modifica(id: int) -> str:
+def ver_normas_que_modifica(id: int, nro_pag: Optional[int] = None) -> str:
     """
     Devuelve las normas que esta norma modifica, deroga o complementa.
 
@@ -127,15 +127,21 @@ def ver_normas_que_modifica(id: int) -> str:
 
     NO CONFUNDIR con ver_normas_que_la_modifican(), que es la dirección inversa.
 
+    PAGINACIÓN:
+    - Primera llamada: no incluir nro_pag (devuelve los primeros resultados).
+    - El resultado incluye `pagina_actual` y `total_pags` (basado en páginas virtuales del MCP).
+    - Para páginas siguientes, repetir la misma llamada agregando nro_pag=2, 3, etc.
+
     PARÁMETROS:
     - id: ID numérico de la norma en Infoleg.
+    - nro_pag: Número de página virtual (MCP).
 
     DEVUELVE: Lista de normas que fueron modificadas/derogadas/complementadas por esta norma.
     """
-    return norma_svc.ver_vinculos(id, ModoVinculo.MODIFICA_A)
+    return norma_svc.ver_vinculos(id, ModoVinculo.MODIFICA_A, nro_pag)
 
 @mcp.tool()
-def ver_normas_que_la_modifican(id: int) -> str:
+def ver_normas_que_la_modifican(id: int, nro_pag: Optional[int] = None) -> str:
     """
     Devuelve las normas que modificaron, derogaron o complementaron a esta norma.
 
@@ -145,12 +151,18 @@ def ver_normas_que_la_modifican(id: int) -> str:
 
     NO CONFUNDIR con ver_normas_que_modifica(), que es la dirección inversa.
 
+    PAGINACIÓN:
+    - Primera llamada: no incluir nro_pag (devuelve los primeros resultados).
+    - El resultado incluye `pagina_actual` y `total_pags` (basado en páginas virtuales del MCP).
+    - Para páginas siguientes, repetir la misma llamada agregando nro_pag=2, 3, etc.
+
     PARÁMETROS:
     - id: ID numérico de la norma en Infoleg.
+    - nro_pag: Número de página virtual (MCP).
 
     DEVUELVE: Lista de normas que modificaron/derogaron/complementaron a esta norma.
     """
-    return norma_svc.ver_vinculos(id, ModoVinculo.MODIFICADA_POR)
+    return norma_svc.ver_vinculos(id, ModoVinculo.MODIFICADA_POR, nro_pag)
 
 @mcp.tool()
 def buscar_normas(

@@ -1,7 +1,7 @@
 import json
 import unicodedata
 from rapidfuzz import process, fuzz
-from typing import Optional, TypeVar, Generic, Callable, List, Tuple
+from typing import Optional, TypeVar, Callable, List, Tuple
 from datetime import date
 from models import *
 from client import InfolegClient
@@ -10,25 +10,29 @@ from parsers import NormaNotFoundError
 
 
 
-T = TypeVar('T')
-
-class Paginator(Generic[T]):
+class Paginator:
     def __init__(self, virtual_page_size: int, real_page_size: int):
         self.virtual_page_size = virtual_page_size
         self.real_page_size = real_page_size
 
-    def get_page(self, virtual_page: int, fetch_real_page: Callable[[int], Tuple[List[T], int]]) -> Tuple[List[T], int, int]:
+    def get_page_dict(self, virtual_page: int, fetch_real_page: Callable[[int], Tuple[List[T], int]]) -> dict:
+        """
+        Obtiene una página virtual y devuelve el diccionario de respuesta estandarizado.
+        """
         real_page = ((virtual_page - 1) * self.virtual_page_size) // self.real_page_size + 1
         offset_in_real = ((virtual_page - 1) * self.virtual_page_size) % self.real_page_size
-        
-        real_items, total_items = fetch_real_page(real_page)
-        
-        total_virtual_pages = (total_items + self.virtual_page_size - 1) // self.virtual_page_size
-        
-        virtual_items = real_items[offset_in_real : offset_in_real + self.virtual_page_size]
-        
-        return virtual_items, total_virtual_pages, total_items
 
+        real_items, total_items = fetch_real_page(real_page)
+
+        total_virtual_pages = (total_items + self.virtual_page_size - 1) // self.virtual_page_size
+        virtual_items = real_items[offset_in_real : offset_in_real + self.virtual_page_size]
+
+        return {
+            "resultados": [r.model_dump() if hasattr(r, 'model_dump') else r for r in virtual_items],
+            "pagina_actual": virtual_page,
+            "total_pags": total_virtual_pages,
+            "total_resultados": total_items
+        }
 
 class DependenciaService:
     """Servicio para el dominio de Dependencias y Catálogos."""
@@ -127,11 +131,21 @@ class NormaService:
             
         return f"No se encontró el texto {tipo.value} para la norma {id}."
 
-    def ver_vinculos(self, id: int, modo: ModoVinculo) -> str:
+    def ver_vinculos(self, id: int, modo: ModoVinculo, nro_pag: Optional[int] = None) -> str:
         session = self.session_manager.get_session()
         params = ParamsVerVinculos(id=id, modo=modo)
         result = self.client.ver_vinculos(session, params)
-        return result.model_dump_json(indent=2)
+        
+        mcp_page = nro_pag if nro_pag and nro_pag > 0 else 1
+        
+        total_items = len(result.vinculos)
+        paginator = Paginator(virtual_page_size=self.mcp_page_size, real_page_size=max(total_items, 1))
+        
+        def fetch_memory_page(real_page_num: int):
+            return result.vinculos, total_items
+            
+        result_dict = paginator.get_page_dict(mcp_page, fetch_memory_page)
+        return json.dumps(result_dict, indent=2, default=str)
 
     def _build_search_request(
         self,
@@ -209,12 +223,5 @@ class NormaService:
                 
             return res.resultados, res.total
 
-        items, total_pags, total_items = self.paginator.get_page(mcp_page, fetch_page)
-        
-        result_dict = {
-            "resultados": [r.model_dump() for r in items],
-            "pagina_actual": mcp_page,
-            "total_pags": total_pags,
-            "total_resultados": total_items
-        }
+        result_dict = self.paginator.get_page_dict(mcp_page, fetch_page)
         return json.dumps(result_dict, indent=2, default=str)

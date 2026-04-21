@@ -15,7 +15,7 @@ class Paginator:
         self.virtual_page_size = virtual_page_size
         self.real_page_size = real_page_size
 
-    def get_page_dict(self, virtual_page: int, fetch_real_page: Callable[[int], Tuple[List[T], int]]) -> dict:
+    def get_page_dict(self, virtual_page: int, fetch_real_page: Callable) -> dict:
         """
         Obtiene una página virtual y devuelve el diccionario de respuesta estandarizado.
         """
@@ -147,7 +147,7 @@ class NormaService:
         result_dict = paginator.get_page_dict(mcp_page, fetch_memory_page)
         return json.dumps(result_dict, indent=2, default=str)
 
-    def _build_search_request(
+    def buscar_normas(
         self,
         tipo_norma: Optional[int] = None,
         numero: Optional[int] = None,
@@ -156,7 +156,9 @@ class NormaService:
         dependencia: Optional[int] = None,
         publicado_desde: Optional[date] = None,
         publicado_hasta: Optional[date] = None,
-    ) -> BusquedaNormaRequest:
+        nro_pag: Optional[int] = None,
+    ) -> str:
+        # Validación y construcción del request
         search_params = [tipo_norma, numero, anio_sancion, dependencia, publicado_desde, publicado_hasta]
         provided_params = sum(1 for p in search_params if p is not None)
         
@@ -165,7 +167,7 @@ class NormaService:
         if tipo_norma == 1 and anio_sancion is not None:
             raise ValueError("No se debe ingresar el año para tipo de norma Ley (tipo_norma=1).")
             
-        return BusquedaNormaRequest(
+        request = BusquedaNormaRequest(
             tipoNorma=tipo_norma,
             numero=numero,
             anio_sancion=anio_sancion,
@@ -179,26 +181,6 @@ class NormaService:
             anioPubHasta=publicado_hasta.year if publicado_hasta else None,
         )
 
-    def buscar_normas(
-        self,
-        tipo_norma: Optional[int] = None,
-        numero: Optional[int] = None,
-        anio_sancion: Optional[int] = None,
-        texto: Optional[str] = None,
-        dependencia: Optional[int] = None,
-        publicado_desde: Optional[date] = None,
-        publicado_hasta: Optional[date] = None,
-        nro_pag: Optional[int] = None,
-    ) -> str:
-        request = self._build_search_request(
-            tipo_norma=tipo_norma,
-            numero=numero,
-            anio_sancion=anio_sancion,
-            texto=texto,
-            dependencia=dependencia,
-            publicado_desde=publicado_desde,
-            publicado_hasta=publicado_hasta
-        )
         mcp_page = nro_pag if nro_pag and nro_pag > 0 else 1
 
         def fetch_page(real_page_num: int) -> Tuple[List[NormaSummary], int]:

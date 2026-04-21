@@ -22,10 +22,8 @@ TEXT_CHUNK_SIZE = 500   # Tamaño por defecto de los fragmentos de texto
 
 
 mcp = FastMCP("InfoLeg MCP", json_response=True)
-page_cache = PageCache()
-norma_cache = NormaCache()
 session_manager = SessionManager()
-
+client = InfolegClient()
 
 
 def normalize(text: str) -> str:
@@ -106,20 +104,10 @@ def ver_norma(id: int) -> dict:
 
     DEVUELVE: Metadatos de la norma.
     """
-    # Intentar obtener de la caché
-    cached_norma = norma_cache.get(id)
-    if cached_norma:
-        return cached_norma.model_dump_json(indent=2)
-
     session = session_manager.get_session()
-    client = InfolegClient()
     params = ParamsVerNorma(id=id)
     try:
         result = client.ver_norma(session, params)
-        
-        # Guardar en caché
-        norma_cache.set(id, result)
-        
         return result.model_dump_json(indent=2)
     except NormaNotFoundError:
         raise
@@ -168,24 +156,14 @@ def obtener_texto_actualizado(id: int, inicio: int = 0, fin: int = TEXT_CHUNK_SI
     - inicio: Índice del carácter desde donde empezar a leer (por defecto 0).
     - fin: Índice del carácter donde terminar de leer (por defecto 500).
     """
-    # Intentar obtener de caché
-    cached_texto = norma_cache.get_texto_actualizado(id)
-    if cached_texto:
-        return recortar_texto(cached_texto, inicio, fin)
-
     session = session_manager.get_session()
     try:
         norma_data = VerNormaResponse.model_validate_json(ver_norma(id))
     except NormaNotFoundError:
         return f"No se encontró una norma con el id incluido en la petición."
         
-    client = InfolegClient()
-    
     if norma_data.url_texto_actualizado:
-        texto = client.consultar_anexo(session, norma_data.url_texto_actualizado)
-        # Guardar en caché si se obtuvo algo
-        if texto and not texto.startswith("No se encontró"):
-             norma_cache.set_texto_actualizado(id, texto)
+        texto = client.consultar_texto_actualizado(session, id, norma_data.url_texto_actualizado)
         return recortar_texto(texto, inicio, fin)
     return f"No se encontró texto disponible para la norma {id}."
 
@@ -207,28 +185,17 @@ def obtener_texto_original(id: int, inicio: int = 0, fin: int = TEXT_CHUNK_SIZE)
     - inicio: Índice del carácter desde donde empezar a leer (por defecto 0).
     - fin: Índice del carácter donde terminar de leer (por defecto 500).
     """
-    # Intentar obtener de caché
-    cached_texto = norma_cache.get_texto_original(id)
-    if cached_texto:
-        return recortar_texto(cached_texto, inicio, fin)
-
     try:
         norma_data = VerNormaResponse.model_validate_json(ver_norma(id))
     except NormaNotFoundError:
         return f"No se encontró una norma con el id incluido en la petición."
 
-    client = InfolegClient()
     session = session_manager.get_session()
     
     if not norma_data.url_texto_completo:
         return f"No se encontró el texto original para la norma {id}."
         
-    texto = client.consultar_anexo(session, norma_data.url_texto_completo)
-    
-    # Guardar en caché si se obtuvo algo
-    if texto and not texto.startswith("No se encontró"):
-        norma_cache.set_texto_original(id, texto)
-        
+    texto = client.consultar_texto_original(session, id, norma_data.url_texto_completo)
     return recortar_texto(texto, inicio, fin)
 
 
@@ -247,21 +214,10 @@ def ver_normas_que_modifica(id: int) -> dict:
 
     DEVUELVE: Lista de normas que fueron modificadas/derogadas/complementadas por esta norma.
     """
-    # Intentar obtener de caché
-    cached_vinculos = norma_cache.get_vinculos_modifica_a(id)
-    if cached_vinculos:
-        return cached_vinculos
-
     session = session_manager.get_session()
-    client = InfolegClient()
     params = ParamsVerVinculos(id=id, modo=ModoVinculo.MODIFICA_A)
-    
-    result_json = client.ver_vinculos(session, params).model_dump_json(indent=2)
-    
-    # Guardar en caché
-    norma_cache.set_vinculos_modifica_a(id, result_json)
-    
-    return result_json
+    result = client.ver_vinculos(session, params)
+    return result.model_dump_json(indent=2)
 
 
 @mcp.tool()
@@ -280,21 +236,10 @@ def ver_normas_que_la_modifican(id: int) -> dict:
 
     DEVUELVE: Lista de normas que modificaron/derogaron/complementaron a esta norma.
     """
-    # Intentar obtener de caché
-    cached_vinculos = norma_cache.get_vinculos_modificada_por(id)
-    if cached_vinculos:
-        return cached_vinculos
-
     session = session_manager.get_session()
-    client = InfolegClient()
     params = ParamsVerVinculos(id=id, modo=ModoVinculo.MODIFICADA_POR)
-    
-    result_json = client.ver_vinculos(session, params).model_dump_json(indent=2)
-    
-    # Guardar en caché
-    norma_cache.set_vinculos_modificada_por(id, result_json)
-    
-    return result_json
+    result = client.ver_vinculos(session, params)
+    return result.model_dump_json(indent=2)
 
 def _build_search_request(
     tipo_norma: Optional[int],
@@ -334,7 +279,6 @@ def _build_search_request(
 
 def _fetch_infoleg_page(request: BusquedaNormaRequest, infoleg_page: int) -> BusquedaNormaResponse:
     """Maneja la sesión, la caché y la petición de una página específica a InfoLeg (INFOLEG_PAGE_SIZE resultados)."""
-    client = InfolegClient()
     session_state = session_manager.get_search_session(request)
     session = session_state.session
 
@@ -342,21 +286,17 @@ def _fetch_infoleg_page(request: BusquedaNormaRequest, infoleg_page: int) -> Bus
         result = client.buscar_normas(session, request)
         session_manager.put_pages_count(request, result.total_pags)
         session_state = session_manager.get_search_session(request)
-        page_cache.set(request, 1, result)
         if infoleg_page == 1:
             return result
 
     if infoleg_page > session_state.total_pags:
         infoleg_page = session_state.total_pags
 
-    cached_page = page_cache.get(request, infoleg_page)
-    if cached_page:
-        return cached_page
+    if infoleg_page == 1:
+        return client.buscar_normas(session, request)
 
     pag_request = PaginacionRequest(irAPagina=infoleg_page, desplazamiento=ModoDesplazamiento.AVANZAR)
-    result = client.navegar_normas(session, pag_request)
-    page_cache.set(request, infoleg_page, result)
-    return result
+    return client.navegar_normas(session, pag_request)
 
 @mcp.tool()
 def buscar_normas(

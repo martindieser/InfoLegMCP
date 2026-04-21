@@ -1,6 +1,5 @@
-import requests
-import uuid
-import time
+from functools import wraps
+from typing import Callable, Any
 from models import BusquedaNormaRequest, BusquedaNormaResponse, PaginacionRequest \
                    , BusquedaBoletinRequest, BusquedaBoletinResponse \
                    , ParamsVerNorma, VerNormaResponse \
@@ -9,8 +8,107 @@ from models import BusquedaNormaRequest, BusquedaNormaResponse, PaginacionReques
 
 from requests.exceptions import RequestException, Timeout
 from parsers import *
+from cache import PageCache, NormaCache
+import hashlib
+import requests
+import uuid
+import time
+import json
 
 BASE_URL = "https://servicios.infoleg.gob.ar/infolegInternet"
+
+# Instancias globales de caché
+norma_cache = NormaCache()
+page_cache = PageCache()
+
+def cache_norma(func: Callable) -> Callable:
+    @wraps(func)
+    def wrapper(self, session: requests.Session, params: ParamsVerNorma) -> VerNormaResponse:
+        cached = norma_cache.get(params.id)
+        if cached:
+            return cached
+        result = func(self, session, params)
+        norma_cache.set(params.id, result)
+        return result
+    return wrapper
+
+def cache_vinculos(func: Callable) -> Callable:
+    @wraps(func)
+    def wrapper(self, session: requests.Session, params: ParamsVerVinculos) -> VerVinculosResponse:
+        # Usamos el modo para diferenciar la caché
+        if params.modo == ModoVinculo.MODIFICA_A:
+            cached_json = norma_cache.get_vinculos_modifica_a(params.id)
+        else:
+            cached_json = norma_cache.get_vinculos_modificada_por(params.id)
+            
+        if cached_json:
+            # Re-parsear el JSON guardado (norma_cache guarda strings de los vínculos actualmente)
+            return VerVinculosResponse.model_validate_json(cached_json)
+            
+        result = func(self, session, params)
+        result_json = result.model_dump_json(indent=2)
+        
+        if params.modo == ModoVinculo.MODIFICA_A:
+            norma_cache.set_vinculos_modifica_a(params.id, result_json)
+        else:
+            norma_cache.set_vinculos_modificada_por(params.id, result_json)
+            
+        return result
+    return wrapper
+
+def cache_texto_actualizado(func: Callable) -> Callable:
+    @wraps(func)
+    def wrapper(self, session: requests.Session, id: int, url_relativa: str) -> str:
+        cached = norma_cache.get_texto_actualizado(id)
+        if cached:
+            return cached
+        texto = func(self, session, id, url_relativa)
+        if texto and not texto.startswith("No se encontró"):
+            norma_cache.set_texto_actualizado(id, texto)
+        return texto
+    return wrapper
+
+def cache_texto_original(func: Callable) -> Callable:
+    @wraps(func)
+    def wrapper(self, session: requests.Session, id: int, url_relativa: str) -> str:
+        cached = norma_cache.get_texto_original(id)
+        if cached:
+            return cached
+        texto = func(self, session, id, url_relativa)
+        if texto and not texto.startswith("No se encontró"):
+            norma_cache.set_texto_original(id, texto)
+        return texto
+    return wrapper
+
+
+def cache_busqueda(func: Callable) -> Callable:
+    @wraps(func)
+    def wrapper(self, session: requests.Session, request: Any) -> BusquedaNormaResponse:
+        # Extraer página del request
+        page = 1
+        if isinstance(request, PaginacionRequest):
+            page = request.irAPagina
+        
+        # Generar hash de cookies para identificar la sesión de búsqueda en InfoLeg
+        cookie_dict = session.cookies.get_dict()
+        cookie_hash = hashlib.md5(json.dumps(cookie_dict, sort_keys=True).encode()).hexdigest()
+        
+        # Intentar obtener de la caché
+        cached = page_cache.get(cookie_hash, page)
+        if cached:
+            return cached
+            
+        # Ejecutar petición
+        result = func(self, session, request)
+        
+        # Si las cookies cambiaron (ej: después del primer request), 
+        # actualizamos el hash para guardar el resultado correctamente
+        new_cookie_dict = session.cookies.get_dict()
+        new_cookie_hash = hashlib.md5(json.dumps(new_cookie_dict, sort_keys=True).encode()).hexdigest()
+        
+        page_cache.set(new_cookie_hash, page, result)
+        return result
+    return wrapper
 
 class InfolegClient:
 
@@ -56,19 +154,28 @@ class InfolegClient:
 
         return md(str(soup), heading_style="ATX")
 
+    @cache_texto_actualizado
+    def consultar_texto_actualizado(self, session: requests.Session, id: int, url_relativa: str) -> str:
+        return self.consultar_anexo(session, url_relativa)
+
+    @cache_texto_original
+    def consultar_texto_original(self, session: requests.Session, id: int, url_relativa: str) -> str:
+        return self.consultar_anexo(session, url_relativa)
+
 
     def mostrar_opciones_busqueda_de_normas(self, session: requests.Session) -> BusquedaConfig:
         url = f"{BASE_URL}/mostrarBusquedaNormas.do"
-        r = self._request(session, 'GET', url_absoluta)
+        r = self._request(session, 'GET', url)
         return InfoLegConfigParser().parse(r.text)
 
-
+    @cache_vinculos
     def ver_vinculos(self, session: requests.Session, params: ParamsVerVinculos) -> VerVinculosResponse:
         url = f"{BASE_URL}/verVinculos.do"
         r = self._request(session, 'GET', url,
             params=params.model_dump(exclude_none=True))
         return VerVinculosParser(r.text, params.id).parse()
 
+    @cache_norma
     def ver_norma(self, session: requests.Session, params: ParamsVerNorma) -> VerNormaResponse:
         url = f"{BASE_URL}/verNorma.do"
         r = self._request(session, 'GET', url, params=params.model_dump(exclude_none=True))
@@ -77,6 +184,7 @@ class InfolegClient:
     def buscar_boletin(self, session: requests.Session, request: BusquedaBoletinRequest) -> BusquedaBoletinResponse:
         raise NotImplemented()
 
+    @cache_busqueda
     def buscar_normas(self, session: requests.Session, request: BusquedaNormaRequest) -> BusquedaNormaResponse:
         """
         Realiza la petición POST inicial de búsqueda.
@@ -86,6 +194,7 @@ class InfolegClient:
         r = self._request(session, 'POST', url, data=payload)
         return InfoLegBusquedasParser().parse(r.text)
 
+    @cache_busqueda
     def navegar_normas(self, session: requests.Session, request: PaginacionRequest) -> BusquedaNormaResponse:
         """
         Realiza la petición POST de paginación.
@@ -95,9 +204,9 @@ class InfolegClient:
         r = self._request(session, 'POST', url, data=payload)
         return InfoLegBusquedasParser().parse(r.text)
 
+
 if __name__ == "__main__":
     # Prueba rápida: Ley 27430
-    import json
     
     client = InfolegClient()
     session = requests.Session()

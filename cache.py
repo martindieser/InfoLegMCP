@@ -12,17 +12,14 @@ class PageCache:
         self.ttl = ttl
         self._cache = diskcache.Cache(directory)
 
-    def _key(self, request: BusquedaNormaRequest, page: int) -> str:
-        base = hashlib.md5(
-            json.dumps(request.model_dump(exclude_none=True), sort_keys=True).encode()
-        ).hexdigest()
-        return f"{base}_{page}"
+    def _key(self, cookie_hash: str, page: int) -> str:
+        return f"{cookie_hash}_{page}"
 
-    def get(self, request: BusquedaNormaRequest, page: int) -> Optional[BusquedaNormaResponse]:
-        return self._cache.get(self._key(request, page))
+    def get(self, cookie_hash: str, page: int) -> Optional[BusquedaNormaResponse]:
+        return self._cache.get(self._key(cookie_hash, page))
 
-    def set(self, request: BusquedaNormaRequest, page: int, result: BusquedaNormaResponse) -> None:
-        self._cache.set(self._key(request, page), result, expire=self.ttl)
+    def set(self, cookie_hash: str, page: int, result: BusquedaNormaResponse) -> None:
+        self._cache.set(self._key(cookie_hash, page), result, expire=self.ttl)
 
     def close(self):
         self._cache.close()

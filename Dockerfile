@@ -13,7 +13,7 @@ COPY pyproject.toml uv.lock ./
 # Instalar dependencias sin instalar el proyecto (mejor para la caché)
 RUN uv sync --frozen --no-cache --no-install-project
 
-# Copiar el resto de la aplicación
+# Copiar el resto de la aplicación (incluyendo src y data)
 COPY . .
 
 # Sincronizar el proyecto
@@ -22,5 +22,8 @@ RUN uv sync --frozen --no-cache
 # Exponer el puerto por defecto de FastMCP (8000)
 EXPOSE 8000
 
+# Asegurar que el directorio src esté en el PYTHONPATH para las importaciones
+ENV PYTHONPATH=/app/src
+
 # Comando para ejecutar el servidor
-CMD ["uv", "run", "python", "server.py"]
+CMD ["uv", "run", "python", "src/server.py"]

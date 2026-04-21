@@ -3,13 +3,39 @@ import json
 import unicodedata
 from mcp.server.fastmcp import FastMCP
 from rapidfuzz import process, fuzz
-from typing import Optional
+from typing import Optional, TypeVar, Generic, Callable, List, Tuple
 from client import InfolegClient, BASE_URL
 from cache import PageCache, NormaCache
 from datetime import date
 from models import *
 from sessmanager import SessionManager
 from parsers import NormaNotFoundError
+
+T = TypeVar('T')
+
+class Paginator(Generic[T]):
+    """
+    Clase genérica para mapear páginas virtuales (usadas por la interfaz del MCP) 
+    a páginas reales (provistas por la API externa).
+    """
+    def __init__(self, virtual_page_size: int, real_page_size: int):
+        self.virtual_page_size = virtual_page_size
+        self.real_page_size = real_page_size
+
+    def get_page(self, virtual_page: int, fetch_real_page: Callable[[int], Tuple[List[T], int]]) -> Tuple[List[T], int, int]:
+        """
+        Obtiene una página virtual solicitando internamente la página real correspondiente.
+        """
+        real_page = ((virtual_page - 1) * self.virtual_page_size) // self.real_page_size + 1
+        offset_in_real = ((virtual_page - 1) * self.virtual_page_size) % self.real_page_size
+        
+        real_items, total_items = fetch_real_page(real_page)
+        
+        total_virtual_pages = (total_items + self.virtual_page_size - 1) // self.virtual_page_size
+        
+        virtual_items = real_items[offset_in_real : offset_in_real + self.virtual_page_size]
+        
+        return virtual_items, total_virtual_pages, total_items
 
 
 PATH_DEPENDENCIAS = "./data/dependencias.json"
@@ -365,24 +391,19 @@ def buscar_normas(
 
     mcp_page = nro_pag if nro_pag and nro_pag > 0 else 1
     
-    # Cálculos para paginación interna (MCP=5 resultados, InfoLeg=50 resultados)
-    infoleg_page = ((mcp_page - 1) * MCP_PAGE_SIZE) // INFOLEG_PAGE_SIZE + 1
-    offset_in_infoleg = ((mcp_page - 1) * MCP_PAGE_SIZE) % INFOLEG_PAGE_SIZE
+    paginator = Paginator(virtual_page_size=MCP_PAGE_SIZE, real_page_size=INFOLEG_PAGE_SIZE)
     
-    infoleg_result = _fetch_infoleg_page(request, infoleg_page)
-    
-    # Recalcular total de páginas para el MCP
-    total_mcp_pages = (infoleg_result.total + MCP_PAGE_SIZE - 1) // MCP_PAGE_SIZE
-    
-    # Obtener el slice de resultados
-    mcp_resultados = infoleg_result.resultados[offset_in_infoleg : offset_in_infoleg + MCP_PAGE_SIZE]
+    def fetch_page(real_page_num: int):
+        res = _fetch_infoleg_page(request, real_page_num)
+        return res.resultados, res.total
+        
+    mcp_resultados, total_mcp_pages, total_resultados = paginator.get_page(mcp_page, fetch_page)
     
     result_dict = {
         "resultados": [r.model_dump() for r in mcp_resultados],
         "pagina_actual": mcp_page,
         "total_pags": total_mcp_pages,
-        # "infoleg_page" : infoleg_page,
-        "total_resultados": infoleg_result.total
+        "total_resultados": total_resultados
     }
     
     return json.dumps(result_dict, indent=2, default=str)
